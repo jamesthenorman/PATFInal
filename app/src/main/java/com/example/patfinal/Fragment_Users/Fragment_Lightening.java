@@ -19,7 +19,7 @@ public class Fragment_Lightening extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_lightening, container, false);
+        View view = inflater.inflate(R.layout.fragment_lightning, container, false);
         imageView = view.findViewById(R.id.imageView2);
         String url = "https://firebasestorage.googleapis.com/v0/b/patfinal-329c0.appspot.com/o/Lightning.jpg?alt=media&token=327137a9-e840-4615-ae19-65023e5478e9";
         Glide.with(getActivity()).load(url).into(imageView);
