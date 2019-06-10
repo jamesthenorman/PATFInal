@@ -27,7 +27,7 @@
         app:itemIconSize="30dp"
         android:clickable="true"
         app:itemTextColor="#FFFF"
-        app:menu="@menu/bottom_nav_menu"
+        app:menu="@menu/bottom_nav_teacher"
         android:background="#12185D"/>
 
 

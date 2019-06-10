@@ -14,8 +14,8 @@
         android:title="I.C.E number"
         app:showAsAction="never" />
     <item
-        android:id="@+id/Lightening"
-        android:title="Lightening"
+        android:id="@+id/Lightning"
+        android:title="Lightning"
         app:showAsAction="never" />
     <item
         android:id="@+id/Fire"

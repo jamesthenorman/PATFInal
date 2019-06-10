@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.example.patfinal.Fragment_Users.Fragment_Contact_Us;
 import com.example.patfinal.Fragment_Users.Fragment_Fire;
 import com.example.patfinal.Fragment_Users.Fragment_History;
-import com.example.patfinal.Fragment_Users.Fragment_Lightening;
+import com.example.patfinal.Fragment_Users.Fragment_Lightning;
 import com.example.patfinal.Fragment_Users.Fragment_Personal_Details;
 import com.example.patfinal.Fragment_Users.Fragment_Teacher_Contact;
 import com.example.patfinal.Fragment_Users.Fragment_emergency_numbers;
@@ -100,9 +100,9 @@ public class Main_Activity_Parent extends AppCompatActivity {
                 deselect();
                 return true;
 
-            case R.id.Lightening:
+            case R.id.Lightning:
                 FragmentTransaction fr2 = getSupportFragmentManager().beginTransaction();
-                fr2.replace(R.id.fragment_container, new Fragment_Lightening());
+                fr2.replace(R.id.fragment_container, new Fragment_Lightning());
                 fr2.commit();
                 deselect();
                 return true;
