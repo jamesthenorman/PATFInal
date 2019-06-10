@@ -44,7 +44,7 @@
         android:layout_below="@+id/SchoolNumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="133dp"
-        android:text="Button" />
+        android:text="@android:string/search_go" />
 
     <TextView
         android:id="@+id/textView6"

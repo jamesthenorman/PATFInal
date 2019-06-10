@@ -30,7 +30,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="10dp"
-                android:text="Firstname"
+                android:text="First Name"
                 android:textSize="30sp" />
 
             <TextView
@@ -133,7 +133,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="330dp"
-                android:text="Emergency Contact"
+                android:text="Emergency Number"
                 android:textSize="30sp" />
 
             <TextView

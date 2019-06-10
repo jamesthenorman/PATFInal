@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Background"
-
 >
 
 
@@ -21,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="17sp">
+            android:padding="20sp">
 
 
             <Space
@@ -35,11 +34,9 @@
                 android:id="@+id/textTab1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/TVmon"
 
+                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="40dp"
                 android:text="Week:"
                 android:textSize="30sp" />
 
@@ -49,20 +46,19 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/TVsat"
 
-                android:layout_alignEnd="@id/TVsat"
-                android:layout_marginStart="80dp"
+                android:layout_alignStart="@+id/rgsat"
+                android:layout_alignParentEnd="true"
                 android:layout_marginTop="100dp"
-                android:layout_toEndOf="@+id/TVsun"
                 android:text="Submit" />
 
             <TextView
                 android:id="@+id/TVmon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="10sp"
-                android:layout_marginTop="100dp"
+                android:layout_below="@+id/textTab1"
+                android:layout_alignStart="@+id/textTab1"
+                android:layout_marginStart="0sp"
+                android:layout_marginTop="30sp"
                 android:text="Monday"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:textSize="30sp" />
@@ -96,10 +92,10 @@
                 android:id="@+id/TVtue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/spinner"
                 android:layout_alignTop="@+id/TVmon"
-                android:layout_alignParentEnd="true"
                 android:layout_marginTop="0dp"
-                android:layout_marginEnd="50sp"
+                android:linksClickable="false"
                 android:text="Tuesday"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:textSize="30sp" />
@@ -316,9 +312,8 @@
                 android:layout_height="40dp"
 
                 android:layout_alignTop="@+id/textTab1"
-                android:layout_marginStart="70dp"
+                android:layout_alignParentEnd="true"
                 android:layout_marginTop="0dp"
-                android:layout_toEndOf="@+id/textTab1"
                 android:background="#ffff" />
 
         </RelativeLayout>
@@ -337,9 +332,8 @@
         android:layout_marginEnd="15sp"
         android:layout_marginBottom="30dp"
 
-        android:padding="30sp"
         android:visibility="gone"
-        tools:visibility="visible">
+        tools:visibility="gone">
 
     </FrameLayout>
 
@@ -348,5 +342,6 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" />
+        android:layout_centerInParent="true"
+        tools:visibility="gone" />
 </RelativeLayout>
