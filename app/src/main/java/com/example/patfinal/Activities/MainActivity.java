@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             databaseReference.child("Users").child(x.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    if (dataSnapshot.exists() && x.getText().length()!=0) {
+                    if (dataSnapshot.exists() && !x.getText().toString().isEmpty()) {
                         //bus number exists in Database
                         textView.setVisibility(View.INVISIBLE);
                         Personal_Info.setSchool_number(x.getText().toString());
