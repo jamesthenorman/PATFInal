@@ -1,0 +1,11 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16sp</dimen>
+    <dimen name="activity_vertical_margin">16sp</dimen>
+    <dimen name="History_Dimen">16sp</dimen>
+    <dimen name="History_Margin">1sp</dimen>
+    <dimen name="teacher_Contact">25sp</dimen>
+    <dimen name="Toggle_Button_Width">140dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="Teacher_check">20sp</dimen>
+</resources>

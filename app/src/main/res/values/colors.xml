@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1300C1</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#728AE9</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Black">#000000</color>
+    <color name="Maroon">#620032</color>
+    <color name="DropBlue">#262D8A</color>
+    <color name="ButtonColour">#FFFFFF</color>
+    <color name="HistoryTextColour">#000000</color>
+    <color name="HistoryBackgroundColour">#FFFFFF</color>
+    <color name="Gray">#9C9C9C</color>
+    <color name="Background">#6B0C0C</color>
+</resources>

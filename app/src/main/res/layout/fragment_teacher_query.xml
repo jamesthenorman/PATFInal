@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B8B8B8"
+    android:padding="5dp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/notes"
+                android:layout_width="0dp"
+                android:layout_height="136dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="8dp"
+                android:background="@color/Gray"
+                android:ems="10"
+                android:gravity="start"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                tools:text="Horse"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="serif"
+                android:text="Querry"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/Black"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/week"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="36dp"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7"
+                tools:text="20 May-27 May" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="8dp"
+                android:text="Out time "
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/outtime"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/week" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="In time "
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView8"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Out method"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:text="Notes"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/method"
+                app:layout_constraintTop_toBottomOf="@+id/method" />
+
+            <EditText
+                android:focusableInTouchMode="false"
+                android:id="@+id/outtime"
+                android:layout_width="113dp"
+                android:layout_height="0dp"
+                android:inputType="time"
+                app:layout_constraintBottom_toBottomOf="@+id/textView8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView8"
+                tools:text="@tools:sample/date/hhmm" />
+
+            <EditText
+                android:focusableInTouchMode="false"
+                android:id="@+id/timein"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:ems="10"
+                android:inputType="time"
+                app:layout_constraintBottom_toBottomOf="@+id/textView10"
+                app:layout_constraintEnd_toEndOf="@+id/outtime"
+                app:layout_constraintStart_toStartOf="@+id/outtime"
+                app:layout_constraintTop_toTopOf="@+id/textView10"
+                tools:text="@tools:sample/date/hhmm" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Out for the night?"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/outForNight"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <CheckBox
+                android:id="@+id/outForNight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="@+id/outtime"
+                app:layout_constraintStart_toStartOf="@+id/outtime"
+                android:buttonTint="#424242"
+                app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+            <EditText
+                android:id="@+id/method"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/Gray"
+                android:ems="10"
+                android:gravity="start"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="@+id/timein"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/textView13"
+                app:layout_constraintTop_toBottomOf="@+id/textView13"
+                tools:text="Text"
+                />
+
+            <Button
+                android:id="@+id/Button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Submit"
+                app:layout_constraintEnd_toEndOf="@+id/notes"
+                app:layout_constraintStart_toStartOf="@+id/notes"
+                app:layout_constraintTop_toBottomOf="@+id/notes" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="30sp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Button4" />
+
+            <TextView
+                android:id="@+id/dayOfWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/week"
+                tools:text="Monday"
+
+                />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</RelativeLayout>

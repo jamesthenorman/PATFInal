@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+
+
+    android:padding="20sp">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_below="@id/rgsun"
+
+                android:layout_marginTop="0dp" />
+
+            <TextView
+                android:id="@+id/textTab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/TVmon"
+
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="40dp"
+                android:text="Week:"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TVsat"
+
+                android:layout_alignEnd="@id/TVsat"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="100dp"
+                android:layout_toEndOf="@+id/TVsun"
+                android:text="Submit" />
+
+            <TextView
+                android:id="@+id/TVmon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="100dp"
+                android:text="Monday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/rgmon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TVmon"
+                android:layout_alignLeft="@+id/TVmon"
+                android:layout_alignRight="@+id/TVmon">
+
+                <RadioButton
+                    android:id="@+id/rbINmon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="In" />
+
+                <RadioButton
+                    android:id="@+id/rbOUTmon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="Out" />
+            </RadioGroup>
+
+            //Tuesday
+
+            <TextView
+                android:id="@+id/TVtue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/TVmon"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="50sp"
+                android:text="Tuesday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/rgtue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TVtue"
+                android:layout_alignLeft="@+id/TVtue"
+                android:layout_alignRight="@+id/TVtue">
+
+                <RadioButton
+                    android:id="@+id/rbINtue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="In"
+
+                    />
+
+                <RadioButton
+                    android:id="@+id/rbOUTtue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="Out" />
+            </RadioGroup>
+
+            //Wednesday
+
+            <TextView
+                android:id="@+id/TVwed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TVmon"
+                android:layout_alignTop="@+id/TVmon"
+                android:layout_marginTop="100dp"
+                android:text="Wednesday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/rgwed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TVwed"
+                android:layout_alignLeft="@+id/TVwed"
+                android:layout_alignRight="@+id/TVwed">
+
+                <RadioButton
+                    android:id="@+id/rbINwed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="In" />
+
+                <RadioButton
+                    android:id="@+id/rbOUTwed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="Out" />
+            </RadioGroup>
+
+            //Thursday
+
+            <TextView
+                android:id="@+id/TVthu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TVtue"
+                android:layout_alignTop="@+id/TVtue"
+                android:layout_marginTop="100dp"
+                android:text="Thursday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/rgthu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TVthu"
+                android:layout_alignLeft="@+id/TVthu"
+                android:layout_alignRight="@+id/TVthu">
+
+                <RadioButton
+                    android:id="@+id/rbINthu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="In" />
+
+                <RadioButton
+                    android:id="@+id/rbOUTthu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="Out" />
+            </RadioGroup>
+
+            //Friday
+
+            <TextView
+                android:id="@+id/TVfri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TVmon"
+                android:layout_alignTop="@+id/TVmon"
+                android:layout_marginTop="200dp"
+                android:text="Friday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/rgfri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TVfri"
+                android:layout_alignLeft="@+id/TVfri"
+                android:layout_alignRight="@+id/TVfri">
+
+                <RadioButton
+                    android:id="@+id/rbINfri"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="In" />
+
+                <RadioButton
+                    android:id="@+id/rbOUTfri"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="Out" />
+            </RadioGroup>
+
+            //Saturday
+
+            <TextView
+                android:id="@+id/TVsat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TVtue"
+                android:layout_alignTop="@+id/TVtue"
+                android:layout_marginTop="200dp"
+                android:text="Saturday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/rgsat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TVsat"
+                android:layout_alignLeft="@+id/TVsat"
+                android:layout_alignRight="@+id/TVsat">
+
+                <RadioButton
+                    android:id="@+id/rbINsat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="In" />
+
+                <RadioButton
+                    android:id="@+id/rbOUTsat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="Out" />
+            </RadioGroup>
+
+            //Sunday
+
+            <TextView
+                android:id="@+id/TVsun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/TVmon"
+                android:layout_alignTop="@+id/TVmon"
+
+                android:layout_marginTop="300dp"
+                android:text="Sunday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/rgsun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/TVsun"
+                android:layout_alignLeft="@+id/TVsun"
+                android:layout_alignRight="@+id/TVsun">
+
+                <RadioButton
+                    android:id="@+id/rbINsun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="In" />
+
+                <RadioButton
+                    android:id="@+id/rbOUTsun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/ButtonColour"
+                    android:text="Out" />
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="149dp"
+                android:layout_height="40dp"
+
+                android:layout_alignTop="@+id/textTab1"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/textTab1"
+                android:background="#ffff" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/FrameQuerry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15sp"
+        android:layout_marginBottom="30dp"
+
+        android:padding="30sp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+</RelativeLayout>

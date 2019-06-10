@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_teacher_contact"
+        android:icon="@drawable/ic_action_user"
+        android:title="Teacher Contact" />
+
+    <item
+        android:id="@+id/nav_consent"
+        android:icon="@drawable/ic_action_sjc"
+        android:title="Menu" />
+
+
+    <item
+        android:id="@+id/nav_personal_details"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="Personal Details" />
+<item
+    android:id="@+id/none"
+    android:visible="false"/>
+
+</menu>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_FN"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:text="Firstname"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/et_FN"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="50dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                tools:text="@tools:sample/first_names" />
+
+            <TextView
+                android:id="@+id/tv_SN"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="90dp"
+                android:text="Lastname"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/et_SN"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="130dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                tools:text="@tools:sample/last_names" />
+
+            <TextView
+                android:id="@+id/tv_CN"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="170dp"
+                android:text="Phone Number"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/et_CN"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="210dp"
+                android:ems="10"
+                android:inputType="phone"
+                tools:text="@android:string/emptyPhoneNumber" />
+
+            <TextView
+                android:id="@+id/tv_PC"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="250dp"
+                android:text="Parent Phone Number"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/et_PC"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="290dp"
+                android:ems="10"
+                android:inputType="phone"
+                tools:text="@android:string/emptyPhoneNumber" />
+
+            <TextView
+                android:id="@+id/tv_EC"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="330dp"
+                android:text="Emergency Contact"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/et_EC"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="370dp"
+                android:ems="10"
+                android:inputType="phone"
+                tools:text="@android:string/emptyPhoneNumber" />
+
+            <TextView
+                android:id="@+id/tv_RN"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="410dp"
+                android:text="Room Number"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/et_RN"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="450dp"
+                android:ems="10"
+                android:inputType="number"
+                tools:text="2222" />
+
+            <TextView
+                android:id="@+id/tv_AL"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="490dp"
+                android:text="Allergies"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/et_AL"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="530dp"
+                android:ems="10"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btnSPD"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/et_AL"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/et_AL"
+
+                android:text="Submit" />
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/btnSPD"
+
+                android:layout_marginTop="0dp" />
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+         />
+</RelativeLayout>

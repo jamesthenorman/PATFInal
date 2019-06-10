@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:background="@color/Background">
+
+        <TableRow>
+
+            <Space android:layout_height="30dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Ems1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Police"
+                android:textColor="@color/HistoryTextColour"
+                android:textSize="@dimen/teacher_Contact"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Emsph1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="10111"
+                android:textColor="@color/HistoryTextColour"
+                android:textSize="@dimen/teacher_Contact"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Ems2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Fire Dept"
+                android:textColor="@color/HistoryTextColour"
+                android:textSize="@dimen/teacher_Contact"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Emsph2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="4922"
+                android:textColor="@color/HistoryTextColour"
+                android:textSize="@dimen/teacher_Contact"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Ems3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="San"
+                android:textColor="@color/HistoryTextColour"
+                android:textSize="@dimen/teacher_Contact"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Emsph3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0295920459"
+                android:textColor="@color/HistoryTextColour"
+                android:textSize="@dimen/teacher_Contact"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Ems4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Flying squad"
+                android:textColor="@color/HistoryTextColour"
+                android:textSize="@dimen/teacher_Contact"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Emsph4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="4245"
+                android:textColor="@color/HistoryTextColour"
+                android:textSize="@dimen/teacher_Contact"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Ems5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Ambulance"
+                android:textColor="@color/HistoryTextColour"
+                android:textSize="@dimen/teacher_Contact"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Emsph5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="93992583"
+                android:textColor="@color/HistoryTextColour"
+                android:textSize="@dimen/teacher_Contact"
+                android:textStyle="bold" />
+        </TableRow>
+
+    </TableLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Background"
+    android:orientation="vertical"
+
+    >
+
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TableRow>
+
+                    <Space android:layout_height="30dp" />
+                </TableRow>
+
+                <TableRow
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/teachername1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Mr Yoshi"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="187dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:text="Number"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+                        android:id="@+id/teachernumber1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoLink="phone"
+                        android:gravity="center"
+                        android:text="081 039 5284"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textColorLink="@color/Black"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Room"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+                        android:id="@+id/teacherroom1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2567"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Email:"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+                        android:id="@+id/TeacherEmail1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoLink="email"
+                        android:gravity="center"
+                        android:text="yoshi@gmail.com"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textColorLink="@color/Black"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <Space android:layout_height="20dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:id="@+id/teachername2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Mr Mario"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Number"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+
+                        android:id="@+id/teachernumber2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoLink="phone"
+                        android:gravity="center"
+                        android:text="081 042 9323"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textColorLink="@color/Black"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Room"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+
+                        android:id="@+id/teacherroom2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="493"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Email:"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+
+                        android:id="@+id/TeacherEmail2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoLink="email"
+                        android:gravity="center"
+                        android:text="mario@gmail.com"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textColorLink="@color/Black"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <Space android:layout_height="20dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:id="@+id/teachername3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Mr Shroom"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Number"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+
+                        android:id="@+id/teachernumber3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoLink="phone"
+                        android:gravity="center"
+                        android:text="081 042 9323"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textColorLink="@color/Black"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Room"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+
+                        android:id="@+id/teacherroom3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="3202"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Email:"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+
+                        android:id="@+id/TeacherEmail3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoLink="email"
+                        android:gravity="center"
+                        android:text="shroom@gmail.com"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textColorLink="@color/Black"
+                        android:textSize="@dimen/teacher_Contact" />
+                </TableRow>
+
+                <TableRow>
+
+                    <Space android:layout_height="20dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:id="@+id/teachername4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Ms Peach"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Number"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+
+                        android:id="@+id/teachernumber4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoLink="phone"
+                        android:gravity="center"
+                        android:text="081 203 5032"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textColorLink="@color/Black"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Room"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+
+                        android:id="@+id/teacherroom4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="403"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Email:"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+
+                        android:id="@+id/TeacherEmail4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoLink="email"
+                        android:text="peach@gmail.com"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textColorLink="@color/Black"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow>
+
+                    <Space android:layout_height="20dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:id="@+id/teachername5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Mr Donkey"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Number"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+
+                        android:id="@+id/teachernumber5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoLink="phone"
+                        android:gravity="center"
+                        android:text="081 492 5394"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textColorLink="@color/Black"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Room"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+
+                        android:id="@+id/teacherroom5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="492"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Email:"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                    <TextView
+
+                        android:id="@+id/TeacherEmail5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:autoLink="email"
+                        android:gravity="center"
+                        android:text="donkey@gmail.com"
+                        android:textColor="@color/HistoryTextColour"
+                        android:textColorLink="@color/Black"
+                        android:textSize="@dimen/teacher_Contact" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+
+                    <Space android:layout_height="40dp" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

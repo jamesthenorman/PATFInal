@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <item
+        android:id="@+id/History"
+        android:title="History"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/ICE"
+        android:title="I.C.E number"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Lightening"
+        android:title="Lightening"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Fire"
+        android:title="Fire Procedures"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Contact"
+        android:title="Contact Us."
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Help"
+        android:title="Help"
+        app:showAsAction="never" />
+
+
+</menu>
