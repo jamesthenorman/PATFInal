@@ -45,7 +45,7 @@ public class Fragment_Querry extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_querries, container, false);
+        View view = inflater.inflate(R.layout.fragment_queries, container, false);
 
         timeIn = view.findViewById(R.id.timein);
         timeOut = view.findViewById(R.id.outtime);

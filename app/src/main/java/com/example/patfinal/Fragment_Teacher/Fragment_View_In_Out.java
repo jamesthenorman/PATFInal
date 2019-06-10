@@ -137,33 +137,7 @@ public class Fragment_View_In_Out extends Fragment {
 
             }
         });
-        Friday.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                day.setText("Friday");
-                openQuery();
 
-
-            }
-        });
-        Saturday.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                day.setText("Saturday");
-                openQuery();
-
-
-            }
-        });
-        Sunday.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                day.setText("Sunday");
-                openQuery();
-
-
-            }
-        });
 
         History = view.findViewById(R.id.btnHist);
         personalInfo = view.findViewById(R.id.btnInfo);
