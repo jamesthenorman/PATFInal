@@ -89,6 +89,6 @@ public class Week {
                 ", friday=" + friday +
                 ", saturday=" + saturday +
                 ", sunday=" + sunday +
-                '}'+"Blue cheese";
+                '}';
     }
 }

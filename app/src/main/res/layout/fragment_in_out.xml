@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/Background"
 
-
-    android:padding="20sp">
+>
 
 
     <ScrollView
@@ -21,7 +20,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="17sp">
 
 
             <Space
@@ -320,12 +320,6 @@
                 android:layout_marginTop="0dp"
                 android:layout_toEndOf="@+id/textTab1"
                 android:background="#ffff" />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </FrameLayout>
 
         </RelativeLayout>
     </ScrollView>
