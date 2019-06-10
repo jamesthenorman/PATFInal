@@ -422,7 +422,8 @@ public class Fragment_Teacher_History extends Fragment {
                         break;
 
                 }
-                switch (b21) {
+
+                switch (b22) {
                     case "true":
                         b22 = getResources().getString(R.string.In);
                         break;
@@ -452,6 +453,15 @@ public class Fragment_Teacher_History extends Fragment {
                 switch (b25) {
                     case "true":
                         b25 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b25 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b26) {
+                    case "true":
+                        b26 = getResources().getString(R.string.In);
                         break;
                     case "false":
                         b26 = getResources().getString(R.string.Out);

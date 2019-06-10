@@ -304,503 +304,480 @@ public class Fragment_History extends Fragment {
                         break;
                 }
 
-                    switch (b9) {
-                        case "true":
-                            b9 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b9 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b10) {
-                        case "true":
-                            b10 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b10 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b11) {
-                        case "true":
-                            b11 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b11 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b12) {
-                        case "true":
-                            b12 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b12 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b13) {
-                        case "true":
-                            b13 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b13 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b14) {
-                        case "true":
-                            b14 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b14 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b15) {
-                        case "true":
-                            b15 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b15 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b16) {
-                        case "true":
-                            b16 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b16 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b17) {
-                        case "true":
-                            b17 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b17 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b18) {
-                        case "true":
-                            b18 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b18 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b19) {
-                        case "true":
-                            b19 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b19 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b20) {
-                        case "true":
-                            b20 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b20 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b21) {
-                        case "true":
-                            b21 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b21 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b21) {
-                        case "true":
-                            b22 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b22 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b23) {
-                        case "true":
-                            b23 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b23 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b24) {
-                        case "true":
-                            b24 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b24 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b25) {
-                        case "true":
-                            b25 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b26 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    switch (b27) {
-                        case "true":
-                            b27 = getResources().getString(R.string.In);
-                            break;
-                        case "false":
-                            b27 = getResources().getString(R.string.Out);
-                            break;
-
-                    }
-                    int x = 0;
-
-                    tv1.setText(getDate(x) + "\n" + b1);
-                    x++;
-                    tv2.setText(getDate(x) + "\n" + b2);
-                    x++;
-                    tv3.setText(getDate(x) + "\n" + b3);
-                    x++;
-                    tv4.setText(getDate(x) + "\n" + b4);
-                    x++;
-                    tv5.setText(getDate(x) + "\n" + b5);
-                    x++;
-                    tv6.setText(getDate(x) + "\n" + b6);
-                    x++;
-                    tv7.setText(getDate(x) + "\n" + b7);
-                    x++;
-                    tv8.setText(getDate(x) + "\n" + b8);
-                    x++;
-                    tv9.setText(getDate(x) + "\n" + b9);
-                    x++;
-                    tv10.setText(getDate(x) + "\n" + b10);
-                    x++;
-                    tv11.setText(getDate(x) + "\n" + b11);
-                    x++;
-                    tv12.setText(getDate(x) + "\n" + b12);
-                    x++;
-                    tv13.setText(getDate(x) + "\n" + b13);
-                    x++;
-                    tv14.setText(getDate(x) + "\n" + b14);
-                    x++;
-                    tv15.setText(getDate(x) + "\n" + b15);
-                    x++;
-                    tv16.setText(getDate(x) + "\n" + b16);
-                    x++;
-                    tv17.setText(getDate(x) + "\n" + b17);
-                    x++;
-                    tv18.setText(getDate(x) + "\n" + b18);
-                    x++;
-                    tv19.setText(getDate(x) + "\n" + b19);
-                    x++;
-                    tv20.setText(getDate(x) + "\n" + b20);
-                    x++;
-                    tv21.setText(getDate(x) + "\n" + b21);
-                    x++;
-                    tv22.setText(getDate(x) + "\n" + b22);
-                    x++;
-                    tv23.setText(getDate(x) + "\n" + b23);
-                    x++;
-                    tv24.setText(getDate(x) + "\n" + b24);
-                    x++;
-                    tv25.setText(getDate(x) + "\n" + b25);
-                    x++;
-                    tv26.setText(getDate(x) + "\n" + b26);
-                    x++;
-                    tv27.setText(getDate(x) + "\n" + b27);
-
-
-                    databaseReference.removeEventListener(this);
-                    progressBar.setVisibility(View.INVISIBLE);
-                }
-
-                @Override
-                public void onCancelled (@NonNull DatabaseError databaseError){
+                switch (b9) {
+                    case "true":
+                        b9 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b9 = getResources().getString(R.string.Out);
+                        break;
 
                 }
-            });
+                switch (b10) {
+                    case "true":
+                        b10 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b10 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b11) {
+                    case "true":
+                        b11 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b11 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b12) {
+                    case "true":
+                        b12 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b12 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b13) {
+                    case "true":
+                        b13 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b13 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b14) {
+                    case "true":
+                        b14 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b14 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b15) {
+                    case "true":
+                        b15 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b15 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b16) {
+                    case "true":
+                        b16 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b16 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b17) {
+                    case "true":
+                        b17 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b17 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b18) {
+                    case "true":
+                        b18 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b18 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b19) {
+                    case "true":
+                        b19 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b19 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b20) {
+                    case "true":
+                        b20 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b20 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b21) {
+                    case "true":
+                        b21 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b21 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b22) {
+                    case "true":
+                        b22 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b22 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b23) {
+                    case "true":
+                        b23 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b23 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b24) {
+                    case "true":
+                        b24 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b24 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b25) {
+                    case "true":
+                        b25 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b25 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b26) {
+                    case "true":
+                        b26 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b26 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                switch (b27) {
+                    case "true":
+                        b27 = getResources().getString(R.string.In);
+                        break;
+                    case "false":
+                        b27 = getResources().getString(R.string.Out);
+                        break;
+
+                }
+                int x = 0;
+
+                tv1.setText(getDate(x) + "\n" + b1);
+                x++;
+                tv2.setText(getDate(x) + "\n" + b2);
+                x++;
+                tv3.setText(getDate(x) + "\n" + b3);
+                x++;
+                tv4.setText(getDate(x) + "\n" + b4);
+                x++;
+                tv5.setText(getDate(x) + "\n" + b5);
+                x++;
+                tv6.setText(getDate(x) + "\n" + b6);
+                x++;
+                tv7.setText(getDate(x) + "\n" + b7);
+                x++;
+                tv8.setText(getDate(x) + "\n" + b8);
+                x++;
+                tv9.setText(getDate(x) + "\n" + b9);
+                x++;
+                tv10.setText(getDate(x) + "\n" + b10);
+                x++;
+                tv11.setText(getDate(x) + "\n" + b11);
+                x++;
+                tv12.setText(getDate(x) + "\n" + b12);
+                x++;
+                tv13.setText(getDate(x) + "\n" + b13);
+                x++;
+                tv14.setText(getDate(x) + "\n" + b14);
+                x++;
+                tv15.setText(getDate(x) + "\n" + b15);
+                x++;
+                tv16.setText(getDate(x) + "\n" + b16);
+                x++;
+                tv17.setText(getDate(x) + "\n" + b17);
+                x++;
+                tv18.setText(getDate(x) + "\n" + b18);
+                x++;
+                tv19.setText(getDate(x) + "\n" + b19);
+                x++;
+                tv20.setText(getDate(x) + "\n" + b20);
+                x++;
+                tv21.setText(getDate(x) + "\n" + b21);
+                x++;
+                tv22.setText(getDate(x) + "\n" + b22);
+                x++;
+                tv23.setText(getDate(x) + "\n" + b23);
+                x++;
+                tv24.setText(getDate(x) + "\n" + b24);
+                x++;
+                tv25.setText(getDate(x) + "\n" + b25);
+                x++;
+                tv26.setText(getDate(x) + "\n" + b26);
+                x++;
+                tv27.setText(getDate(x) + "\n" + b27);
+
+
+                databaseReference.removeEventListener(this);
+                progressBar.setVisibility(View.INVISIBLE);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
         return true;
-        }
+    }
 
-        public void Download () {
-            String[] arr = getWeeks();
+    public void Download() {
+        String[] arr = getWeeks();
 
-            final String text1 = arr[0];
-            final String text2 = arr[1];
-            final String text3 = arr[2];
-            final String text4 = arr[3];
-            System.out.println(text1 + "Hello this is text 1");
-            DocumentReference Ref1 = db.collection("Users").document(Personal_Info.getSchool_number()).collection("In or Out").document(text1);
+        final String text1 = arr[0];
+        final String text2 = arr[1];
+        final String text3 = arr[2];
+        final String text4 = arr[3];
+        System.out.println(text1 + "Hello this is text 1");
+        DocumentReference Ref1 = db.collection("Users").document(Personal_Info.getSchool_number()).collection("In or Out").document(text1);
 
-            DocumentReference Ref2 = db.collection("Users").document(Personal_Info.getSchool_number()).collection("In or Out").document(text2);
-            DocumentReference Ref3 = db.collection("Users").document(Personal_Info.getSchool_number()).collection("In or Out").document(text3);
-            DocumentReference Ref4 = db.collection("Users").document(Personal_Info.getSchool_number()).collection("In or Out").document(text4);
+        DocumentReference Ref2 = db.collection("Users").document(Personal_Info.getSchool_number()).collection("In or Out").document(text2);
+        DocumentReference Ref3 = db.collection("Users").document(Personal_Info.getSchool_number()).collection("In or Out").document(text3);
+        DocumentReference Ref4 = db.collection("Users").document(Personal_Info.getSchool_number()).collection("In or Out").document(text4);
 
 
-            Ref1.get()
-                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                        @Override
-                        public void onSuccess(DocumentSnapshot documentSnapshot) {
+        Ref1.get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+
+
+                        Week week = documentSnapshot.toObject(Week.class);
+
+                        b1 = valueOf(week.isMonday());
+                        b2 = valueOf(week.isTuesday());
+                        b3 = valueOf(week.isWednesday());
+                        b4 = valueOf(week.isThursday());
+                        b5 = valueOf(week.isFriday());
+                        b6 = valueOf(week.isSaturday());
+                        b7 = valueOf(week.isSunday());
+                        switch (b1) {
+                            case "true":
+                                b1 = getResources().getString(R.string.In);
+                                break;
+                            case "false":
+                                b1 = getResources().getString(R.string.Out);
+                                break;
+                        }
+                        switch (b2) {
+                            case "true":
+                                b2 = getResources().getString(R.string.In);
+                                break;
+                            case "false":
+                                b2 = getResources().getString(R.string.Out);
+
+                                break;
+
+                        }
+                        switch (b3) {
+                            case "true":
+                                b3 = getResources().getString(R.string.In);
+                                break;
+                            case "false":
+                                b3 = getResources().getString(R.string.Out);
+                                break;
+                            default:
+                                break;
+
+                        }
+                        switch (b4) {
+                            case "true":
+                                b4 = getResources().getString(R.string.In);
+                                break;
+                            case "false":
+                                b4 = getResources().getString(R.string.Out);
+                                break;
+                            default:
+                                break;
+
+                        }
+                        switch (b5) {
+                            case "true":
+                                b5 = getResources().getString(R.string.In);
+                                break;
+                            case "false":
+                                b5 = getResources().getString(R.string.Out);
+                                break;
+
+                        }
+                        switch (b6) {
+                            case "true":
+                                b6 = getResources().getString(R.string.In);
+                                break;
+                            case "false":
+                                b6 = getResources().getString(R.string.Out);
+                                break;
+
+                        }
+                        switch (b7) {
+                            case "true":
+                                b7 = getResources().getString(R.string.In);
+                                break;
+                            case "false":
+                                b7 = getResources().getString(R.string.Out);
+                                break;
+
+                        }
+
+                        tv1.setText(getDate(x) + "\n" + b1);
+                        x++;
+                        tv2.setText(getDate(x) + "\n" + b2);
+                        x++;
+                        tv3.setText(getDate(x) + "\n" + b3);
+                        x++;
+                        tv4.setText(getDate(x) + "\n" + b4);
+                        x++;
+                        tv5.setText(getDate(x) + "\n" + b5);
+                        x++;
+                        tv6.setText(getDate(x) + "\n" + b6);
+                        x++;
+                        tv7.setText(getDate(x) + "\n" + b7);
+                        x++;
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        b1 = getResources().getString(R.string.No_data);
+                        b2 = getResources().getString(R.string.No_data);
+                        b3 = getResources().getString(R.string.No_data);
+                        b4 = getResources().getString(R.string.No_data);
+                        b5 = getResources().getString(R.string.No_data);
+                        b6 = getResources().getString(R.string.No_data);
+                        b7 = getResources().getString(R.string.No_data);
+
+                        tv1.setText(getDate(x) + "\n" + b1);
+                        x++;
+                        tv2.setText(getDate(x) + "\n" + b2);
+                        x++;
+                        tv3.setText(getDate(x) + "\n" + b3);
+                        x++;
+                        tv4.setText(getDate(x) + "\n" + b4);
+                        x++;
+                        tv5.setText(getDate(x) + "\n" + b5);
+                        x++;
+                        tv6.setText(getDate(x) + "\n" + b6);
+                        x++;
+                        tv7.setText(getDate(x) + "\n" + b7);
+                        x++;
+                    }
+                });
+        Ref2.get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+
+
+                        try {
 
 
                             Week week = documentSnapshot.toObject(Week.class);
 
-                            b1 = valueOf(week.isMonday());
-                            b2 = valueOf(week.isTuesday());
-                            b3 = valueOf(week.isWednesday());
-                            b4 = valueOf(week.isThursday());
-                            b5 = valueOf(week.isFriday());
-                            b6 = valueOf(week.isSaturday());
-                            b7 = valueOf(week.isSunday());
-                            switch (b1) {
+                            b8 = valueOf(week.isMonday());
+                            b9 = valueOf(week.isTuesday());
+                            b10 = valueOf(week.isWednesday());
+                            b11 = valueOf(week.isThursday());
+                            b12 = valueOf(week.isFriday());
+                            b13 = valueOf(week.isSaturday());
+                            b14 = valueOf(week.isSunday());
+
+                            switch (b8) {
                                 case "true":
-                                    b1 = getResources().getString(R.string.In);
+                                    b9 = getResources().getString(R.string.In);
                                     break;
                                 case "false":
-                                    b1 = getResources().getString(R.string.Out);
+                                    b9 = getResources().getString(R.string.Out);
                                     break;
+
                             }
-                            switch (b2) {
+                            switch (b10) {
                                 case "true":
-                                    b2 = getResources().getString(R.string.In);
+                                    b10 = getResources().getString(R.string.In);
                                     break;
                                 case "false":
-                                    b2 = getResources().getString(R.string.Out);
-
+                                    b10 = getResources().getString(R.string.Out);
                                     break;
 
                             }
-                            switch (b3) {
+                            switch (b11) {
                                 case "true":
-                                    b3 = getResources().getString(R.string.In);
+                                    b11 = getResources().getString(R.string.In);
                                     break;
                                 case "false":
-                                    b3 = getResources().getString(R.string.Out);
-                                    break;
-                                default:
+                                    b11 = getResources().getString(R.string.Out);
                                     break;
 
                             }
-                            switch (b4) {
+                            switch (b12) {
                                 case "true":
-                                    b4 = getResources().getString(R.string.In);
+                                    b12 = getResources().getString(R.string.In);
                                     break;
                                 case "false":
-                                    b4 = getResources().getString(R.string.Out);
-                                    break;
-                                default:
+                                    b12 = getResources().getString(R.string.Out);
                                     break;
 
                             }
-                            switch (b5) {
+                            switch (b13) {
                                 case "true":
-                                    b5 = getResources().getString(R.string.In);
+                                    b13 = getResources().getString(R.string.In);
                                     break;
                                 case "false":
-                                    b5 = getResources().getString(R.string.Out);
+                                    b13 = getResources().getString(R.string.Out);
                                     break;
 
                             }
-                            switch (b6) {
+                            switch (b14) {
                                 case "true":
-                                    b6 = getResources().getString(R.string.In);
+                                    b14 = getResources().getString(R.string.In);
                                     break;
                                 case "false":
-                                    b6 = getResources().getString(R.string.Out);
-                                    break;
-
-                            }
-                            switch (b7) {
-                                case "true":
-                                    b7 = getResources().getString(R.string.In);
-                                    break;
-                                case "false":
-                                    b7 = getResources().getString(R.string.Out);
+                                    b14 = getResources().getString(R.string.Out);
                                     break;
 
                             }
 
-                            tv1.setText(getDate(x) + "\n" + b1);
+
+                            tv8.setText(getDate(x) + "\n" + b8);
                             x++;
-                            tv2.setText(getDate(x) + "\n" + b2);
+                            tv9.setText(getDate(x) + "\n" + b9);
                             x++;
-                            tv3.setText(getDate(x) + "\n" + b3);
+                            tv10.setText(getDate(x) + "\n" + b10);
                             x++;
-                            tv4.setText(getDate(x) + "\n" + b4);
+                            tv11.setText(getDate(x) + "\n" + b11);
                             x++;
-                            tv5.setText(getDate(x) + "\n" + b5);
+                            tv12.setText(getDate(x) + "\n" + b12);
                             x++;
-                            tv6.setText(getDate(x) + "\n" + b6);
+                            tv13.setText(getDate(x) + "\n" + b13);
                             x++;
-                            tv7.setText(getDate(x) + "\n" + b7);
+                            tv14.setText(getDate(x) + "\n" + b14);
                             x++;
 
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            b1 = getResources().getString(R.string.No_data);
-                            b2 = getResources().getString(R.string.No_data);
-                            b3 = getResources().getString(R.string.No_data);
-                            b4 = getResources().getString(R.string.No_data);
-                            b5 = getResources().getString(R.string.No_data);
-                            b6 = getResources().getString(R.string.No_data);
-                            b7 = getResources().getString(R.string.No_data);
 
-                            tv1.setText(getDate(x) + "\n" + b1);
-                            x++;
-                            tv2.setText(getDate(x) + "\n" + b2);
-                            x++;
-                            tv3.setText(getDate(x) + "\n" + b3);
-                            x++;
-                            tv4.setText(getDate(x) + "\n" + b4);
-                            x++;
-                            tv5.setText(getDate(x) + "\n" + b5);
-                            x++;
-                            tv6.setText(getDate(x) + "\n" + b6);
-                            x++;
-                            tv7.setText(getDate(x) + "\n" + b7);
-                            x++;
-                        }
-                    });
-            Ref2.get()
-                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                        @Override
-                        public void onSuccess(DocumentSnapshot documentSnapshot) {
-
-
-                            try {
-
-
-                                Week week = documentSnapshot.toObject(Week.class);
-
-                                b8 = valueOf(week.isMonday());
-                                b9 = valueOf(week.isTuesday());
-                                b10 = valueOf(week.isWednesday());
-                                b11 = valueOf(week.isThursday());
-                                b12 = valueOf(week.isFriday());
-                                b13 = valueOf(week.isSaturday());
-                                b14 = valueOf(week.isSunday());
-
-                                switch (b8) {
-                                    case "true":
-                                        b9 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b9 = getResources().getString(R.string.Out);
-                                        break;
-
-                                }
-                                switch (b10) {
-                                    case "true":
-                                        b10 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b10 = getResources().getString(R.string.Out);
-                                        break;
-
-                                }
-                                switch (b11) {
-                                    case "true":
-                                        b11 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b11 = getResources().getString(R.string.Out);
-                                        break;
-
-                                }
-                                switch (b12) {
-                                    case "true":
-                                        b12 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b12 = getResources().getString(R.string.Out);
-                                        break;
-
-                                }
-                                switch (b13) {
-                                    case "true":
-                                        b13 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b13 = getResources().getString(R.string.Out);
-                                        break;
-
-                                }
-                                switch (b14) {
-                                    case "true":
-                                        b14 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b14 = getResources().getString(R.string.Out);
-                                        break;
-
-                                }
-
-
-                                tv8.setText(getDate(x) + "\n" + b8);
-                                x++;
-                                tv9.setText(getDate(x) + "\n" + b9);
-                                x++;
-                                tv10.setText(getDate(x) + "\n" + b10);
-                                x++;
-                                tv11.setText(getDate(x) + "\n" + b11);
-                                x++;
-                                tv12.setText(getDate(x) + "\n" + b12);
-                                x++;
-                                tv13.setText(getDate(x) + "\n" + b13);
-                                x++;
-                                tv14.setText(getDate(x) + "\n" + b14);
-                                x++;
-
-
-                            } catch (Exception e) {
-                                b8 = getResources().getString(R.string.No_data);
-                                b9 = getResources().getString(R.string.No_data);
-                                b10 = getResources().getString(R.string.No_data);
-                                b11 = getResources().getString(R.string.No_data);
-                                b12 = getResources().getString(R.string.No_data);
-                                b13 = getResources().getString(R.string.No_data);
-                                b14 = getResources().getString(R.string.No_data);
-
-                                tv8.setText(getDate(x) + "\n" + b8);
-                                x++;
-                                tv9.setText(getDate(x) + "\n" + b9);
-                                x++;
-                                tv10.setText(getDate(x) + "\n" + b10);
-                                x++;
-                                tv11.setText(getDate(x) + "\n" + b11);
-                                x++;
-                                tv12.setText(getDate(x) + "\n" + b12);
-                                x++;
-                                tv13.setText(getDate(x) + "\n" + b13);
-                                x++;
-                                tv14.setText(getDate(x) + "\n" + b14);
-                                x++;
-
-                            }
-
-
-                        }
-
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
+                        } catch (Exception e) {
                             b8 = getResources().getString(R.string.No_data);
                             b9 = getResources().getString(R.string.No_data);
                             b10 = getResources().getString(R.string.No_data);
@@ -825,140 +802,140 @@ public class Fragment_History extends Fragment {
                             x++;
 
                         }
-                    });
-            Ref3.get()
-                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                        @Override
-                        public void onSuccess(DocumentSnapshot documentSnapshot) {
 
 
-                            try {
+                    }
+
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        b8 = getResources().getString(R.string.No_data);
+                        b9 = getResources().getString(R.string.No_data);
+                        b10 = getResources().getString(R.string.No_data);
+                        b11 = getResources().getString(R.string.No_data);
+                        b12 = getResources().getString(R.string.No_data);
+                        b13 = getResources().getString(R.string.No_data);
+                        b14 = getResources().getString(R.string.No_data);
+
+                        tv8.setText(getDate(x) + "\n" + b8);
+                        x++;
+                        tv9.setText(getDate(x) + "\n" + b9);
+                        x++;
+                        tv10.setText(getDate(x) + "\n" + b10);
+                        x++;
+                        tv11.setText(getDate(x) + "\n" + b11);
+                        x++;
+                        tv12.setText(getDate(x) + "\n" + b12);
+                        x++;
+                        tv13.setText(getDate(x) + "\n" + b13);
+                        x++;
+                        tv14.setText(getDate(x) + "\n" + b14);
+                        x++;
+
+                    }
+                });
+        Ref3.get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
 
 
-                                Week week = documentSnapshot.toObject(Week.class);
-
-                                b15 = valueOf(week.isMonday());
-                                b16 = valueOf(week.isTuesday());
-                                b17 = valueOf(week.isWednesday());
-                                b18 = valueOf(week.isThursday());
-                                b19 = valueOf(week.isFriday());
-                                b20 = valueOf(week.isSaturday());
-                                b21 = valueOf(week.isSunday());
-
-                                switch (b15) {
-                                    case "true":
-                                        b15 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b15 = getResources().getString(R.string.Out);
-                                        break;
-
-                                }
-                                switch (b16) {
-                                    case "true":
-                                        b16 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b16 = getResources().getString(R.string.Out);
-                                        break;
-
-                                }
-                                switch (b17) {
-                                    case "true":
-                                        b17 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b17 = getResources().getString(R.string.Out);
-                                        break;
-
-                                }
-                                switch (b18) {
-                                    case "true":
-                                        b18 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b18 = getResources().getString(R.string.Out);
-                                        break;
-
-                                }
-                                switch (b19) {
-                                    case "true":
-                                        b19 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b19 = getResources().getString(R.string.Out);
-                                        break;
-
-                                }
-                                switch (b20) {
-                                    case "true":
-                                        b20 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b20 = getResources().getString(R.string.Out);
-                                        break;
-
-                                }
-                                switch (b21) {
-                                    case "true":
-                                        b21 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b21 = getResources().getString(R.string.Out);
-                                        break;
-
-                                }
+                        try {
 
 
-                                tv15.setText(getDate(x) + "\n" + b15);
-                                x++;
-                                tv16.setText(getDate(x) + "\n" + b16);
-                                x++;
-                                tv17.setText(getDate(x) + "\n" + b17);
-                                x++;
-                                tv18.setText(getDate(x) + "\n" + b18);
-                                x++;
-                                tv19.setText(getDate(x) + "\n" + b19);
-                                x++;
-                                tv20.setText(getDate(x) + "\n" + b20);
-                                x++;
-                                tv21.setText(getDate(x) + "\n" + b21);
-                                x++;
+                            Week week = documentSnapshot.toObject(Week.class);
 
+                            b15 = valueOf(week.isMonday());
+                            b16 = valueOf(week.isTuesday());
+                            b17 = valueOf(week.isWednesday());
+                            b18 = valueOf(week.isThursday());
+                            b19 = valueOf(week.isFriday());
+                            b20 = valueOf(week.isSaturday());
+                            b21 = valueOf(week.isSunday());
 
-                            } catch (Exception e) {
-                                b15 = getResources().getString(R.string.No_data);
-                                b16 = getResources().getString(R.string.No_data);
-                                b17 = getResources().getString(R.string.No_data);
-                                b18 = getResources().getString(R.string.No_data);
-                                b19 = getResources().getString(R.string.No_data);
-                                b20 = getResources().getString(R.string.No_data);
-                                b21 = getResources().getString(R.string.No_data);
+                            switch (b15) {
+                                case "true":
+                                    b15 = getResources().getString(R.string.In);
+                                    break;
+                                case "false":
+                                    b15 = getResources().getString(R.string.Out);
+                                    break;
 
+                            }
+                            switch (b16) {
+                                case "true":
+                                    b16 = getResources().getString(R.string.In);
+                                    break;
+                                case "false":
+                                    b16 = getResources().getString(R.string.Out);
+                                    break;
 
-                                tv15.setText(getDate(x) + "\n" + b15);
-                                x++;
-                                tv16.setText(getDate(x) + "\n" + b16);
-                                x++;
-                                tv17.setText(getDate(x) + "\n" + b17);
-                                x++;
-                                tv18.setText(getDate(x) + "\n" + b18);
-                                x++;
-                                tv19.setText(getDate(x) + "\n" + b19);
-                                x++;
-                                tv20.setText(getDate(x) + "\n" + b20);
-                                x++;
-                                tv21.setText(getDate(x) + "\n" + b21);
-                                x++;
+                            }
+                            switch (b17) {
+                                case "true":
+                                    b17 = getResources().getString(R.string.In);
+                                    break;
+                                case "false":
+                                    b17 = getResources().getString(R.string.Out);
+                                    break;
+
+                            }
+                            switch (b18) {
+                                case "true":
+                                    b18 = getResources().getString(R.string.In);
+                                    break;
+                                case "false":
+                                    b18 = getResources().getString(R.string.Out);
+                                    break;
+
+                            }
+                            switch (b19) {
+                                case "true":
+                                    b19 = getResources().getString(R.string.In);
+                                    break;
+                                case "false":
+                                    b19 = getResources().getString(R.string.Out);
+                                    break;
+
+                            }
+                            switch (b20) {
+                                case "true":
+                                    b20 = getResources().getString(R.string.In);
+                                    break;
+                                case "false":
+                                    b20 = getResources().getString(R.string.Out);
+                                    break;
+
+                            }
+                            switch (b21) {
+                                case "true":
+                                    b21 = getResources().getString(R.string.In);
+                                    break;
+                                case "false":
+                                    b21 = getResources().getString(R.string.Out);
+                                    break;
 
                             }
 
 
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
+                            tv15.setText(getDate(x) + "\n" + b15);
+                            x++;
+                            tv16.setText(getDate(x) + "\n" + b16);
+                            x++;
+                            tv17.setText(getDate(x) + "\n" + b17);
+                            x++;
+                            tv18.setText(getDate(x) + "\n" + b18);
+                            x++;
+                            tv19.setText(getDate(x) + "\n" + b19);
+                            x++;
+                            tv20.setText(getDate(x) + "\n" + b20);
+                            x++;
+                            tv21.setText(getDate(x) + "\n" + b21);
+                            x++;
+
+
+                        } catch (Exception e) {
                             b15 = getResources().getString(R.string.No_data);
                             b16 = getResources().getString(R.string.No_data);
                             b17 = getResources().getString(R.string.No_data);
@@ -984,110 +961,116 @@ public class Fragment_History extends Fragment {
                             x++;
 
                         }
-                    });
-            Ref4.get()
-                    .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                        @Override
-                        public void onSuccess(DocumentSnapshot documentSnapshot) {
 
 
-                            try {
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        b15 = getResources().getString(R.string.No_data);
+                        b16 = getResources().getString(R.string.No_data);
+                        b17 = getResources().getString(R.string.No_data);
+                        b18 = getResources().getString(R.string.No_data);
+                        b19 = getResources().getString(R.string.No_data);
+                        b20 = getResources().getString(R.string.No_data);
+                        b21 = getResources().getString(R.string.No_data);
 
 
-                                Week week = documentSnapshot.toObject(Week.class);
+                        tv15.setText(getDate(x) + "\n" + b15);
+                        x++;
+                        tv16.setText(getDate(x) + "\n" + b16);
+                        x++;
+                        tv17.setText(getDate(x) + "\n" + b17);
+                        x++;
+                        tv18.setText(getDate(x) + "\n" + b18);
+                        x++;
+                        tv19.setText(getDate(x) + "\n" + b19);
+                        x++;
+                        tv20.setText(getDate(x) + "\n" + b20);
+                        x++;
+                        tv21.setText(getDate(x) + "\n" + b21);
+                        x++;
 
-                                b22 = valueOf(week.isMonday());
-                                b23 = valueOf(week.isTuesday());
-                                b24 = valueOf(week.isWednesday());
-                                b25 = valueOf(week.isThursday());
-                                b26 = valueOf(week.isFriday());
-                                b27 = valueOf(week.isSaturday());
+                    }
+                });
+        Ref4.get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
 
-                                switch (b22) {
-                                    case "true":
-                                        b22 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b22 = getResources().getString(R.string.Out);
-                                        break;
 
-                                }
-                                switch (b23) {
-                                    case "true":
-                                        b23 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b23 = getResources().getString(R.string.Out);
-                                        break;
+                        try {
 
-                                }
-                                switch (b24) {
-                                    case "true":
-                                        b24 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b24 = getResources().getString(R.string.Out);
-                                        break;
 
-                                }
-                                switch (b25) {
-                                    case "true":
-                                        b25 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b26 = getResources().getString(R.string.Out);
-                                        break;
+                            Week week = documentSnapshot.toObject(Week.class);
 
-                                }
-                                switch (b27) {
-                                    case "true":
-                                        b27 = getResources().getString(R.string.In);
-                                        break;
-                                    case "false":
-                                        b27 = getResources().getString(R.string.Out);
-                                        break;
+                            b22 = valueOf(week.isMonday());
+                            b23 = valueOf(week.isTuesday());
+                            b24 = valueOf(week.isWednesday());
+                            b25 = valueOf(week.isThursday());
+                            b26 = valueOf(week.isFriday());
+                            b27 = valueOf(week.isSaturday());
 
-                                }
+                            switch (b22) {
+                                case "true":
+                                    b22 = getResources().getString(R.string.In);
+                                    break;
+                                case "false":
+                                    b22 = getResources().getString(R.string.Out);
+                                    break;
 
-                                tv22.setText(getDate(x) + "\n" + b22);
-                                x++;
-                                tv23.setText(getDate(x) + "\n" + b23);
-                                x++;
-                                tv24.setText(getDate(x) + "\n" + b24);
-                                x++;
-                                tv25.setText(getDate(x) + "\n" + b25);
-                                x++;
-                                tv26.setText(getDate(x) + "\n" + b26);
-                                x++;
-                                tv27.setText(getDate(x) + "\n" + b27);
+                            }
+                            switch (b23) {
+                                case "true":
+                                    b23 = getResources().getString(R.string.In);
+                                    break;
+                                case "false":
+                                    b23 = getResources().getString(R.string.Out);
+                                    break;
 
-                            } catch (Exception e) {
-                                b22 = getResources().getString(R.string.No_data);
-                                b23 = getResources().getString(R.string.No_data);
-                                b24 = getResources().getString(R.string.No_data);
-                                b25 = getResources().getString(R.string.No_data);
-                                b26 = getResources().getString(R.string.No_data);
-                                b27 = getResources().getString(R.string.No_data);
+                            }
+                            switch (b24) {
+                                case "true":
+                                    b24 = getResources().getString(R.string.In);
+                                    break;
+                                case "false":
+                                    b24 = getResources().getString(R.string.Out);
+                                    break;
 
-                                tv22.setText(getDate(x) + "\n" + b22);
-                                x++;
-                                tv23.setText(getDate(x) + "\n" + b23);
-                                x++;
-                                tv24.setText(getDate(x) + "\n" + b24);
-                                x++;
-                                tv25.setText(getDate(x) + "\n" + b25);
-                                x++;
-                                tv26.setText(getDate(x) + "\n" + b26);
-                                x++;
-                                tv27.setText(getDate(x) + "\n" + b27);
+                            }
+                            switch (b25) {
+                                case "true":
+                                    b25 = getResources().getString(R.string.In);
+                                    break;
+                                case "false":
+                                    b26 = getResources().getString(R.string.Out);
+                                    break;
+
+                            }
+                            switch (b27) {
+                                case "true":
+                                    b27 = getResources().getString(R.string.In);
+                                    break;
+                                case "false":
+                                    b27 = getResources().getString(R.string.Out);
+                                    break;
+
                             }
 
+                            tv22.setText(getDate(x) + "\n" + b22);
+                            x++;
+                            tv23.setText(getDate(x) + "\n" + b23);
+                            x++;
+                            tv24.setText(getDate(x) + "\n" + b24);
+                            x++;
+                            tv25.setText(getDate(x) + "\n" + b25);
+                            x++;
+                            tv26.setText(getDate(x) + "\n" + b26);
+                            x++;
+                            tv27.setText(getDate(x) + "\n" + b27);
 
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
+                        } catch (Exception e) {
                             b22 = getResources().getString(R.string.No_data);
                             b23 = getResources().getString(R.string.No_data);
                             b24 = getResources().getString(R.string.No_data);
@@ -1107,69 +1090,95 @@ public class Fragment_History extends Fragment {
                             x++;
                             tv27.setText(getDate(x) + "\n" + b27);
                         }
-                    });
 
 
-            boolean a = true;
-            tv1.setText(valueOf(b1));
-            System.out.println(b1);
-        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        b22 = getResources().getString(R.string.No_data);
+                        b23 = getResources().getString(R.string.No_data);
+                        b24 = getResources().getString(R.string.No_data);
+                        b25 = getResources().getString(R.string.No_data);
+                        b26 = getResources().getString(R.string.No_data);
+                        b27 = getResources().getString(R.string.No_data);
 
-        public static String[] getWeeks () {
-            String[] array = {"", "", "", ""};
-
-            Calendar calendar = Calendar.getInstance();
-            int day = calendar.get(Calendar.DAY_OF_WEEK);
-            int x = 0;
-            switch (day) {
-                case Calendar.MONDAY:
-
-                    break;
-                case Calendar.TUESDAY:
-                    x = 1;
-                    break;
-                case Calendar.WEDNESDAY:
-                    x = 2;
-                    break;
-                case Calendar.THURSDAY:
-                    x = 3;
-                    break;
-                case Calendar.FRIDAY:
-                    x = 4;
-                    break;
-                case Calendar.SATURDAY:
-                    x = 5;
-                    break;
-                case Calendar.SUNDAY:
-                    x = 6;
-                    break;
+                        tv22.setText(getDate(x) + "\n" + b22);
+                        x++;
+                        tv23.setText(getDate(x) + "\n" + b23);
+                        x++;
+                        tv24.setText(getDate(x) + "\n" + b24);
+                        x++;
+                        tv25.setText(getDate(x) + "\n" + b25);
+                        x++;
+                        tv26.setText(getDate(x) + "\n" + b26);
+                        x++;
+                        tv27.setText(getDate(x) + "\n" + b27);
+                    }
+                });
 
 
-            }
-            SimpleDateFormat mdformat = new SimpleDateFormat("LLLL-dd ");
-            calendar.add(Calendar.DAY_OF_MONTH, -1 - x);
-            String one = mdformat.format(calendar.getTime());
-            calendar.add(Calendar.DAY_OF_YEAR, -6);
-            String two = mdformat.format(calendar.getTime());
-            array[0] = two + " - " + one;
-            calendar.add(Calendar.DAY_OF_MONTH, -1);
-            one = mdformat.format(calendar.getTime());
-            calendar.add(Calendar.DAY_OF_YEAR, -6);
-            two = mdformat.format(calendar.getTime());
-            array[1] = two + " - " + one;
-            calendar.add(Calendar.DAY_OF_MONTH, -1);
-            one = mdformat.format(calendar.getTime());
-            calendar.add(Calendar.DAY_OF_YEAR, -6);
-            two = mdformat.format(calendar.getTime());
-            array[2] = two + " - " + one;
-            calendar.add(Calendar.DAY_OF_MONTH, -1);
-            one = mdformat.format(calendar.getTime());
-            calendar.add(Calendar.DAY_OF_YEAR, -6);
-            two = mdformat.format(calendar.getTime());
-            array[3] = two + " - " + one;
-            System.out.println(arr[0]);
-            return array;
-        }
-
-
+        boolean a = true;
+        tv1.setText(valueOf(b1));
+        System.out.println(b1);
     }
+
+    public static String[] getWeeks() {
+        String[] array = {"", "", "", ""};
+
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
+        int x = 0;
+        switch (day) {
+            case Calendar.MONDAY:
+
+                break;
+            case Calendar.TUESDAY:
+                x = 1;
+                break;
+            case Calendar.WEDNESDAY:
+                x = 2;
+                break;
+            case Calendar.THURSDAY:
+                x = 3;
+                break;
+            case Calendar.FRIDAY:
+                x = 4;
+                break;
+            case Calendar.SATURDAY:
+                x = 5;
+                break;
+            case Calendar.SUNDAY:
+                x = 6;
+                break;
+
+
+        }
+        SimpleDateFormat mdformat = new SimpleDateFormat("LLLL-dd ");
+        calendar.add(Calendar.DAY_OF_MONTH, -1 - x);
+        String one = mdformat.format(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, -6);
+        String two = mdformat.format(calendar.getTime());
+        array[0] = two + " - " + one;
+        calendar.add(Calendar.DAY_OF_MONTH, -1);
+        one = mdformat.format(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, -6);
+        two = mdformat.format(calendar.getTime());
+        array[1] = two + " - " + one;
+        calendar.add(Calendar.DAY_OF_MONTH, -1);
+        one = mdformat.format(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, -6);
+        two = mdformat.format(calendar.getTime());
+        array[2] = two + " - " + one;
+        calendar.add(Calendar.DAY_OF_MONTH, -1);
+        one = mdformat.format(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, -6);
+        two = mdformat.format(calendar.getTime());
+        array[3] = two + " - " + one;
+        System.out.println(arr[0]);
+        return array;
+    }
+
+
+}

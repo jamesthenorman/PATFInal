@@ -76,12 +76,70 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void openTeacher() {
+    public void openUsertype() {
         Intent intent = new Intent(this, UserType.class);
         startActivity(intent);
     }
 
-    public void openUsertype() {
+    public void openTeacherPass() {
+        Intent intent = new Intent(this, Teacher_Login.class);
+        startActivity(intent);
+
+    }
+
+    public void Verify(final EditText x) {
+        try {
+            databaseReference.child("Users").child(x.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists() && x.getText().length()!=0) {
+                        //bus number exists in Database
+                        textView.setVisibility(View.INVISIBLE);
+                        Personal_Info.setSchool_number(x.getText().toString());
+                        progressBar.setVisibility(View.INVISIBLE);
+                        setName();
+                        openUsertype();
+
+                    } else {
+                        //bus number doesn't exists.
+                        textView.setText("Wrong number.");
+                        textView.setVisibility(View.VISIBLE);
+                        progressBar.setVisibility(View.INVISIBLE);
+
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        } catch (Exception e) {
+            System.out.println("Error in try catch");
+        }
+    }
+
+    public void setName() {
+        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                try {
+                    String First = dataSnapshot.child("Users").child(Personal_Info.getSchool_number()).child("Personal Details").child("firstName").getValue().toString();
+                    String Last = dataSnapshot.child("Users").child(Personal_Info.getSchool_number()).child("Personal Details").child("lastName").getValue().toString();
+                    Personal_Info.setName(First + " " + Last);
+                } catch (Exception e) {
+                    Personal_Info.setName("ERR, enter name");
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    public void openTeacher() {
         Intent intent = new Intent(this, UserType.class);
         startActivity(intent);
     }
@@ -124,43 +182,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void openTeacherPass() {
-        Intent intent = new Intent(this, Teacher_Login.class);
-        startActivity(intent);
-
-    }
-
-    public void Verify(final EditText x) {
-        try {
-            databaseReference.child("Users").child(x.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    if (dataSnapshot.exists()) {
-                        //bus number exists in Database
-                        textView.setVisibility(View.INVISIBLE);
-                        Personal_Info.setSchool_number(x.getText().toString());
-                        progressBar.setVisibility(View.INVISIBLE);
-                        setName();
-                        openUsertype();
-
-                    } else {
-                        //bus number doesn't exists.
-                        textView.setText("Wrong number.");
-                        textView.setVisibility(View.VISIBLE);
-                        progressBar.setVisibility(View.INVISIBLE);
-
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                }
-            });
-        } catch (Exception e) {
-            System.out.println("Error in try catch");
-        }
-    }
 
     public void check2(final EditText num) {
         DocumentReference noteRef1 = db.collection("Users").document(num.getText().toString());
@@ -215,25 +236,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void setName() {
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                try {
-                    String First = dataSnapshot.child("Users").child(Personal_Info.getSchool_number()).child("Personal Details").child("firstName").getValue().toString();
-                    String Last = dataSnapshot.child("Users").child(Personal_Info.getSchool_number()).child("Personal Details").child("lastName").getValue().toString();
-                    Personal_Info.setName(First + " " + Last);
-                } catch (Exception e) {
-                    Personal_Info.setName("ERR, enter name");
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-    }
 
     public void setName2() {
         DocumentReference noteRef = db.collection("Users").document(Personal_Info.getSchool_number()).collection("Personal Details").document("Document");
