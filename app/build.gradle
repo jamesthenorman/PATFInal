@@ -3,11 +3,7 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
     signingConfigs {
-        debug {
-            storePassword 'Buster@56'
-            keyAlias = 'pass'
-            keyPassword 'Buster@56'
-        }
+
     }
     lintOptions {
         checkReleaseBuilds false
