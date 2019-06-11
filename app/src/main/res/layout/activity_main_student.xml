@@ -58,7 +58,8 @@
         android:clickable="true"
         app:itemTextColor="#FFFF"
         app:menu="@menu/bottom_navigation"
-        android:background="#12185D"/>
+        android:background="#12185D"
+        android:focusable="true" />
 
 
 </RelativeLayout>

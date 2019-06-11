@@ -17,14 +17,15 @@
         android:layout_marginTop="229dp"
         android:layout_marginEnd="26dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/buttonSub"
@@ -33,7 +34,7 @@
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="132dp"
-        android:text="Submit"
+        android:text="@string/submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,11 +44,10 @@
         android:id="@+id/wrong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="175dp"
-        android:layout_marginBottom="288dp"
-        android:text="Wrong"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="299dp"
+        android:text="Wrong Password"
         android:textSize="20sp"
         android:visibility="invisible"
         tools:visibility="visible" />
