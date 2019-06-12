@@ -9,10 +9,11 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Activity_Help"></activity>
         <activity
             android:name=".Activities.Teacher_Login"
             android:label="@string/title_activity_teacher__login"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activities.Teacher"
             android:label="@string/title_activity_teacher" />
