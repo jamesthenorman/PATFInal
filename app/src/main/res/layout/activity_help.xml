@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30sp"
     tools:context=".Activities.Activity_Help">
 
     <ScrollView
@@ -21,7 +20,53 @@
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:padding="30sp">
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="FAQ's"
+                    android:textSize="36sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="How to log in?"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Press put your school number in the school number block and click log in, if it doesn't log in then your number is incorrect."
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="[User] How to open student or parent view?"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/textView16"
@@ -38,10 +83,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="How to select the week?"
+                    android:text="[User] How to select the week?"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView16"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/textView19"
@@ -58,10 +105,33 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="How to save your in/out selection."
+                    android:text="[Student] How to save your in/out selection?"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView19"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Select either In/Out for the respective day and after you have completed your selection."
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="[Student] How to save the query selection?"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView21" android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/textView23"
@@ -78,30 +148,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="How to view the teacher contact details "
+                    android:text="[User] How to view the teacher contact details? "
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView23" />
-
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="How to open student or parent view?"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-                <TextView
-                    android:id="@+id/textView21"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Select either In/Out for the respective day and after you have completed your selection."
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView20" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView23"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView25"
@@ -114,43 +166,16 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
                 <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="How to log in?"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="Press put your school number in the school number block and click log in, if it doesn't log in- your number is incorrect."
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-                <TextView
-                    android:id="@+id/textView22"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="How to save the query selection?"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView21" />
-
-                <TextView
                     android:id="@+id/textView26"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="How to update your personal details?"
+                    android:text="[Student] How to update your personal details?"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView25" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView25"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/textView27"
@@ -167,10 +192,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="How to view your history"
+                    android:text="[User] How to view your history?"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView27" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView27"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/textView29"
@@ -187,10 +214,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="How to see teh emergency numbers"
+                    android:text="[User] How to see teh emergency numbers?"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/textView29" />
+                    app:layout_constraintTop_toBottomOf="@id/textView29"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/textView31"
@@ -207,10 +236,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="How to see the lightning procedures"
+                    android:text="[User] How to see the lightning procedures?"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView31" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView31"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/textView33"
@@ -227,10 +258,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="How to see fire procedures"
+                    android:text="[User] How to see fire procedures?"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/textView33" />
+                    app:layout_constraintTop_toBottomOf="@id/textView33"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView35"
@@ -247,17 +280,19 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="How to consent?"
+                    android:text="[Parent] How to consent?"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/textView35" />
+                    app:layout_constraintTop_toBottomOf="@id/textView35"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView37"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text='Press the "I dont consent button" when it is selected the button will change to "I consent" and vice versa. When done with selection press the "Submit" button to save.'
+                    android:text='Press the "I do not consent button" when it is selected the button will change to "I consent" and vice versa. When done with selection press the "Submit" button to save.'
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/textView36" />
@@ -267,10 +302,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="How to login as a teacher?"
+                    android:text="[Admin] How to login as a teacher?"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/textView37" />
+                    app:layout_constraintTop_toBottomOf="@id/textView37"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView40"
@@ -287,17 +324,19 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="[Teacher] How to add a user"
+                    android:text="[Admin] How to add a user?"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/textView40" />
+                    app:layout_constraintTop_toBottomOf="@id/textView40"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/textView42"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text='After loging in as a teacher fill out all fields and press "Save"'
+                    android:text='After logging in as a teacher fill out all fields and press "Save"'
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/textView41" />
@@ -310,7 +349,9 @@
                     android:text="[Admin] How to find a user?"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/textView42" />
+                    app:layout_constraintTop_toBottomOf="@id/textView42"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView44"
@@ -326,10 +367,12 @@
                     android:id="@+id/textView45"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="[Admin] How to see the Student personal info"
+                    android:text="[Admin] How to see the Student personal info?"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/textView44" />
+                    app:layout_constraintTop_toBottomOf="@id/textView44"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView46"
@@ -349,7 +392,9 @@
                     android:text="[Admin] How to see student history?"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/textView46" />
+                    app:layout_constraintTop_toBottomOf="@id/textView46"
+                    android:textSize="@dimen/Help_heading"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView48"

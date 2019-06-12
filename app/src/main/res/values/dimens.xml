@@ -8,4 +8,5 @@
     <dimen name="Toggle_Button_Width">140dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="Teacher_check">20sp</dimen>
+    <dimen name="Help_heading">20sp</dimen>
 </resources>
