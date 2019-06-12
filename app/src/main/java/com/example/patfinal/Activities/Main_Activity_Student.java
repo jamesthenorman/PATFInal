@@ -131,7 +131,6 @@ public class Main_Activity_Student extends AppCompatActivity {
                 return true;
 
             case R.id.Help:
-                Toast.makeText(this, "Help", Toast.LENGTH_SHORT).show();
                 openHelpScreen();
                 deselect();
                 return true;

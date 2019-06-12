@@ -2,6 +2,7 @@ package com.example.patfinal.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,7 @@ public class Teacher_Login extends AppCompatActivity {
     Button sub;
     TextView Wrong;
     String Pass = "pass";
+    FloatingActionButton help;
     private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
@@ -27,6 +29,14 @@ public class Teacher_Login extends AppCompatActivity {
         sub = findViewById(R.id.buttonSub);
         Wrong = findViewById(R.id.wrong);
         System.out.println(password.getText().toString());
+        help = findViewById(R.id.floatingActionButton2);
+
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHelpScreen();
+            }
+        });
 
 
         sub.setOnClickListener(new View.OnClickListener() {
@@ -34,12 +44,10 @@ public class Teacher_Login extends AppCompatActivity {
             public void onClick(View v) {
                 if (password.getText().toString().equals(Pass)) {
                     openTeacher();
-                    System.out.println("Test");
                     Wrong.setVisibility(View.INVISIBLE);
 
                 } else {
                     Wrong.setVisibility(View.VISIBLE);
-                    System.out.println("yoooo");
 
                 }
             }
@@ -48,6 +56,11 @@ public class Teacher_Login extends AppCompatActivity {
 
     public void openTeacher() {
         Intent intent = new Intent(this, Teacher.class);
+        startActivity(intent);
+
+    }
+    public void openHelpScreen() {
+        Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
 
     }

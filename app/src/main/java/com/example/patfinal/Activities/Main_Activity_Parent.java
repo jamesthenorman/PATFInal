@@ -1,5 +1,6 @@
 package com.example.patfinal.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -122,13 +123,18 @@ public class Main_Activity_Parent extends AppCompatActivity {
                 return true;
 
             case R.id.Help:
-                Toast.makeText(this, "Help", Toast.LENGTH_SHORT).show();
+                openHelpScreen();
                 deselect();
                 return true;
 
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    public void openHelpScreen() {
+        Intent intent = new Intent(this, Activity_Help.class);
+        startActivity(intent);
+
     }
 
 

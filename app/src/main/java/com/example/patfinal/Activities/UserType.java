@@ -2,6 +2,7 @@ package com.example.patfinal.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -19,12 +20,22 @@ public class UserType extends AppCompatActivity {
     RadioButton radioButton;
     RadioGroup group;
     private FirebaseAnalytics mFirebaseAnalytics;
+    FloatingActionButton help;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_type);
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         group = findViewById(R.id.radioGroup);
+
+        help = findViewById(R.id.floatingActionButton4);
+
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHelpScreen();
+            }
+        });
 
         Button sub = findViewById(R.id.btnSub);
         sub.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +80,10 @@ public class UserType extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void openHelpScreen() {
+        Intent intent = new Intent(this, Activity_Help.class);
+        startActivity(intent);
 
+    }
 }
 

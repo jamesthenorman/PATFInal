@@ -3,6 +3,7 @@ package com.example.patfinal.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar progressBar;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
     FirebaseAnalytics mFirebaseAnalytics;
+    FloatingActionButton help;
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         bt = findViewById(R.id.btnCont);
         textView = findViewById(R.id.textView2);
         Teacher = findViewById(R.id.TeacherLogin);
+
 
         progressBar = findViewById(R.id.progressBar);
         progressBar.setVisibility(View.INVISIBLE);
@@ -70,6 +73,15 @@ public class MainActivity extends AppCompatActivity {
                 progressBar.setVisibility(View.VISIBLE);
                 Verify(number);
 
+            }
+        });
+
+        help = findViewById(R.id.floatingActionButton4);
+
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHelpScreen();
             }
         });
 
@@ -137,6 +149,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void openHelpScreen() {
+        Intent intent = new Intent(this, Activity_Help.class);
+        startActivity(intent);
+
     }
 
     public void openTeacher() {

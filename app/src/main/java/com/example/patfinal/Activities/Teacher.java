@@ -1,11 +1,14 @@
 package com.example.patfinal.Activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.patfinal.Fragment_Teacher.Fragment_Add_User;
@@ -16,6 +19,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 public class Teacher extends AppCompatActivity {
     private TextView mTextMessage;
     private FirebaseAnalytics mFirebaseAnalytics;
+    FloatingActionButton help;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -47,6 +51,19 @@ public class Teacher extends AppCompatActivity {
         mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         navView.setSelectedItemId(R.id.navigation_home);
+        help = findViewById(R.id.floatingActionButton3);
+
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHelpScreen();
+            }
+        });
+
+    }
+    public void openHelpScreen() {
+        Intent intent = new Intent(this, Activity_Help.class);
+        startActivity(intent);
 
     }
 
