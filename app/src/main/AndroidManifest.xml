@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity_Help"></activity>
+        <activity android:name=".Activities.Activity_Help"></activity>
         <activity
             android:name=".Activities.Teacher_Login"
             android:label="@string/title_activity_teacher__login"

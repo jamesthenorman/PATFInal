@@ -1,7 +1,9 @@
-package com.example.patfinal;
+package com.example.patfinal.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.patfinal.R;
 
 public class Activity_Help extends AppCompatActivity {
 
