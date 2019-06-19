@@ -24,14 +24,14 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Fragment_Teacher_Check extends Fragment {
 
-    public static String number;
-    Button btnSub;
-    EditText schoolNumber;
-    static TextView test;
-    ProgressBar progressBar;
+    private static String number;
+    private Button btnSub;
+    private EditText schoolNumber;
+    public static TextView test;
+    private ProgressBar progressBar;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference databaseReference = database.getReference();
 
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference databaseReference = database.getReference();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -54,7 +54,7 @@ public class Fragment_Teacher_Check extends Fragment {
         return view;
     }
 
-    public void searchSchoolNumber(final EditText x) {
+    private void searchSchoolNumber(final EditText x) {
         try {
             databaseReference.child("Users").child(x.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
@@ -86,7 +86,7 @@ public class Fragment_Teacher_Check extends Fragment {
     }
 
 
-    public void openTeacherCheck() {
+    private void openTeacherCheck() {
         FragmentTransaction fr1 = getFragmentManager().beginTransaction().addToBackStack("Tag");
         fr1.replace(R.id.fragment_container, new Fragment_View_In_Out());
         fr1.commit();

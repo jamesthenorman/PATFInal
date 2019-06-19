@@ -11,8 +11,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.example.patfinal.Fragment_Users.Fragment_Contact_Us;
 import com.example.patfinal.Fragment_Users.Fragment_Fire;
 import com.example.patfinal.Fragment_Users.Fragment_History;
@@ -28,7 +26,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class Main_Activity_Student extends AppCompatActivity {
     private FirebaseAnalytics mFirebaseAnalytics;
-    static BottomNavigationView bottomnav;
+    private static BottomNavigationView bottomnav;
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -57,12 +55,11 @@ public class Main_Activity_Student extends AppCompatActivity {
                 }
             };
 
-    static public void deselect() {
+    static private void deselect() {
         for (int i = 0; i < 4; i++) {
             bottomnav.getMenu().getItem(i).setChecked(false);
         }
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,19 +130,10 @@ public class Main_Activity_Student extends AppCompatActivity {
         }
     }
 
-    public void openHelpScreen() {
+    private void openHelpScreen() {
         Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
 
     }
 
-/*
-    public static void other(int x) {
-        switch (x) {
-            case 1:
-
-                break;
-        }
-    }
-*/
 }

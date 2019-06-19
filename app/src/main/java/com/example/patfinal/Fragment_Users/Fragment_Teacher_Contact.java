@@ -23,17 +23,12 @@ import static android.support.constraint.Constraints.TAG;
 public class Fragment_Teacher_Contact extends Fragment {
 
     //Firebase
-    TextView TeacherName1, TeacherName2, TeacherName3, TeacherName4, TeacherName5;
-
-    TextView TeacherNumber1, TeacherNumber2, TeacherNumber3, TeacherNumber4, TeacherNumber5;
-
-    TextView TeacherRoom1, TeacherRoom2, TeacherRoom3, TeacherRoom4, TeacherRoom5;
-
-    TextView TeacherEmail1, TeacherEmail2, TeacherEmail3, TeacherEmail4, TeacherEmail5;
-
-    ProgressBar progressBar;
-
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+    private TextView TeacherName1, TeacherName2, TeacherName3, TeacherName4, TeacherName5;
+    private TextView TeacherNumber1, TeacherNumber2, TeacherNumber3, TeacherNumber4, TeacherNumber5;
+    private TextView TeacherRoom1, TeacherRoom2, TeacherRoom3, TeacherRoom4, TeacherRoom5;
+    private TextView TeacherEmail1, TeacherEmail2, TeacherEmail3, TeacherEmail4, TeacherEmail5;
+    private ProgressBar progressBar;
+    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
     @Nullable
     @Override
@@ -86,8 +81,7 @@ public class Fragment_Teacher_Contact extends Fragment {
         return view;
     }
 
-
-    public void GetAndSet() {
+    private void GetAndSet() {
         databaseReference.child("Teacher Contact").addValueEventListener(new ValueEventListener() {
 
             @Override

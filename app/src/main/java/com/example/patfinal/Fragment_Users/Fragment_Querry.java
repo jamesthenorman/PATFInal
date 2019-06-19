@@ -27,17 +27,17 @@ import static com.example.patfinal.Fragment_Users.Fragment_In_or_Out.queryList;
 import static com.example.patfinal.Fragment_Users.Fragment_In_or_Out.queryListLen;
 
 public class Fragment_Querry extends Fragment {
-    Button button1;
-    EditText timeOut;
-    EditText timeIn;
-    TextView Week;
-    TextView day;
-    CheckBox outNight;
-    EditText method;
-    EditText notes;
-    int x = queryListLen;
-    int saves = 0;
-    ProgressBar progressBar;
+    private Button button1;
+    private EditText timeOut;
+    private EditText timeIn;
+    private TextView Week;
+    private TextView day;
+    private CheckBox outNight;
+    private EditText method;
+    private EditText notes;
+    private int x = queryListLen;
+    private int saves = 0;
+    private ProgressBar progressBar;
 
 
     @Nullable
@@ -102,7 +102,7 @@ public class Fragment_Querry extends Fragment {
         return view;
     }
 
-    public void save() {
+    private void save() {
         progressBar.setVisibility(View.VISIBLE);
         System.out.println(timeIn.getText().toString());
         String timeout = timeOut.getText().toString();
@@ -127,7 +127,7 @@ public class Fragment_Querry extends Fragment {
 
     }
 
-    public void openNext() {
+    private void openNext() {
         System.out.println(x + "X");
         System.out.println(saves + "Saves");
         if (x > saves) {
@@ -153,7 +153,7 @@ public class Fragment_Querry extends Fragment {
 
     }
 
-    public void openFirst() {
+    private void openFirst() {
         String setWeek;
         String setDay;
         setWeek = queryList[saves].getWeek();

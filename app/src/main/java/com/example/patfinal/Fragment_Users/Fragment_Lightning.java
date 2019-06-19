@@ -14,7 +14,7 @@ import com.example.patfinal.R;
 
 public class Fragment_Lightning extends Fragment {
 
-    ImageView imageView;
+    private ImageView imageView;
 
     @Nullable
     @Override

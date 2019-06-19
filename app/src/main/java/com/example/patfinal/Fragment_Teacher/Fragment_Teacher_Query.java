@@ -23,16 +23,16 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Fragment_Teacher_Query extends Fragment {
-    Button button1;
-    EditText timeOut;
-    EditText timeIn;
-    TextView Week;
+    private Button button1;
+    private EditText timeOut;
+    private EditText timeIn;
+    private TextView Week;
     TextView day;
-    CheckBox outNight;
-    EditText method;
-    EditText notes;
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-    ProgressBar progressBar;
+    private CheckBox outNight;
+    private EditText method;
+    private EditText notes;
+    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+    private ProgressBar progressBar;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,7 +47,7 @@ public class Fragment_Teacher_Query extends Fragment {
         outNight = view.findViewById(R.id.outForNight);
         method = view.findViewById(R.id.method);
         notes = view.findViewById(R.id.notes);
-        progressBar=view.findViewById(R.id.progressBar);
+        progressBar = view.findViewById(R.id.progressBar);
         set();
         disable();
         button1.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +63,7 @@ public class Fragment_Teacher_Query extends Fragment {
         return view;
     }
 
-    public void set() {
+    private void set() {
         System.out.println(Fragment_Teacher_Check.test.getText());
         System.out.println(getWeek());
         System.out.println(getDay());
@@ -108,13 +108,13 @@ public class Fragment_Teacher_Query extends Fragment {
         });
     }
 
-    public String getDay() {
+    private String getDay() {
         String x = Fragment_View_In_Out.day.getText().toString();
         return x;
 
     }
 
-    public String getWeek() {
+    private String getWeek() {
         Calendar calendar = Calendar.getInstance();
         int day = calendar.get(Calendar.DAY_OF_WEEK);
         int x = 0;

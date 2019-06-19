@@ -17,10 +17,11 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 public class UserType extends AppCompatActivity {
 
 
-    RadioButton radioButton;
-    RadioGroup group;
+    private RadioButton radioButton;
+    private RadioGroup group;
     private FirebaseAnalytics mFirebaseAnalytics;
-    FloatingActionButton help;
+    private FloatingActionButton help;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,19 +70,19 @@ public class UserType extends AppCompatActivity {
         System.out.println(radioButton.toString());
     }
 
-    public void openMainScreen() {
+    private void openMainScreen() {
         Intent intent = new Intent(this, Main_Activity_Student.class);
         startActivity(intent);
 
     }
 
-    public void openParentScreen() {
+    private void openParentScreen() {
         Intent intent = new Intent(this, Main_Activity_Parent.class);
         startActivity(intent);
 
     }
 
-    public void openHelpScreen() {
+    private void openHelpScreen() {
         Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
 

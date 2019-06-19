@@ -25,17 +25,17 @@ import static android.support.constraint.Constraints.TAG;
 
 
 public class Fragment_Teacher_Personal_Info extends Fragment {
-    TextView first;
-    TextView last;
-    TextView phone;
-    TextView parent;
-    TextView emergency;
-    TextView room;
-    TextView allergies;
-    Button submit;
-    ProgressBar progressBar;
-    DatabaseReference mDatabase;
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+    private TextView first;
+    private TextView last;
+    private TextView phone;
+    private TextView parent;
+    private TextView emergency;
+    private TextView room;
+    private TextView allergies;
+    private Button submit;
+    private ProgressBar progressBar;
+    private DatabaseReference mDatabase;
+    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
     @Nullable
     @Override
@@ -65,7 +65,7 @@ public class Fragment_Teacher_Personal_Info extends Fragment {
 
 
     //Download and set the texts
-    public void download() {
+    private void download() {
 
         databaseReference.child("Users").child(Fragment_Teacher_Check.test.getText().toString()).child("Personal Details").addListenerForSingleValueEvent(new ValueEventListener() {
 

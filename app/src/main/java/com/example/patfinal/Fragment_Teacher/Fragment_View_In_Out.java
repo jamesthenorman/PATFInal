@@ -27,17 +27,17 @@ import java.util.Calendar;
 
 
 public class Fragment_View_In_Out extends Fragment {
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-    TextView nameandnum;
-    String week;
-    CheckBox consentMon, consentTue, consentWed, consentThu, consentFri, consentSat, consentSun;
-    CheckBox InOutMon, InOutTue, InOutWed, InOutThu, InOutFri, InOutSat, InOutSun;
-    TextView Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday;
-    Button History;
-    Button personalInfo;
+    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+    private TextView nameandnum;
+    private String week;
+    private CheckBox consentMon, consentTue, consentWed, consentThu, consentFri, consentSat, consentSun;
+    private CheckBox InOutMon, InOutTue, InOutWed, InOutThu, InOutFri, InOutSat, InOutSun;
+    private TextView Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday;
+    private Button History;
+    private Button personalInfo;
     static TextView day;
-    FrameLayout query;
-    ProgressBar progressBar;
+    private FrameLayout query;
+    private ProgressBar progressBar;
 
 
     @Nullable
@@ -163,15 +163,15 @@ public class Fragment_View_In_Out extends Fragment {
         return view;
     }
 
-    public void populate() {
-        SetNamenumber();
+    private void populate() {
+        SetNameNumber();
         populateConsent();
         populateInOut();
         progressBar.setVisibility(View.INVISIBLE);
 
     }
 
-    public void SetNamenumber() {
+    private void SetNameNumber() {
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -192,8 +192,8 @@ public class Fragment_View_In_Out extends Fragment {
         });
     }
 
-    public void populateConsent() {
-        databaseReference.child("Users").child(Fragment_Teacher_Check.test.getText().toString()).child("Consent History").child(getweek()).addListenerForSingleValueEvent(new ValueEventListener() {
+    private void populateConsent() {
+        databaseReference.child("Users").child(Fragment_Teacher_Check.test.getText().toString()).child("Consent History").child(getWeek()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -229,8 +229,8 @@ public class Fragment_View_In_Out extends Fragment {
 
     }
 
-    public void populateInOut() {
-        databaseReference.child("Users").child(Fragment_Teacher_Check.test.getText().toString()).child("User History").child(getweek()).addListenerForSingleValueEvent(new ValueEventListener() {
+    private void populateInOut() {
+        databaseReference.child("Users").child(Fragment_Teacher_Check.test.getText().toString()).child("User History").child(getWeek()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -266,7 +266,7 @@ public class Fragment_View_In_Out extends Fragment {
 
     }
 
-    public String getweek() {
+    private String getWeek() {
         Calendar calendar = Calendar.getInstance();
         int day = calendar.get(Calendar.DAY_OF_WEEK);
         int x = 0;
@@ -304,7 +304,7 @@ public class Fragment_View_In_Out extends Fragment {
         return week;
     }
 
-    public void disableClick() {
+    private void disableClick() {
 
         nameandnum.setClickable(false);
         consentMon.setClickable(false);
@@ -326,19 +326,19 @@ public class Fragment_View_In_Out extends Fragment {
 
     }
 
-    public void openHistory() {
+    private void openHistory() {
         FragmentTransaction fr1 = getFragmentManager().beginTransaction().addToBackStack("Tag");
         fr1.replace(R.id.fragment_container, new Fragment_Teacher_History());
         fr1.commit();
     }
 
-    public void openInfo() {
+    private void openInfo() {
         FragmentTransaction fr1 = getFragmentManager().beginTransaction().addToBackStack("Tag");
         fr1.replace(R.id.fragment_container, new Fragment_Teacher_Personal_Info());
         fr1.commit();
     }
 
-    public void openQuery() {
+    private void openQuery() {
         query.setVisibility(View.VISIBLE);
         FragmentTransaction fr1 = getFragmentManager().beginTransaction().addToBackStack("Tag");
         fr1.add(R.id.query, new Fragment_Teacher_Query());

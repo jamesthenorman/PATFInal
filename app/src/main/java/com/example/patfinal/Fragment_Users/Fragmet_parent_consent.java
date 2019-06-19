@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.patfinal.Objects.Week;
@@ -21,29 +20,24 @@ import com.example.patfinal.Personal_Info;
 import com.example.patfinal.Processes.Populate_Spinner;
 import com.example.patfinal.R;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Fragmet_parent_consent extends Fragment {
 
     //Firebase
 
-    Button btn;
-    ToggleButton tbmon, tbtue, tbwed, tbthu, tbfri, tbsat, tbsun;
-    TextView tvmon, tvtue, tvwed, tvthu, tvfri, tvsat, tvsun;
-    boolean mon, tue, wed, thu, fri, sat, sun;
-    Spinner spinner;
-    ProgressBar progressBar;
-    DatabaseReference databaseReference;
+    private Button btn;
+    private ToggleButton tbmon, tbtue, tbwed, tbthu, tbfri, tbsat, tbsun;
+    private TextView tvmon, tvtue, tvwed, tvthu, tvfri, tvsat, tvsun;
+    private boolean mon, tue, wed, thu, fri, sat, sun;
+    private Spinner spinner;
+    private ProgressBar progressBar;
+    private DatabaseReference databaseReference;
 
     @Nullable
     @Override
@@ -128,7 +122,7 @@ public class Fragmet_parent_consent extends Fragment {
         return view;
     }
 
-    public void downloadTv(String text) {
+    private void downloadTv(String text) {
         databaseReference.child("Users").child(Personal_Info.getSchool_number()).child("User History").child(text).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -163,7 +157,7 @@ public class Fragmet_parent_consent extends Fragment {
         });
     }
 
-    public void downloadTb(String text) {
+    private void downloadTb(String text) {
         databaseReference.child("Users").child(Personal_Info.getSchool_number()).child("Consent History").child(text).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -198,7 +192,7 @@ public class Fragmet_parent_consent extends Fragment {
         });
     }
 
-    public void set(boolean mon, boolean tue, boolean wed, boolean thu, boolean fri, boolean sat, boolean sun) {
+    private void set(boolean mon, boolean tue, boolean wed, boolean thu, boolean fri, boolean sat, boolean sun) {
 
         if (mon) {
             tvmon.setText("In");
@@ -239,7 +233,7 @@ public class Fragmet_parent_consent extends Fragment {
 
     }
 
-    public void setTB(boolean mon, boolean tue, boolean wed, boolean thu, boolean fri, boolean sat, boolean sun) {
+    private void setTB(boolean mon, boolean tue, boolean wed, boolean thu, boolean fri, boolean sat, boolean sun) {
 
         if (mon == true) {
             tbmon.setChecked(true);
@@ -280,7 +274,7 @@ public class Fragmet_parent_consent extends Fragment {
 
     }
 
-    public void saveTB(String text) {
+    private void saveTB(String text) {
 
 
         boolean Mon = tbmon.isChecked();

@@ -37,17 +37,17 @@ import static java.lang.String.valueOf;
 
 public class Fragment_Personal_Details extends Fragment {
     //Firebase
-    EditText first;
-    EditText last;
-    EditText phone;
-    EditText parent;
-    EditText emergency;
-    EditText room;
-    EditText allergies;
-    Button submit;
-    ProgressBar progressBar;
-    DatabaseReference mDatabase;
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+    private EditText first;
+    private EditText last;
+    private EditText phone;
+    private EditText parent;
+    private EditText emergency;
+    private EditText room;
+    private EditText allergies;
+    private Button submit;
+    private ProgressBar progressBar;
+    private DatabaseReference mDatabase;
+    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
 // ...
 
@@ -87,7 +87,7 @@ public class Fragment_Personal_Details extends Fragment {
     }
 
     //Download and set the texts
-    public void download() {
+    private void download() {
 
         databaseReference.child("Users").child(Personal_Info.getSchool_number()).child("Personal Details").addListenerForSingleValueEvent(new ValueEventListener() {
 

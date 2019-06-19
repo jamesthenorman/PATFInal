@@ -30,30 +30,29 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
 
 
 public class Fragment_In_or_Out extends Fragment {
 
-    RadioButton RBIm, RBOm, RBItu, RBOtu, RBIw, RBOw, RBIth, RBOth, RBIf, RBOf, RBIsa, RBOsa, RBIsu, RBOsu;
-    RadioGroup rgmon, rgtue, rgwed, rgthu, rgfri, rgsat, rgsun;
-    Button sub;
-    static Spinner spinner;
-    FrameLayout querry;
+    private RadioButton RBIm, RBOm, RBItu, RBOtu, RBIw, RBOw, RBIth, RBOth, RBIf, RBOf, RBIsa, RBOsa, RBIsu, RBOsu;
+    private RadioGroup rgmon, rgtue, rgwed, rgthu, rgfri, rgsat, rgsun;
+    private Button sub;
+    private static Spinner spinner;
+    private FrameLayout querry;
     public static Query[] queryList = new Query[7];
     static int queryListLen = 0;
-    boolean mon;
-    boolean tue;
-    boolean wed;
-    boolean thu;
-    boolean fri;
-    boolean sat;
-    boolean sun;
-    DatabaseReference databaseReference;
-    static Week weekDownload;
-    ProgressBar progressBar;
+    private boolean mon;
+    private boolean tue;
+    private boolean wed;
+    private boolean thu;
+    private boolean fri;
+    private boolean sat;
+    private boolean sun;
+    private DatabaseReference databaseReference;
+    private static Week weekDownload;
+    private ProgressBar progressBar;
 
     @Nullable
     @Override
@@ -151,8 +150,7 @@ public class Fragment_In_or_Out extends Fragment {
         return view;
     }
 
-
-    public void download(final String text) {
+    private void download(final String text) {
 
         databaseReference.child("Users").child(Personal_Info.getSchool_number()).child("User History").child(text).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -198,8 +196,7 @@ public class Fragment_In_or_Out extends Fragment {
         weekDownload = w;
     }
 
-
-    public void writeToFile(String text) {
+    private void writeToFile(String text) {
 
 
         boolean mon = RBIm.isChecked();
@@ -225,7 +222,7 @@ public class Fragment_In_or_Out extends Fragment {
 
     }
 
-    public void check(boolean mon, boolean tue, boolean wed, boolean thu, boolean fri, boolean sat, boolean sun) {
+    private void check(boolean mon, boolean tue, boolean wed, boolean thu, boolean fri, boolean sat, boolean sun) {
         if (mon == true) {
             RBIm.setChecked(true);
         } else {
@@ -269,7 +266,7 @@ public class Fragment_In_or_Out extends Fragment {
         }
     }
 
-    public void selection() {
+    private void selection() {
         Calendar calendar = Calendar.getInstance();
         int day = calendar.get(Calendar.DAY_OF_WEEK);
         int y = 0;
@@ -434,7 +431,7 @@ public class Fragment_In_or_Out extends Fragment {
         }
     }
 
-    public void openQuery() {
+    private void openQuery() {
         querry.setVisibility(View.VISIBLE);
         FragmentTransaction fr5 = getFragmentManager().beginTransaction();
         fr5.add(R.id.FrameQuerry, new Fragment_Querry());
@@ -443,7 +440,7 @@ public class Fragment_In_or_Out extends Fragment {
 
     }
 
-    public void seeQuery() {
+    private void seeQuery() {
 
         int len = 0;
 

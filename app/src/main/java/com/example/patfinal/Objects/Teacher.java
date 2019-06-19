@@ -47,7 +47,6 @@ public class Teacher {
         return roomNumber;
     }
 
-
     public String getEmail() {
         return email;
     }

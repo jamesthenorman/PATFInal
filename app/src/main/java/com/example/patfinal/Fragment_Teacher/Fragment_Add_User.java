@@ -1,7 +1,6 @@
 package com.example.patfinal.Fragment_Teacher;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -15,8 +14,6 @@ import android.widget.Toast;
 
 import com.example.patfinal.Objects.Personal_Details;
 import com.example.patfinal.R;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -24,18 +21,15 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class Fragment_Add_User extends Fragment {
 
-    TextView Fill;
-
-    EditText First1;
-    EditText Last1;
-    EditText schoolNum1;
-    EditText Room1;
-    ProgressBar progressBar;
-    Button button;
-
+    private TextView Fill;
+    private EditText First1;
+    private EditText Last1;
+    private EditText schoolNum1;
+    private EditText Room1;
+    private ProgressBar progressBar;
+    private Button button;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     @Nullable
     @Override
@@ -71,7 +65,7 @@ public class Fragment_Add_User extends Fragment {
         return view;
     }
 
-    public void saveOld() {
+    private void saveOld() {
         try {
             String first = First1.getText().toString();
             String last = Last1.getText().toString();

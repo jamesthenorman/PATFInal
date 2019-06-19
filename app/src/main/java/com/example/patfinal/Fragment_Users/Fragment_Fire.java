@@ -14,8 +14,8 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.patfinal.R;
 
 public class Fragment_Fire extends Fragment {
-    ProgressBar progressBar;
-    ImageView imageView;
+    private ProgressBar progressBar;
+    private ImageView imageView;
 
     @Nullable
     @Override

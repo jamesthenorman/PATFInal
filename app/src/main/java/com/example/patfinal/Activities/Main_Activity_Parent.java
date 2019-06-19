@@ -131,7 +131,8 @@ public class Main_Activity_Parent extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-    public void openHelpScreen() {
+
+    private void openHelpScreen() {
         Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
 

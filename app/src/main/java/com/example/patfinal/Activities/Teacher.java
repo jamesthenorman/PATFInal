@@ -19,7 +19,7 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 public class Teacher extends AppCompatActivity {
     private TextView mTextMessage;
     private FirebaseAnalytics mFirebaseAnalytics;
-    FloatingActionButton help;
+    private FloatingActionButton help;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -61,7 +61,8 @@ public class Teacher extends AppCompatActivity {
         });
 
     }
-    public void openHelpScreen() {
+
+    private void openHelpScreen() {
         Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
 

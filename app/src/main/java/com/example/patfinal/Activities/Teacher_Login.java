@@ -13,11 +13,11 @@ import com.example.patfinal.R;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class Teacher_Login extends AppCompatActivity {
-    EditText password;
-    Button sub;
-    TextView Wrong;
-    String Pass = "pass";
-    FloatingActionButton help;
+    private EditText password;
+    private Button sub;
+    private TextView Wrong;
+    private String Pass = "pass";
+    private FloatingActionButton help;
     private FirebaseAnalytics mFirebaseAnalytics;
 
     @Override
@@ -54,13 +54,13 @@ public class Teacher_Login extends AppCompatActivity {
         });
     }
 
-    public void openTeacher() {
+    private void openTeacher() {
         Intent intent = new Intent(this, Teacher.class);
         startActivity(intent);
 
     }
 
-    public void openHelpScreen() {
+    private void openHelpScreen() {
         Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
 

@@ -11,37 +11,26 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.example.patfinal.Objects.Personal_Details;
 import com.example.patfinal.Personal_Info;
 import com.example.patfinal.R;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
 
 
-    EditText number;
-    Button bt;
-    TextView textView;
-    TextView Teacher;
-    ProgressBar progressBar;
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-    FirebaseAnalytics mFirebaseAnalytics;
-    FloatingActionButton help;
-
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-
+    private EditText number;
+    private Button bt;
+    private TextView textView;
+    private TextView Teacher;
+    private ProgressBar progressBar;
+    private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private FloatingActionButton help;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,18 +76,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void openUsertype() {
+    private void openUsertype() {
         Intent intent = new Intent(this, UserType.class);
         startActivity(intent);
     }
 
-    public void openTeacherPass() {
+    private void openTeacherPass() {
         Intent intent = new Intent(this, Teacher_Login.class);
         startActivity(intent);
 
     }
 
-    public void Verify(final EditText x) {
+    private void Verify(final EditText x) {
         try {
             databaseReference.child("Users").child(x.getText().toString()).addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
@@ -130,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void setName() {
+    private void setName() {
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -150,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void openHelpScreen() {
+    private void openHelpScreen() {
         Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
 

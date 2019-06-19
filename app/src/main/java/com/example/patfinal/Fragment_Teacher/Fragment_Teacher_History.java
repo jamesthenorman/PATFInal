@@ -10,58 +10,23 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.example.patfinal.Objects.Week;
-import com.example.patfinal.Personal_Info;
 import com.example.patfinal.R;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import static java.lang.String.valueOf;
-
 
 public class Fragment_Teacher_History extends Fragment {
-    TextView tv1;
-    TextView tv2;
-    TextView tv3;
-    TextView tv4;
-    TextView tv5;
-    TextView tv6;
-    TextView tv7;
-    TextView tv8;
-    TextView tv9;
-    TextView tv10;
-    TextView tv11;
-    TextView tv12;
-    TextView tv13;
-    TextView tv14;
-    TextView tv15;
-    TextView tv16;
-    TextView tv17;
-    TextView tv18;
-    TextView tv19;
-    TextView tv20;
-    TextView tv21;
-    TextView tv22;
-    TextView tv23;
-    TextView tv24;
-    TextView tv25;
-    TextView tv26;
-    TextView tv27;
+    TextView tv1, tv2, tv3, tv4, tv5, tv6, tv7, tv8, tv9, tv10, tv11, tv12, tv13, tv14, tv15, tv16, tv17, tv18, tv19, tv20, tv21, tv22, tv23, tv24, tv25, tv26, tv27;
     static String b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19, b20, b21, b22, b23, b24, b25, b26, b27;
-    static String[] arr = {"", "", ""};
-    DatabaseReference databaseReference;
-    ProgressBar progressBar;
+    private ProgressBar progressBar;
+    private static String[] arr = {"", "", ""};
+    private DatabaseReference databaseReference;
 
     @Nullable
     @Override
@@ -103,8 +68,7 @@ public class Fragment_Teacher_History extends Fragment {
         return view;
     }
 
-
-    public String getDate(int x) {
+    private String getDate(int x) {
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat mdformat = new SimpleDateFormat("LLL-dd ");
 
@@ -141,7 +105,7 @@ public class Fragment_Teacher_History extends Fragment {
         return mdformat.format(calendar.getTime());
     }
 
-    public boolean download() {
+    private boolean download() {
         progressBar.setVisibility(View.VISIBLE);
         String[] arr = getWeeks();
 
@@ -540,7 +504,7 @@ public class Fragment_Teacher_History extends Fragment {
         return true;
     }
 
-    public static String[] getWeeks() {
+    private static String[] getWeeks() {
         String[] array = {"", "", "", ""};
 
         Calendar calendar = Calendar.getInstance();
@@ -1177,6 +1141,5 @@ public class Fragment_Teacher_History extends Fragment {
         System.out.println(b1);
     }
 */
-
 
 }
