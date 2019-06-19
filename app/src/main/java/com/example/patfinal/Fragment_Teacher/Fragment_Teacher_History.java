@@ -58,12 +58,9 @@ public class Fragment_Teacher_History extends Fragment {
     TextView tv25;
     TextView tv26;
     TextView tv27;
-
-    static int x = 0;
-
     static String b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19, b20, b21, b22, b23, b24, b25, b26, b27;
-
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    static String[] arr = {"", "", ""};
+    DatabaseReference databaseReference;
     ProgressBar progressBar;
 
     @Nullable
@@ -143,10 +140,6 @@ public class Fragment_Teacher_History extends Fragment {
 
         return mdformat.format(calendar.getTime());
     }
-
-
-    static String[] arr = {"", "", ""};
-    DatabaseReference databaseReference;
 
     public boolean download() {
         progressBar.setVisibility(View.VISIBLE);
@@ -547,6 +540,63 @@ public class Fragment_Teacher_History extends Fragment {
         return true;
     }
 
+    public static String[] getWeeks() {
+        String[] array = {"", "", "", ""};
+
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
+        int x = 0;
+        switch (day) {
+            case Calendar.MONDAY:
+
+                break;
+            case Calendar.TUESDAY:
+                x = 1;
+                break;
+            case Calendar.WEDNESDAY:
+                x = 2;
+                break;
+            case Calendar.THURSDAY:
+                x = 3;
+                break;
+            case Calendar.FRIDAY:
+                x = 4;
+                break;
+            case Calendar.SATURDAY:
+                x = 5;
+                break;
+            case Calendar.SUNDAY:
+                x = 6;
+                break;
+
+
+        }
+        SimpleDateFormat mdformat = new SimpleDateFormat("LLLL-dd ");
+        calendar.add(Calendar.DAY_OF_MONTH, -1 - x);
+        String one = mdformat.format(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, -6);
+        String two = mdformat.format(calendar.getTime());
+        array[0] = two + " - " + one;
+        calendar.add(Calendar.DAY_OF_MONTH, -1);
+        one = mdformat.format(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, -6);
+        two = mdformat.format(calendar.getTime());
+        array[1] = two + " - " + one;
+        calendar.add(Calendar.DAY_OF_MONTH, -1);
+        one = mdformat.format(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, -6);
+        two = mdformat.format(calendar.getTime());
+        array[2] = two + " - " + one;
+        calendar.add(Calendar.DAY_OF_MONTH, -1);
+        one = mdformat.format(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, -6);
+        two = mdformat.format(calendar.getTime());
+        array[3] = two + " - " + one;
+        System.out.println(arr[0]);
+        return array;
+    }
+
+/*
     public void Download() {
         String[] arr = getWeeks();
 
@@ -1126,62 +1176,7 @@ public class Fragment_Teacher_History extends Fragment {
         tv1.setText(valueOf(b1));
         System.out.println(b1);
     }
-
-    public static String[] getWeeks() {
-        String[] array = {"", "", "", ""};
-
-        Calendar calendar = Calendar.getInstance();
-        int day = calendar.get(Calendar.DAY_OF_WEEK);
-        int x = 0;
-        switch (day) {
-            case Calendar.MONDAY:
-
-                break;
-            case Calendar.TUESDAY:
-                x = 1;
-                break;
-            case Calendar.WEDNESDAY:
-                x = 2;
-                break;
-            case Calendar.THURSDAY:
-                x = 3;
-                break;
-            case Calendar.FRIDAY:
-                x = 4;
-                break;
-            case Calendar.SATURDAY:
-                x = 5;
-                break;
-            case Calendar.SUNDAY:
-                x = 6;
-                break;
-
-
-        }
-        SimpleDateFormat mdformat = new SimpleDateFormat("LLLL-dd ");
-        calendar.add(Calendar.DAY_OF_MONTH, -1 - x);
-        String one = mdformat.format(calendar.getTime());
-        calendar.add(Calendar.DAY_OF_YEAR, -6);
-        String two = mdformat.format(calendar.getTime());
-        array[0] = two + " - " + one;
-        calendar.add(Calendar.DAY_OF_MONTH, -1);
-        one = mdformat.format(calendar.getTime());
-        calendar.add(Calendar.DAY_OF_YEAR, -6);
-        two = mdformat.format(calendar.getTime());
-        array[1] = two + " - " + one;
-        calendar.add(Calendar.DAY_OF_MONTH, -1);
-        one = mdformat.format(calendar.getTime());
-        calendar.add(Calendar.DAY_OF_YEAR, -6);
-        two = mdformat.format(calendar.getTime());
-        array[2] = two + " - " + one;
-        calendar.add(Calendar.DAY_OF_MONTH, -1);
-        one = mdformat.format(calendar.getTime());
-        calendar.add(Calendar.DAY_OF_YEAR, -6);
-        two = mdformat.format(calendar.getTime());
-        array[3] = two + " - " + one;
-        System.out.println(arr[0]);
-        return array;
-    }
+*/
 
 
 }

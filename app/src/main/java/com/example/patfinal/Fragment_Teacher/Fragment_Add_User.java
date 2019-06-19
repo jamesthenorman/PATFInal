@@ -35,7 +35,6 @@ public class Fragment_Add_User extends Fragment {
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Personal Details");
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     @Nullable
@@ -104,6 +103,7 @@ public class Fragment_Add_User extends Fragment {
 
     }
 
+/*
     public void saveFireStore() {
         try {
             String first = First1.getText().toString();
@@ -145,6 +145,7 @@ public class Fragment_Add_User extends Fragment {
 
 
     }
+*/
 }
 
 

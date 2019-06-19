@@ -23,13 +23,10 @@ import com.google.firebase.database.ValueEventListener;
 
 
 public class Fragment_Teacher_Check extends Fragment {
+
     public static String number;
-
-
     Button btnSub;
     EditText schoolNumber;
-    EditText roomNumber;
-    EditText name;
     static TextView test;
     ProgressBar progressBar;
 
@@ -88,6 +85,14 @@ public class Fragment_Teacher_Check extends Fragment {
         }
     }
 
+
+    public void openTeacherCheck() {
+        FragmentTransaction fr1 = getFragmentManager().beginTransaction().addToBackStack("Tag");
+        fr1.replace(R.id.fragment_container, new Fragment_View_In_Out());
+        fr1.commit();
+    }
+
+/*
     public void SearchRoom() {
         final String Number = roomNumber.getText().toString().trim().toUpperCase();
 
@@ -110,10 +115,6 @@ public class Fragment_Teacher_Check extends Fragment {
         });
 
     }
+*/
 
-    public void openTeacherCheck() {
-        FragmentTransaction fr1 = getFragmentManager().beginTransaction().addToBackStack("Tag");
-        fr1.replace(R.id.fragment_container, new Fragment_View_In_Out());
-        fr1.commit();
-    }
 }

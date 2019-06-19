@@ -155,7 +155,6 @@ public class Fragment_Teacher_Query extends Fragment {
     }
 
     private void disable() {
-        String disableColour = ("#FFFF");
         timeIn.setEnabled(false);
         outNight.setEnabled(false);
         timeOut.setEnabled(false);

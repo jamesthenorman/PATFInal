@@ -28,42 +28,15 @@ import java.util.Calendar;
 
 public class Fragment_View_In_Out extends Fragment {
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-
     TextView nameandnum;
-    String num = Fragment_Teacher_Check.number;
     String week;
-    CheckBox consentMon;
-    CheckBox consentTue;
-    CheckBox consentWed;
-    CheckBox consentThu;
-    CheckBox consentFri;
-    CheckBox consentSat;
-    CheckBox consentSun;
-
-    CheckBox InOutMon;
-    CheckBox InOutTue;
-    CheckBox InOutWed;
-    CheckBox InOutThu;
-    CheckBox InOutFri;
-    CheckBox InOutSat;
-    CheckBox InOutSun;
-
-    TextView Monday;
-    TextView Tuesday;
-    TextView Wednesday;
-    TextView Thursday;
-    TextView Friday;
-    TextView Saturday;
-    TextView Sunday;
-
+    CheckBox consentMon, consentTue, consentWed, consentThu, consentFri, consentSat, consentSun;
+    CheckBox InOutMon, InOutTue, InOutWed, InOutThu, InOutFri, InOutSat, InOutSun;
+    TextView Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday;
     Button History;
-
     Button personalInfo;
-
     static TextView day;
-
     FrameLayout query;
-
     ProgressBar progressBar;
 
 
@@ -100,7 +73,7 @@ public class Fragment_View_In_Out extends Fragment {
 
         query = view.findViewById(R.id.query);
 
-        progressBar=view.findViewById(R.id.progressBar);
+        progressBar = view.findViewById(R.id.progressBar);
 
         Monday.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -189,13 +162,15 @@ public class Fragment_View_In_Out extends Fragment {
 
         return view;
     }
-public void populate(){
-    SetNamenumber();
-    populateConsent();
-    populateInOut();
-    progressBar.setVisibility(View.INVISIBLE);
 
-}
+    public void populate() {
+        SetNamenumber();
+        populateConsent();
+        populateInOut();
+        progressBar.setVisibility(View.INVISIBLE);
+
+    }
+
     public void SetNamenumber() {
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override

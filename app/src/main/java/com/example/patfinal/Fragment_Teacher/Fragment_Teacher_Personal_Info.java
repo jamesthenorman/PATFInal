@@ -25,7 +25,6 @@ import static android.support.constraint.Constraints.TAG;
 
 
 public class Fragment_Teacher_Personal_Info extends Fragment {
-    //Firebase
     TextView first;
     TextView last;
     TextView phone;
@@ -33,16 +32,9 @@ public class Fragment_Teacher_Personal_Info extends Fragment {
     TextView emergency;
     TextView room;
     TextView allergies;
-
     Button submit;
-
     ProgressBar progressBar;
-
-
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-
-    private DatabaseReference mDatabase;
+    DatabaseReference mDatabase;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
     @Nullable
