@@ -7,9 +7,7 @@ public class Populate_Spinner {
     public static String[] week = {"", "", ""};
 
     public static void populate() {
-        String week1 = "";
-        String week2 = "";
-        String week3 = "";
+
 
         Calendar calendar = Calendar.getInstance();
         int day = calendar.get(Calendar.DAY_OF_WEEK);

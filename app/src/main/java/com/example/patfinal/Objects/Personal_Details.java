@@ -9,13 +9,10 @@ public class Personal_Details {
     private String RoomNumber;
     private String Allergies;
 
-
     public Personal_Details() {
     }
 
-    public Personal_Details(String firstname, String lastname, String phonenumber,
-                            String parentPhoneNumber, String emergencyContact, String roomnumber,
-                            String allergies) {
+    public Personal_Details(String firstname, String lastname, String phonenumber, String parentPhoneNumber, String emergencyContact, String roomnumber, String allergies) {
 
         FirstName = firstname;
         LastName = lastname;
@@ -26,7 +23,7 @@ public class Personal_Details {
         Allergies = allergies;
     }
 
-    public Personal_Details(String firstname, String lastname,String roomnumber) {
+    public Personal_Details(String firstname, String lastname, String roomnumber) {
         FirstName = firstname;
         LastName = lastname;
         RoomNumber = roomnumber;
@@ -38,7 +35,7 @@ public class Personal_Details {
         return "Personal_Details{" +
                 "FirstName='" + FirstName + '\'' +
                 ", LastName='" + LastName + '\'' +
-                ", RoomNumber='"+RoomNumber+'\''+
+                ", RoomNumber='" + RoomNumber + '\'' +
                 '}';
     }
 
@@ -46,48 +43,24 @@ public class Personal_Details {
         return FirstName;
     }
 
-    public void setFirstName(String firstname) {
-        FirstName = firstname;
-    }
-
     public String getLastName() {
         return LastName;
-    }
-
-    public void setLastName(String lastName) {
-        LastName = lastName;
     }
 
     public String getPhoneNumber() {
         return PhoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
-    }
-
     public String getParentPhoneNumber() {
         return ParentPhoneNumber;
-    }
-
-    public void setParentPhoneNumber(String parentPhoneNumber) {
-        ParentPhoneNumber = parentPhoneNumber;
     }
 
     public String getEmergencyContact() {
         return EmergencyContact;
     }
 
-    public void setEmergencyContact(String emergencyContact) {
-        EmergencyContact = emergencyContact;
-    }
-
     public String getRoomNumber() {
         return RoomNumber;
-    }
-
-    public void setRoomNumber(String roomNumber) {
-        RoomNumber = roomNumber;
     }
 
     public String getAllergies() {
@@ -96,6 +69,30 @@ public class Personal_Details {
 
     public void setAllergies(String allergies) {
         Allergies = allergies;
+    }
+
+    public void setFirstName(String firstname) {
+        FirstName = firstname;
+    }
+
+    public void setRoomNumber(String roomNumber) {
+        RoomNumber = roomNumber;
+    }
+
+    public void setEmergencyContact(String emergencyContact) {
+        EmergencyContact = emergencyContact;
+    }
+
+    public void setParentPhoneNumber(String parentPhoneNumber) {
+        ParentPhoneNumber = parentPhoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        PhoneNumber = phoneNumber;
+    }
+
+    public void setLastName(String lastName) {
+        LastName = lastName;
     }
 
 

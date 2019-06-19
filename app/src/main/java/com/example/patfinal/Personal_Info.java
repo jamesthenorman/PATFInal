@@ -12,7 +12,6 @@ public class Personal_Info {
         return school_number;
     }
 
-
     public static void setSchool_number(String school_number) {
         Personal_Info.school_number = school_number;
     }
