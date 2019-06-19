@@ -30,7 +30,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
 
-    //Firebase
 
     EditText number;
     Button bt;
@@ -157,12 +156,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+/*
     public void openTeacher() {
         Intent intent = new Intent(this, UserType.class);
         startActivity(intent);
     }
+*/
 
 
+/*
     public void test(final EditText a) {
 
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -199,8 +201,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+*/
 
 
+/*
     public void check2(final EditText num) {
         DocumentReference noteRef1 = db.collection("Users").document(num.getText().toString());
         noteRef1.get()
@@ -227,9 +231,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+*/
 
 
-    public void check(final EditText num) {
+   /* public void check(final EditText num) {
         FirebaseFirestore rootRef = FirebaseFirestore.getInstance();
         DocumentReference docIdRef = rootRef.collection("Users").document(num.getText().toString());
         System.out.println("Blue beans    " + docIdRef);
@@ -252,9 +257,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-    }
+    }*/
 
 
+/*
     public void setName2() {
         DocumentReference noteRef = db.collection("Users").document(Personal_Info.getSchool_number()).collection("Personal Details").document("Document");
         noteRef.get()
@@ -282,5 +288,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+*/
 
 }

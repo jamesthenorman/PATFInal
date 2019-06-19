@@ -80,6 +80,7 @@ public class UserType extends AppCompatActivity {
         startActivity(intent);
 
     }
+
     public void openHelpScreen() {
         Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
