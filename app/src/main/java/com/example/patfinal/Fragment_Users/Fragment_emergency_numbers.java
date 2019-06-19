@@ -18,11 +18,6 @@ public class Fragment_emergency_numbers extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_emergency_numbers, container, false);
 
-
-
-
-
-
         return view;
     }
 }

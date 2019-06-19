@@ -44,16 +44,9 @@ public class Fragment_Personal_Details extends Fragment {
     EditText emergency;
     EditText room;
     EditText allergies;
-
     Button submit;
-
     ProgressBar progressBar;
-
-
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-
-    private DatabaseReference mDatabase;
+    DatabaseReference mDatabase;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
 // ...
@@ -159,6 +152,7 @@ public class Fragment_Personal_Details extends Fragment {
 
     }
 
+/*
     public void save2() {
         DocumentReference noteRef = db.collection("Users").document(Personal_Info.getSchool_number()).collection("Personal Details").document("Document");
 
@@ -188,7 +182,9 @@ public class Fragment_Personal_Details extends Fragment {
                 });
 
     }
+*/
 
+/*
     public void Download() {
         DocumentReference noteRef = db.collection("Users").document(Personal_Info.getSchool_number()).collection("Personal Details").document("Document");
 
@@ -231,6 +227,7 @@ public class Fragment_Personal_Details extends Fragment {
             }
         });
     }
+*/
 
 }
 

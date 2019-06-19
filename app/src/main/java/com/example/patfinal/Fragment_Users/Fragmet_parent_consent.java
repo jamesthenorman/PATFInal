@@ -38,37 +38,12 @@ public class Fragmet_parent_consent extends Fragment {
     //Firebase
 
     Button btn;
-    ToggleButton tbmon;
-    ToggleButton tbtue;
-    ToggleButton tbwed;
-    ToggleButton tbthu;
-    ToggleButton tbfri;
-    ToggleButton tbsat;
-    ToggleButton tbsun;
-
-    TextView tvmon;
-    TextView tvtue;
-    TextView tvwed;
-    TextView tvthu;
-    TextView tvfri;
-    TextView tvsat;
-    TextView tvsun;
-
-    boolean mon;
-    boolean tue;
-    boolean wed;
-    boolean thu;
-    boolean fri;
-    boolean sat;
-    boolean sun;
-
+    ToggleButton tbmon, tbtue, tbwed, tbthu, tbfri, tbsat, tbsun;
+    TextView tvmon, tvtue, tvwed, tvthu, tvfri, tvsat, tvsun;
+    boolean mon, tue, wed, thu, fri, sat, sun;
     Spinner spinner;
-
     ProgressBar progressBar;
-
     DatabaseReference databaseReference;
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-
 
     @Nullable
     @Override
@@ -109,7 +84,7 @@ public class Fragmet_parent_consent extends Fragment {
                 //startActivity(intent);
                 progressBar.setVisibility(View.VISIBLE);
                 saveTB(spinner.getSelectedItem().toString());
-               //
+                //
                 // saveToggle(spinner.getSelectedItem().toString());
 
 
@@ -125,7 +100,7 @@ public class Fragmet_parent_consent extends Fragment {
                 progressBar.setVisibility(View.VISIBLE);
                 downloadTv(spinner.getSelectedItem().toString());
                 //DownloadInOut(spinner.getSelectedItem().toString());
-               // DownloadToggle(spinner.getSelectedItem().toString());
+                // DownloadToggle(spinner.getSelectedItem().toString());
 
 
             }
@@ -221,134 +196,6 @@ public class Fragmet_parent_consent extends Fragment {
 
             }
         });
-    }
-
-    public void DownloadToggle(String week) {
-        DocumentReference noteRef = db.collection("Users").document(Personal_Info.getSchool_number()).collection("Consent").document(week);
-        noteRef.get()
-                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                    @Override
-                    public void onSuccess(DocumentSnapshot documentSnapshot) {
-
-                        if (documentSnapshot.exists()) {
-
-                            try {
-
-
-                                Week week = documentSnapshot.toObject(Week.class);
-
-                                mon = week.isMonday();
-                                tue = week.isTuesday();
-                                wed = week.isWednesday();
-                                thu = week.isThursday();
-                                fri = week.isFriday();
-                                sat = week.isSaturday();
-                                sun = week.isSunday();
-                                progressBar.setVisibility(View.GONE);
-                                setTB(mon, tue, wed, thu, fri, sat, sun);
-
-
-                            } catch (Exception e) {
-                                mon = false;
-                                tue = false;
-                                wed = false;
-                                thu = false;
-                                fri = false;
-                                sat = false;
-                                sun = false;
-                                System.out.println("Error");
-                                progressBar.setVisibility(View.GONE);
-                            }
-                            setTB(mon, tue, wed, thu, fri, sat, sun);
-
-
-                        } else {
-                            progressBar.setVisibility(View.GONE);
-
-                            mon = false;
-                            tue = false;
-                            wed = false;
-                            thu = false;
-                            fri = false;
-                            sat = false;
-                            sun = false;
-                            setTB(mon, tue, wed, thu, fri, sat, sun);
-                            progressBar.setVisibility(View.GONE);
-
-
-                        }
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                    }
-                });
-
-    }
-
-    public void DownloadInOut(String week) {
-        DocumentReference noteRef = db.collection("Users").document(Personal_Info.getSchool_number()).collection("In or Out").document(week);
-
-        noteRef.get()
-                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                    @Override
-                    public void onSuccess(DocumentSnapshot documentSnapshot) {
-
-                        if (documentSnapshot.exists()) {
-
-                            try {
-
-
-                                Week week = documentSnapshot.toObject(Week.class);
-
-                                mon = week.isMonday();
-                                tue = week.isTuesday();
-                                wed = week.isWednesday();
-                                thu = week.isThursday();
-                                fri = week.isFriday();
-                                sat = week.isSaturday();
-                                sun = week.isSunday();
-                                progressBar.setVisibility(View.GONE);
-                                set(mon, tue, wed, thu, fri, sat, sun);
-
-
-                            } catch (Exception e) {
-                                mon = false;
-                                tue = false;
-                                wed = false;
-                                thu = false;
-                                fri = false;
-                                sat = false;
-                                sun = false;
-                                System.out.println("Error");
-                                progressBar.setVisibility(View.GONE);
-                            }
-                            set(mon, tue, wed, thu, fri, sat, sun);
-
-
-                        } else {
-                            progressBar.setVisibility(View.GONE);
-
-                            mon = false;
-                            tue = false;
-                            wed = false;
-                            thu = false;
-                            fri = false;
-                            sat = false;
-                            sun = false;
-                            set(mon, tue, wed, thu, fri, sat, sun);
-                            progressBar.setVisibility(View.GONE);
-
-
-                        }
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                    }
-                });
     }
 
     public void set(boolean mon, boolean tue, boolean wed, boolean thu, boolean fri, boolean sat, boolean sun) {
@@ -463,6 +310,7 @@ public class Fragmet_parent_consent extends Fragment {
 
     }
 
+/*
     public void saveToggle(String week1) {
         DocumentReference noteRef = db.collection("Users").document(Personal_Info.getSchool_number()).collection("Consent").document(week1);
 
@@ -495,6 +343,140 @@ public class Fragmet_parent_consent extends Fragment {
                 });
 
     }
+*/
+
+/*
+    public void DownloadToggle(String week) {
+        DocumentReference noteRef = db.collection("Users").document(Personal_Info.getSchool_number()).collection("Consent").document(week);
+        noteRef.get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+
+                        if (documentSnapshot.exists()) {
+
+                            try {
+
+
+                                Week week = documentSnapshot.toObject(Week.class);
+
+                                mon = week.isMonday();
+                                tue = week.isTuesday();
+                                wed = week.isWednesday();
+                                thu = week.isThursday();
+                                fri = week.isFriday();
+                                sat = week.isSaturday();
+                                sun = week.isSunday();
+                                progressBar.setVisibility(View.GONE);
+                                setTB(mon, tue, wed, thu, fri, sat, sun);
+
+
+                            } catch (Exception e) {
+                                mon = false;
+                                tue = false;
+                                wed = false;
+                                thu = false;
+                                fri = false;
+                                sat = false;
+                                sun = false;
+                                System.out.println("Error");
+                                progressBar.setVisibility(View.GONE);
+                            }
+                            setTB(mon, tue, wed, thu, fri, sat, sun);
+
+
+                        } else {
+                            progressBar.setVisibility(View.GONE);
+
+                            mon = false;
+                            tue = false;
+                            wed = false;
+                            thu = false;
+                            fri = false;
+                            sat = false;
+                            sun = false;
+                            setTB(mon, tue, wed, thu, fri, sat, sun);
+                            progressBar.setVisibility(View.GONE);
+
+
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                    }
+                });
+
+    }
+*/
+
+/*
+    public void DownloadInOut(String week) {
+        DocumentReference noteRef = db.collection("Users").document(Personal_Info.getSchool_number()).collection("In or Out").document(week);
+
+        noteRef.get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+
+                        if (documentSnapshot.exists()) {
+
+                            try {
+
+
+                                Week week = documentSnapshot.toObject(Week.class);
+
+                                mon = week.isMonday();
+                                tue = week.isTuesday();
+                                wed = week.isWednesday();
+                                thu = week.isThursday();
+                                fri = week.isFriday();
+                                sat = week.isSaturday();
+                                sun = week.isSunday();
+                                progressBar.setVisibility(View.GONE);
+                                set(mon, tue, wed, thu, fri, sat, sun);
+
+
+                            } catch (Exception e) {
+                                mon = false;
+                                tue = false;
+                                wed = false;
+                                thu = false;
+                                fri = false;
+                                sat = false;
+                                sun = false;
+                                System.out.println("Error");
+                                progressBar.setVisibility(View.GONE);
+                            }
+                            set(mon, tue, wed, thu, fri, sat, sun);
+
+
+                        } else {
+                            progressBar.setVisibility(View.GONE);
+
+                            mon = false;
+                            tue = false;
+                            wed = false;
+                            thu = false;
+                            fri = false;
+                            sat = false;
+                            sun = false;
+                            set(mon, tue, wed, thu, fri, sat, sun);
+                            progressBar.setVisibility(View.GONE);
+
+
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                    }
+                });
+    }
+*/
+
 }
 
 

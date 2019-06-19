@@ -35,9 +35,7 @@ public class Fragment_Querry extends Fragment {
     CheckBox outNight;
     EditText method;
     EditText notes;
-    static boolean one = true;
     int x = queryListLen;
-    int count = 0;
     int saves = 0;
     ProgressBar progressBar;
 

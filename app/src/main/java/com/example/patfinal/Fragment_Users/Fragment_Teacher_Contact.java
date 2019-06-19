@@ -1,7 +1,6 @@
 package com.example.patfinal.Fragment_Users;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -13,53 +12,29 @@ import android.widget.TextView;
 
 import com.example.patfinal.Objects.Teacher;
 import com.example.patfinal.R;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import static android.support.constraint.Constraints.TAG;
 
 public class Fragment_Teacher_Contact extends Fragment {
 
     //Firebase
-    TextView TeacherName1;
-    TextView TeacherName2;
-    TextView TeacherName3;
-    TextView TeacherName4;
-    TextView TeacherName5;
+    TextView TeacherName1, TeacherName2, TeacherName3, TeacherName4, TeacherName5;
 
-    TextView TeacherNumber1;
-    TextView TeacherNumber2;
-    TextView TeacherNumber3;
-    TextView TeacherNumber4;
-    TextView TeacherNumber5;
+    TextView TeacherNumber1, TeacherNumber2, TeacherNumber3, TeacherNumber4, TeacherNumber5;
 
-    TextView TeacherRoom1;
-    TextView TeacherRoom2;
-    TextView TeacherRoom3;
-    TextView TeacherRoom4;
-    TextView TeacherRoom5;
+    TextView TeacherRoom1, TeacherRoom2, TeacherRoom3, TeacherRoom4, TeacherRoom5;
 
-    TextView TeacherEmail1;
-    TextView TeacherEmail2;
-    TextView TeacherEmail3;
-    TextView TeacherEmail4;
-    TextView TeacherEmail5;
+    TextView TeacherEmail1, TeacherEmail2, TeacherEmail3, TeacherEmail4, TeacherEmail5;
 
     ProgressBar progressBar;
 
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-    //    private DocumentReference noteRef = db.document("Teacher Details");
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -201,6 +176,7 @@ public class Fragment_Teacher_Contact extends Fragment {
 
     }
 
+/*
     public void Download() {
         DocumentReference noteRef1 = db.collection("Teacher Details").document("Teacher 1");
         DocumentReference noteRef2 = db.collection("Teacher Details").document("Teacher 2");
@@ -346,6 +322,7 @@ public class Fragment_Teacher_Contact extends Fragment {
                     }
                 });
     }
+*/
 
 
 }

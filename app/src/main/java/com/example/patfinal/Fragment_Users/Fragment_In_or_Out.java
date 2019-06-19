@@ -24,16 +24,12 @@ import com.example.patfinal.Personal_Info;
 import com.example.patfinal.Processes.Populate_Spinner;
 import com.example.patfinal.R;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
@@ -41,40 +37,13 @@ import java.util.Calendar;
 
 public class Fragment_In_or_Out extends Fragment {
 
-    //Firebase
-    //Initialises the buttons
-    RadioButton RBIm;
-    RadioButton RBOm;
-    RadioButton RBItu;
-    RadioButton RBOtu;
-    RadioButton RBIw;
-    RadioButton RBOw;
-    RadioButton RBIth;
-    RadioButton RBOth;
-    RadioButton RBIf;
-    RadioButton RBOf;
-    RadioButton RBIsa;
-    RadioButton RBOsa;
-    RadioButton RBIsu;
-    RadioButton RBOsu;
-    RadioGroup rgmon;
-    RadioGroup rgtue;
-    RadioGroup rgwed;
-    RadioGroup rgthu;
-    RadioGroup rgfri;
-    RadioGroup rgsat;
-    RadioGroup rgsun;
-
+    RadioButton RBIm, RBOm, RBItu, RBOtu, RBIw, RBOw, RBIth, RBOth, RBIf, RBOf, RBIsa, RBOsa, RBIsu, RBOsu;
+    RadioGroup rgmon, rgtue, rgwed, rgthu, rgfri, rgsat, rgsun;
     Button sub;
-
     static Spinner spinner;
-
     FrameLayout querry;
-
     public static Query[] queryList = new Query[7];
-    static int queryListLen=0;
-
-
+    static int queryListLen = 0;
     boolean mon;
     boolean tue;
     boolean wed;
@@ -82,12 +51,8 @@ public class Fragment_In_or_Out extends Fragment {
     boolean fri;
     boolean sat;
     boolean sun;
-
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-
     DatabaseReference databaseReference;
-
-
+    static Week weekDownload;
     ProgressBar progressBar;
 
     @Nullable
@@ -186,7 +151,6 @@ public class Fragment_In_or_Out extends Fragment {
         return view;
     }
 
-    static Week weekDownload;
 
     public void download(final String text) {
 
@@ -535,6 +499,7 @@ public class Fragment_In_or_Out extends Fragment {
     }
 
 
+/*
     public void save(String week1) {
         progressBar.setVisibility(View.VISIBLE);
         DocumentReference noteRef = db.collection("Users/" + Personal_Info.getSchool_number() + "/In or Out").document(week1);
@@ -565,7 +530,9 @@ public class Fragment_In_or_Out extends Fragment {
                 });
 
     }
+*/
 
+/*
     public void download2(String week1) {
         DocumentReference noteRef = db.collection("Users/").document(Personal_Info.getSchool_number()).collection("/In or Out").document(week1);
 
@@ -628,6 +595,7 @@ public class Fragment_In_or_Out extends Fragment {
                     }
                 });
     }
+*/
 
 
 }

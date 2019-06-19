@@ -31,42 +31,11 @@ import static java.lang.String.valueOf;
 
 public class Fragment_History extends Fragment {
 
-    TextView tv1;
-    TextView tv2;
-    TextView tv3;
-    TextView tv4;
-    TextView tv5;
-    TextView tv6;
-    TextView tv7;
-    TextView tv8;
-    TextView tv9;
-    TextView tv10;
-    TextView tv11;
-    TextView tv12;
-    TextView tv13;
-    TextView tv14;
-    TextView tv15;
-    TextView tv16;
-    TextView tv17;
-    TextView tv18;
-    TextView tv19;
-    TextView tv20;
-    TextView tv21;
-    TextView tv22;
-    TextView tv23;
-    TextView tv24;
-    TextView tv25;
-    TextView tv26;
-    TextView tv27;
-
-    static int x = 0;
-
+    TextView tv1, tv2, tv3, tv4, tv5, tv6, tv7, tv8, tv9, tv10, tv11, tv12, tv13, tv14, tv15, tv16, tv17, tv18, tv19, tv20, tv21, tv22, tv23, tv24, tv25, tv26, tv27;
     static String b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13, b14, b15, b16, b17, b18, b19, b20, b21, b22, b23, b24, b25, b26, b27;
-
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-
     ProgressBar progressBar;
-
+    DatabaseReference databaseReference;
+    static String[] arr = {"", "", ""};
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -144,10 +113,6 @@ public class Fragment_History extends Fragment {
 
         return mdformat.format(calendar.getTime());
     }
-
-
-    static String[] arr = {"", "", ""};
-    DatabaseReference databaseReference;
 
     public boolean download() {
         String[] arr = getWeeks();
@@ -544,6 +509,63 @@ public class Fragment_History extends Fragment {
         return true;
     }
 
+    public static String[] getWeeks() {
+        String[] array = {"", "", "", ""};
+
+        Calendar calendar = Calendar.getInstance();
+        int day = calendar.get(Calendar.DAY_OF_WEEK);
+        int x = 0;
+        switch (day) {
+            case Calendar.MONDAY:
+
+                break;
+            case Calendar.TUESDAY:
+                x = 1;
+                break;
+            case Calendar.WEDNESDAY:
+                x = 2;
+                break;
+            case Calendar.THURSDAY:
+                x = 3;
+                break;
+            case Calendar.FRIDAY:
+                x = 4;
+                break;
+            case Calendar.SATURDAY:
+                x = 5;
+                break;
+            case Calendar.SUNDAY:
+                x = 6;
+                break;
+
+
+        }
+        SimpleDateFormat mdformat = new SimpleDateFormat("LLLL-dd ");
+        calendar.add(Calendar.DAY_OF_MONTH, -1 - x);
+        String one = mdformat.format(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, -6);
+        String two = mdformat.format(calendar.getTime());
+        array[0] = two + " - " + one;
+        calendar.add(Calendar.DAY_OF_MONTH, -1);
+        one = mdformat.format(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, -6);
+        two = mdformat.format(calendar.getTime());
+        array[1] = two + " - " + one;
+        calendar.add(Calendar.DAY_OF_MONTH, -1);
+        one = mdformat.format(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, -6);
+        two = mdformat.format(calendar.getTime());
+        array[2] = two + " - " + one;
+        calendar.add(Calendar.DAY_OF_MONTH, -1);
+        one = mdformat.format(calendar.getTime());
+        calendar.add(Calendar.DAY_OF_YEAR, -6);
+        two = mdformat.format(calendar.getTime());
+        array[3] = two + " - " + one;
+        System.out.println(arr[0]);
+        return array;
+    }
+
+/*
     public void Download() {
         String[] arr = getWeeks();
 
@@ -1123,62 +1145,6 @@ public class Fragment_History extends Fragment {
         tv1.setText(valueOf(b1));
         System.out.println(b1);
     }
-
-    public static String[] getWeeks() {
-        String[] array = {"", "", "", ""};
-
-        Calendar calendar = Calendar.getInstance();
-        int day = calendar.get(Calendar.DAY_OF_WEEK);
-        int x = 0;
-        switch (day) {
-            case Calendar.MONDAY:
-
-                break;
-            case Calendar.TUESDAY:
-                x = 1;
-                break;
-            case Calendar.WEDNESDAY:
-                x = 2;
-                break;
-            case Calendar.THURSDAY:
-                x = 3;
-                break;
-            case Calendar.FRIDAY:
-                x = 4;
-                break;
-            case Calendar.SATURDAY:
-                x = 5;
-                break;
-            case Calendar.SUNDAY:
-                x = 6;
-                break;
-
-
-        }
-        SimpleDateFormat mdformat = new SimpleDateFormat("LLLL-dd ");
-        calendar.add(Calendar.DAY_OF_MONTH, -1 - x);
-        String one = mdformat.format(calendar.getTime());
-        calendar.add(Calendar.DAY_OF_YEAR, -6);
-        String two = mdformat.format(calendar.getTime());
-        array[0] = two + " - " + one;
-        calendar.add(Calendar.DAY_OF_MONTH, -1);
-        one = mdformat.format(calendar.getTime());
-        calendar.add(Calendar.DAY_OF_YEAR, -6);
-        two = mdformat.format(calendar.getTime());
-        array[1] = two + " - " + one;
-        calendar.add(Calendar.DAY_OF_MONTH, -1);
-        one = mdformat.format(calendar.getTime());
-        calendar.add(Calendar.DAY_OF_YEAR, -6);
-        two = mdformat.format(calendar.getTime());
-        array[2] = two + " - " + one;
-        calendar.add(Calendar.DAY_OF_MONTH, -1);
-        one = mdformat.format(calendar.getTime());
-        calendar.add(Calendar.DAY_OF_YEAR, -6);
-        two = mdformat.format(calendar.getTime());
-        array[3] = two + " - " + one;
-        System.out.println(arr[0]);
-        return array;
-    }
-
+*/
 
 }

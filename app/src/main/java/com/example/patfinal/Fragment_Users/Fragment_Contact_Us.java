@@ -14,16 +14,11 @@ public class Fragment_Contact_Us extends Fragment {
 
     @Nullable
     @Override
-        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.fragment_contact_us, container, false);
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_contact_us, container, false);
 
-
-
-
-
-
-            return view;
-        }
+        return view;
     }
+}
 
 

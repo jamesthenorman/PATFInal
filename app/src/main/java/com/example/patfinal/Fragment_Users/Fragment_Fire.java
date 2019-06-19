@@ -15,26 +15,22 @@ import com.example.patfinal.R;
 
 public class Fragment_Fire extends Fragment {
     ProgressBar progressBar;
-ImageView imageView;
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.fragment_fire, container, false);
-            progressBar = view.findViewById(R.id.progressBar);
+    ImageView imageView;
 
-            imageView = view.findViewById(R.id.imageView2);
-            String url = "https://firebasestorage.googleapis.com/v0/b/patfinal-329c0.appspot.com/o/Fire.jpeg?alt=media&token=ee1e5697-6103-49fa-8777-ab40c4e22a05";
-           // Glide.with(getActivity()).load(url).into(imageView);
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_fire, container, false);
+        progressBar = view.findViewById(R.id.progressBar);
+        imageView = view.findViewById(R.id.imageView2);
 
-            Glide.with(this)
-                    .load( "https://firebasestorage.googleapis.com/v0/b/patfinal-329c0.appspot.com/o/Fire.jpeg?alt=media&token=ee1e5697-6103-49fa-8777-ab40c4e22a05" )
-                    .diskCacheStrategy(DiskCacheStrategy.ALL)
-                    .into(imageView);
+        Glide.with(this)
+                .load("https://firebasestorage.googleapis.com/v0/b/patfinal-329c0.appspot.com/o/Fire.jpeg?alt=media&token=ee1e5697-6103-49fa-8777-ab40c4e22a05")
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(imageView);
 
 
-
-
-            return view;
-        }
+        return view;
     }
+}
 
