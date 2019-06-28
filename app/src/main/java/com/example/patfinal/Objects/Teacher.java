@@ -1,10 +1,10 @@
 package com.example.patfinal.Objects;
 
 public class Teacher {
-    String name;
-    String number;
-    String roomNumber;
-    String email;
+    private String name;
+    private String number;
+    private String roomNumber;
+    private String email;
 
 
     public Teacher(String name, String number, String roomNumber, String email) {

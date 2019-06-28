@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.example.patfinal.Objects.Query;
 import com.example.patfinal.Personal_Info;
@@ -131,18 +132,24 @@ public class Fragment_Querry extends Fragment {
         System.out.println(x + "X");
         System.out.println(saves + "Saves");
         if (x > saves) {
+            try {
 
-            String setWeek;
-            String setDay;
-            setWeek = queryList[saves].getWeek();
-            setDay = queryList[saves].getDay();
-            Week.setText(setWeek);
-            day.setText(setDay);
-            timeIn.setText("");
-            timeOut.setText("");
-            outNight.setChecked(false);
-            method.setText("");
-            notes.setText("");
+
+                String setWeek;
+                String setDay;
+                setWeek = queryList[saves].getWeek();
+                setDay = queryList[saves].getDay();
+                Week.setText(setWeek);
+                day.setText(setDay);
+                timeIn.setText("");
+                timeOut.setText("");
+                outNight.setChecked(false);
+                method.setText("");
+                notes.setText("");
+            } catch (Exception e) {
+                Toast.makeText(getContext(), "Error Loading query screen: " + e, Toast.LENGTH_SHORT).show();
+
+            }
 
         } else {
             getFragmentManager().beginTransaction().remove(Fragment_Querry.this).commit();

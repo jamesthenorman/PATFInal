@@ -81,7 +81,6 @@ public class Fragment_Add_User extends Fragment {
                 schoolNum1.setText("");
                 Room1.setText("");
                 Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
-                Toast.makeText(getContext(), "Saved", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(getContext(), "Please fill out all fields", Toast.LENGTH_SHORT).show();
 

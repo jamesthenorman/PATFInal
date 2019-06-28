@@ -2,13 +2,13 @@ package com.example.patfinal.Objects;
 
 public class Week {
 
-    boolean monday;
-    boolean tuesday;
-    boolean wednesday;
-    boolean thursday;
-    boolean friday;
-    boolean saturday;
-    boolean sunday;
+    private boolean monday;
+    private boolean tuesday;
+    private boolean wednesday;
+    private boolean thursday;
+    private boolean friday;
+    private boolean saturday;
+    private boolean sunday;
 
     public Week(boolean monday, boolean tuesday, boolean wednesday, boolean thursday, boolean friday, boolean saturday, boolean sunday) {
 

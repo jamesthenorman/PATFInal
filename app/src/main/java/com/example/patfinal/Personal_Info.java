@@ -1,8 +1,9 @@
 package com.example.patfinal;
 
 public class Personal_Info {
-    static String name = "James Norman";
-    static String school_number = "";
+
+    private static String name = "";
+    private static String school_number = "";
 
     public static String getName() {
         return name;
