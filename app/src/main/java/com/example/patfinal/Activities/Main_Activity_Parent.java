@@ -26,9 +26,8 @@ import com.example.patfinal.R;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class Main_Activity_Parent extends AppCompatActivity {
-    private FirebaseAnalytics mFirebaseAnalytics;
     static BottomNavigationView bottomnav;
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =             //Opens the activity, adds the first fragment and adds the bottom nav view
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -56,16 +55,15 @@ public class Main_Activity_Parent extends AppCompatActivity {
                 }
             };
 
-    static public void deselect() {
+    static public void deselect() {                             //Method do deselect the bottom nav
         for (int i = 0; i < 4; i++) {
             bottomnav.getMenu().getItem(i).setChecked(false);
         }
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {                //Method runs on the creation of the screen
         super.onCreate(savedInstanceState);
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         setContentView(R.layout.activity_main_parent);
         bottomnav = findViewById(R.id.bottom_navigation);
         bottomnav.setOnNavigationItemSelectedListener(navListener);
@@ -136,7 +134,7 @@ public class Main_Activity_Parent extends AppCompatActivity {
         Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
 
-    }
+    }                       //Opens the help screen
 
 
 }

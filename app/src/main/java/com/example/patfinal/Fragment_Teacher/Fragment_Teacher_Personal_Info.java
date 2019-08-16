@@ -34,7 +34,6 @@ public class Fragment_Teacher_Personal_Info extends Fragment {
     private TextView allergies;
     private Button submit;
     private ProgressBar progressBar;
-    private DatabaseReference mDatabase;
     private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
     @Nullable
@@ -42,7 +41,6 @@ public class Fragment_Teacher_Personal_Info extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_teacher_personal_info, container, false);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
         submit = view.findViewById(R.id.btnSPD);
@@ -59,9 +57,7 @@ public class Fragment_Teacher_Personal_Info extends Fragment {
         download();
 
         return view;
-
-
-    }
+    }       //Runs on the creation of the screen
 
 
     //Download and set the texts

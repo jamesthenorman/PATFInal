@@ -28,7 +28,7 @@ import static com.example.patfinal.Fragment_Users.Fragment_In_or_Out.queryList;
 import static com.example.patfinal.Fragment_Users.Fragment_In_or_Out.queryListLen;
 
 public class Fragment_Querry extends Fragment {
-    private Button button1;
+    private Button submit;
     private EditText timeOut;
     private EditText timeIn;
     private TextView Week;
@@ -43,12 +43,13 @@ public class Fragment_Querry extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,                    //Method to run on the creation of the screen
+                             @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_querries, container, false);
 
         timeIn = view.findViewById(R.id.timein);
         timeOut = view.findViewById(R.id.outtime);
-        button1 = view.findViewById(R.id.Button4);
+        submit = view.findViewById(R.id.Button4);
         Week = view.findViewById(R.id.week);
         day = view.findViewById(R.id.dayOfWeek);
         outNight = view.findViewById(R.id.outForNight);
@@ -88,7 +89,7 @@ public class Fragment_Querry extends Fragment {
 
             }
         });
-        button1.setOnClickListener(new View.OnClickListener() {
+        submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 save();
@@ -116,17 +117,22 @@ public class Fragment_Querry extends Fragment {
 
         Query query = new Query(timeout, timein, outnight, Method, Notes);
 
+        System.out.println(query);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
+
         DatabaseReference myRef = database.getReference("Users").child(Personal_Info.getSchool_number()).child("Queries").child(week).child(Day);
         myRef.setValue(query).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
+                System.out.println("Saved");
+
                 progressBar.setVisibility(View.INVISIBLE);
             }
         });
+        myRef.setValue(query);
 
 
-    }
+    }                           //Method to save the query
 
     private void openNext() {
         System.out.println(x + "X");
@@ -147,7 +153,7 @@ public class Fragment_Querry extends Fragment {
                 method.setText("");
                 notes.setText("");
             } catch (Exception e) {
-                Toast.makeText(getContext(), "Error Loading query screen: " + e, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Error " + e, Toast.LENGTH_SHORT).show();
 
             }
 
@@ -158,7 +164,7 @@ public class Fragment_Querry extends Fragment {
 
         }
 
-    }
+    }                       //Method to open the next query
 
     private void openFirst() {
         String setWeek;
@@ -168,7 +174,7 @@ public class Fragment_Querry extends Fragment {
         Week.setText(setWeek);
         day.setText(setDay);
         saves++;
-    }
+    }                       //Method to open the first query
 
 }
 

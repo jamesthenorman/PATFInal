@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Populate_Spinner {
+
     public static String[] week = {"", "", ""};
 
     public static void populate() {
@@ -55,4 +56,5 @@ public class Populate_Spinner {
         week[2] = one + " - " + two;
 
     }
+
 }

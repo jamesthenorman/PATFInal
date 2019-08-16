@@ -16,12 +16,14 @@ public class Fragment_Lightning extends Fragment {
 
     private ImageView imageView;
 
+    //Downloads the lightning procedures from the database
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_lightning, container, false);
         imageView = view.findViewById(R.id.imageView2);
-        String url = "https://firebasestorage.googleapis.com/v0/b/patfinal-329c0.appspot.com/o/Lightning.jpg?alt=media&token=327137a9-e840-4615-ae19-65023e5478e9";
+        String url = "https://firebasestorage.googleapis.com/v0/b/patfinal-329c0.appspot.com/o/download.jpeg?alt=media&token=3ddd2984-a02e-48c3-9715-0f01657bfb7d";
         Glide.with(getActivity()).load(url).into(imageView);
 
         return view;

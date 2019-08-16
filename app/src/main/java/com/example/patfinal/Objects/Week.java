@@ -23,6 +23,7 @@ public class Week {
 
     public Week() {
     }
+
     public boolean isMonday() {
         return monday;
     }

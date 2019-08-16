@@ -169,7 +169,7 @@ public class Fragment_View_In_Out extends Fragment {
         populateInOut();
         progressBar.setVisibility(View.INVISIBLE);
 
-    }
+    }                       //Method to populate the in/out radio buttons
 
     private void SetNameNumber() {
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -190,7 +190,7 @@ public class Fragment_View_In_Out extends Fragment {
 
             }
         });
-    }
+    }                   //Method to set the name of the student
 
     private void populateConsent() {
         databaseReference.child("Users").child(Fragment_Teacher_Check.test.getText().toString()).child("Consent History").child(getWeek()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -227,7 +227,7 @@ public class Fragment_View_In_Out extends Fragment {
         });
 
 
-    }
+    }                   //Method to populate the consent column
 
     private void populateInOut() {
         databaseReference.child("Users").child(Fragment_Teacher_Check.test.getText().toString()).child("User History").child(getWeek()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -264,7 +264,7 @@ public class Fragment_View_In_Out extends Fragment {
         });
 
 
-    }
+    }                       //Method to populate the in/out column
 
     private String getWeek() {
         Calendar calendar = Calendar.getInstance();
@@ -302,7 +302,7 @@ public class Fragment_View_In_Out extends Fragment {
         String two = mdformat.format(calendar.getTime());
         week = one + " - " + two;
         return week;
-    }
+    }                       //Method to get the current week
 
     private void disableClick() {
 
@@ -324,19 +324,19 @@ public class Fragment_View_In_Out extends Fragment {
         InOutSun.setClickable(false);
 
 
-    }
+    }                   //Method to disable the radio buttons
 
     private void openHistory() {
         FragmentTransaction fr1 = getFragmentManager().beginTransaction().addToBackStack("Tag");
         fr1.replace(R.id.fragment_container, new Fragment_Teacher_History());
         fr1.commit();
-    }
+    }                   //Method to open the history page
 
     private void openInfo() {
         FragmentTransaction fr1 = getFragmentManager().beginTransaction().addToBackStack("Tag");
         fr1.replace(R.id.fragment_container, new Fragment_Teacher_Personal_Info());
         fr1.commit();
-    }
+    }                       //Method to open the user info page
 
     private void openQuery() {
         query.setVisibility(View.VISIBLE);
@@ -345,7 +345,7 @@ public class Fragment_View_In_Out extends Fragment {
         fr1.commit();
 
 
-    }
+    }                   //Method to open the query page
 
 
 }

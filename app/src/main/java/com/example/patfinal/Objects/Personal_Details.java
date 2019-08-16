@@ -1,99 +1,68 @@
 package com.example.patfinal.Objects;
 
 public class Personal_Details {
-    private String FirstName;
-    private String LastName;
-    private String PhoneNumber;
-    private String ParentPhoneNumber;
-    private String EmergencyContact;
-    private String RoomNumber;
-    private String Allergies;
+    private String firstName;
+    private String lastName;
+    private String phoneNumber;
+    private String parentPhoneNumber;
+    private String emergencyContact;
+    private String roomNumber;
+    private String allergies;
 
     public Personal_Details() {
     }
 
-    public Personal_Details(String firstname, String lastname, String phonenumber, String parentPhoneNumber, String emergencyContact, String roomnumber, String allergies) {
-
-        FirstName = firstname;
-        LastName = lastname;
-        PhoneNumber = phonenumber;
-        ParentPhoneNumber = parentPhoneNumber;
-        EmergencyContact = emergencyContact;
-        RoomNumber = roomnumber;
-        Allergies = allergies;
+    public Personal_Details(String firstName, String lastName, String phoneNumber, String parentPhoneNumber, String emergencyContact, String roomNumber, String allergies) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phoneNumber = phoneNumber;
+        this.parentPhoneNumber = parentPhoneNumber;
+        this.emergencyContact = emergencyContact;
+        this.roomNumber = roomNumber;
+        this.allergies = allergies;
     }
 
-    public Personal_Details(String firstname, String lastname, String roomnumber) {
-        FirstName = firstname;
-        LastName = lastname;
-        RoomNumber = roomnumber;
+    public Personal_Details(String firstName, String lastName, String roomNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.roomNumber = roomNumber;
 
     }
 
     @Override
     public String toString() {
         return "Personal_Details{" +
-                "FirstName='" + FirstName + '\'' +
-                ", LastName='" + LastName + '\'' +
-                ", RoomNumber='" + RoomNumber + '\'' +
+                "FirstName='" + firstName + '\'' +
+                ", LastName='" + lastName + '\'' +
+                ", RoomNumber='" + roomNumber + '\'' +
                 '}';
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public String getPhoneNumber() {
-        return PhoneNumber;
+        return phoneNumber;
     }
 
     public String getParentPhoneNumber() {
-        return ParentPhoneNumber;
+        return parentPhoneNumber;
     }
 
     public String getEmergencyContact() {
-        return EmergencyContact;
+        return emergencyContact;
     }
 
     public String getRoomNumber() {
-        return RoomNumber;
+        return roomNumber;
     }
 
     public String getAllergies() {
-        return Allergies;
+        return allergies;
     }
-
-    public void setAllergies(String allergies) {
-        Allergies = allergies;
-    }
-
-    public void setFirstName(String firstname) {
-        FirstName = firstname;
-    }
-
-    public void setRoomNumber(String roomNumber) {
-        RoomNumber = roomNumber;
-    }
-
-    public void setEmergencyContact(String emergencyContact) {
-        EmergencyContact = emergencyContact;
-    }
-
-    public void setParentPhoneNumber(String parentPhoneNumber) {
-        ParentPhoneNumber = parentPhoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        PhoneNumber = phoneNumber;
-    }
-
-    public void setLastName(String lastName) {
-        LastName = lastName;
-    }
-
-
 }

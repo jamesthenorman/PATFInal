@@ -60,7 +60,7 @@ public class UserType extends AppCompatActivity {
 
             }
         });
-    }
+    }       //Method that runs on the creation of the screen
 
     public void checkButton(View v) {
         int radioId = group.getCheckedRadioButtonId();
@@ -68,24 +68,24 @@ public class UserType extends AppCompatActivity {
         radioButton = findViewById(radioId);
 
         System.out.println(radioButton.toString());
-    }
+    }                         //Method to output teh checked button
 
     private void openMainScreen() {
         Intent intent = new Intent(this, Main_Activity_Student.class);
         startActivity(intent);
 
-    }
+    }                           //Method to open teh main screen
 
     private void openParentScreen() {
         Intent intent = new Intent(this, Main_Activity_Parent.class);
         startActivity(intent);
 
-    }
+    }                       //Method to open teh parent screen
 
     private void openHelpScreen() {
         Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
 
-    }
+    }                           //Method to open the help screen
 }
 

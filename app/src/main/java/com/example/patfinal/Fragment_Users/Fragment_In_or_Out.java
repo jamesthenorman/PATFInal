@@ -59,7 +59,7 @@ public class Fragment_In_or_Out extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_in_out, container, false);
 
-        //Populate the spinner
+        //Populate the drop down menu with dates
         spinner = view.findViewById(R.id.spinner);
         Populate_Spinner.populate();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, Populate_Spinner.week);
@@ -95,13 +95,16 @@ public class Fragment_In_or_Out extends Fragment {
 
         sub = view.findViewById(R.id.button);
 
+        //Instantiates the loading spinner
         progressBar = view.findViewById(R.id.progressBar);
 
+        //Non visible text view that carries data between screens
         querry = view.findViewById(R.id.FrameQuerry);
 
         //Invokes when an item is selected in the spinner
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
+            //Rns when a item on the drop down menu is selected
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 selection();
@@ -118,31 +121,15 @@ public class Fragment_In_or_Out extends Fragment {
 
         });
 
-        //Invoked when the submit button is pressed
+        //Invoked when the submit button is pressed and invokes the different methods
         sub.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Intent intent = new Intent(getActivity(), Main_Activity_Student.class);
-                //startActivity(intent);
                 progressBar.setVisibility(View.INVISIBLE);
                 writeToFile(spinner.getSelectedItem().toString());
                 System.out.println(weekDownload);
                 seeQuery();
-// save(spinner.getSelectedItem().toString());
 
 
-            }
-        });
-
-//show Loading symbol
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
             }
         });
 
@@ -150,21 +137,23 @@ public class Fragment_In_or_Out extends Fragment {
         return view;
     }
 
+    //Downloads the data from the database
     private void download(final String text) {
 
         databaseReference.child("Users").child(Personal_Info.getSchool_number()).child("User History").child(text).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-
                 try {
-                    mon = Boolean.parseBoolean(dataSnapshot.child("monday").getValue().toString());
-                    tue = Boolean.parseBoolean(dataSnapshot.child("tuesday").getValue().toString());
-                    wed = Boolean.parseBoolean(dataSnapshot.child("wednesday").getValue().toString());
-                    thu = Boolean.parseBoolean(dataSnapshot.child("thursday").getValue().toString());
-                    fri = Boolean.parseBoolean(dataSnapshot.child("friday").getValue().toString());
-                    sat = Boolean.parseBoolean(dataSnapshot.child("saturday").getValue().toString());
-                    sun = Boolean.parseBoolean(dataSnapshot.child("sunday").getValue().toString());
+                    Week week = dataSnapshot.getValue(Week.class);
+                    mon = week.isMonday();
+                    tue = week.isTuesday();
+                    wed = week.isWednesday();
+                    thu = week.isThursday();
+                    fri = week.isFriday();
+                    sat = week.isSaturday();
+                    sun = week.isSunday();
+
                 } catch (Exception e) {
                     mon = false;
                     tue = false;
@@ -173,6 +162,7 @@ public class Fragment_In_or_Out extends Fragment {
                     fri = false;
                     sat = false;
                     sun = false;
+
                 }
                 check(mon, tue, wed, thu, fri, sat, sun);
                 Week w = new Week(mon, tue, wed, thu, fri, sat, sun);
@@ -196,9 +186,8 @@ public class Fragment_In_or_Out extends Fragment {
         weekDownload = w;
     }
 
+    //Writes data to the database
     private void writeToFile(String text) {
-
-
         boolean mon = RBIm.isChecked();
         boolean tue = RBItu.isChecked();
         boolean wed = RBIw.isChecked();
@@ -222,6 +211,7 @@ public class Fragment_In_or_Out extends Fragment {
 
     }
 
+    //Method to check and uncheck the radio buttons depending on given data
     private void check(boolean mon, boolean tue, boolean wed, boolean thu, boolean fri, boolean sat, boolean sun) {
         if (mon == true) {
             RBIm.setChecked(true);
@@ -266,6 +256,7 @@ public class Fragment_In_or_Out extends Fragment {
         }
     }
 
+    //Method disables the query buttons depending on the day of the week to prevent users from changing after the fact
     private void selection() {
         Calendar calendar = Calendar.getInstance();
         int day = calendar.get(Calendar.DAY_OF_WEEK);
@@ -273,33 +264,10 @@ public class Fragment_In_or_Out extends Fragment {
         System.out.println(spinner.getSelectedItemPosition());
         switch (day) {
             case Calendar.MONDAY:
-                RBIm.setEnabled(true);
-                RBOm.setEnabled(true);
-                RBItu.setEnabled(true);
-                RBOtu.setEnabled(true);
-                RBIw.setEnabled(true);
-                RBOw.setEnabled(true);
-                RBIth.setEnabled(true);
-                RBOth.setEnabled(true);
-                RBIf.setEnabled(true);
-                RBOf.setEnabled(true);
-                RBIsa.setEnabled(true);
-                RBOsa.setEnabled(true);
-
+                enableAll();
                 break;
             case Calendar.TUESDAY:
-                RBIm.setEnabled(true);
-                RBOm.setEnabled(true);
-                RBItu.setEnabled(true);
-                RBOtu.setEnabled(true);
-                RBIw.setEnabled(true);
-                RBOw.setEnabled(true);
-                RBIth.setEnabled(true);
-                RBOth.setEnabled(true);
-                RBIf.setEnabled(true);
-                RBOf.setEnabled(true);
-                RBIsa.setEnabled(true);
-                RBOsa.setEnabled(true);
+                enableAll();
                 if (spinner.getSelectedItemPosition() == 0) {
                     System.out.println(spinner.getSelectedItemPosition());
                     RBIm.setEnabled(false);
@@ -307,18 +275,7 @@ public class Fragment_In_or_Out extends Fragment {
                 }
                 break;
             case Calendar.WEDNESDAY:
-                RBIm.setEnabled(true);
-                RBOm.setEnabled(true);
-                RBItu.setEnabled(true);
-                RBOtu.setEnabled(true);
-                RBIw.setEnabled(true);
-                RBOw.setEnabled(true);
-                RBIth.setEnabled(true);
-                RBOth.setEnabled(true);
-                RBIf.setEnabled(true);
-                RBOf.setEnabled(true);
-                RBIsa.setEnabled(true);
-                RBOsa.setEnabled(true);
+                enableAll();
                 if (spinner.getSelectedItemPosition() == 0) {
                     RBIm.setEnabled(false);
                     RBOm.setEnabled(false);
@@ -327,18 +284,7 @@ public class Fragment_In_or_Out extends Fragment {
                 }
                 break;
             case Calendar.THURSDAY:
-                RBIm.setEnabled(true);
-                RBOm.setEnabled(true);
-                RBItu.setEnabled(true);
-                RBOtu.setEnabled(true);
-                RBIw.setEnabled(true);
-                RBOw.setEnabled(true);
-                RBIth.setEnabled(true);
-                RBOth.setEnabled(true);
-                RBIf.setEnabled(true);
-                RBOf.setEnabled(true);
-                RBIsa.setEnabled(true);
-                RBOsa.setEnabled(true);
+                enableAll();
                 if (spinner.getSelectedItemPosition() == 0) {
                     RBIm.setEnabled(false);
                     RBOm.setEnabled(false);
@@ -349,18 +295,7 @@ public class Fragment_In_or_Out extends Fragment {
                 }
                 break;
             case Calendar.FRIDAY:
-                RBIm.setEnabled(true);
-                RBOm.setEnabled(true);
-                RBItu.setEnabled(true);
-                RBOtu.setEnabled(true);
-                RBIw.setEnabled(true);
-                RBOw.setEnabled(true);
-                RBIth.setEnabled(true);
-                RBOth.setEnabled(true);
-                RBIf.setEnabled(true);
-                RBOf.setEnabled(true);
-                RBIsa.setEnabled(true);
-                RBOsa.setEnabled(true);
+                enableAll();
                 if (spinner.getSelectedItemPosition() == 0) {
                     RBIm.setEnabled(false);
                     RBOm.setEnabled(false);
@@ -373,18 +308,7 @@ public class Fragment_In_or_Out extends Fragment {
                 }
                 break;
             case Calendar.SATURDAY:
-                RBIm.setEnabled(true);
-                RBOm.setEnabled(true);
-                RBItu.setEnabled(true);
-                RBOtu.setEnabled(true);
-                RBIw.setEnabled(true);
-                RBOw.setEnabled(true);
-                RBIth.setEnabled(true);
-                RBOth.setEnabled(true);
-                RBIf.setEnabled(true);
-                RBOf.setEnabled(true);
-                RBIsa.setEnabled(true);
-                RBOsa.setEnabled(true);
+                enableAll();
                 if (spinner.getSelectedItemPosition() == 0) {
                     RBIm.setEnabled(false);
                     RBOm.setEnabled(false);
@@ -399,18 +323,7 @@ public class Fragment_In_or_Out extends Fragment {
                 }
                 break;
             case Calendar.SUNDAY:
-                RBIm.setEnabled(true);
-                RBOm.setEnabled(true);
-                RBItu.setEnabled(true);
-                RBOtu.setEnabled(true);
-                RBIw.setEnabled(true);
-                RBOw.setEnabled(true);
-                RBIth.setEnabled(true);
-                RBOth.setEnabled(true);
-                RBIf.setEnabled(true);
-                RBOf.setEnabled(true);
-                RBIsa.setEnabled(true);
-                RBOsa.setEnabled(true);
+                enableAll();
                 if (spinner.getSelectedItemPosition() == 0) {
                     RBIm.setEnabled(false);
                     RBOm.setEnabled(false);
@@ -431,6 +344,24 @@ public class Fragment_In_or_Out extends Fragment {
         }
     }
 
+    //Method to open the radio buttons
+    private void enableAll() {
+        RBIm.setEnabled(true);
+        RBOm.setEnabled(true);
+        RBItu.setEnabled(true);
+        RBOtu.setEnabled(true);
+        RBIw.setEnabled(true);
+        RBOw.setEnabled(true);
+        RBIth.setEnabled(true);
+        RBOth.setEnabled(true);
+        RBIf.setEnabled(true);
+        RBOf.setEnabled(true);
+        RBIsa.setEnabled(true);
+        RBOsa.setEnabled(true);
+
+    }
+
+    //Method to open the query screen
     private void openQuery() {
         querry.setVisibility(View.VISIBLE);
         FragmentTransaction fr5 = getFragmentManager().beginTransaction();
@@ -440,24 +371,19 @@ public class Fragment_In_or_Out extends Fragment {
 
     }
 
+    //Method to see if the query screen must open
     private void seeQuery() {
-
         int len = 0;
-
         boolean mon = RBIm.isChecked();
         boolean tue = RBItu.isChecked();
         boolean wed = RBIw.isChecked();
         boolean thu = RBIth.isChecked();
-        boolean fri = RBIf.isChecked();
-        boolean sat = RBIsa.isChecked();
-        boolean sun = RBIsu.isChecked();
 
         boolean checkQyery = false;
 
         if (weekDownload.isMonday() != mon && !mon) {
             Query que = new Query(spinner.getSelectedItem().toString(), "Monday");
             queryList[len] = (que);
-            System.out.println("Blue" + queryList[0].getDay());
             len++;
             queryListLen++;
             checkQyery = true;

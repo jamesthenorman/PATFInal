@@ -8,309 +8,322 @@
     tools:context=".Fragment_Teacher.Fragment_View_In_Out">
 
 
-
-
-    <TextView
-        android:id="@+id/NameandNumber"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:background="@color/design_default_color_primary"
-        android:textAlignment="center"
-        android:textColor="@color/White"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="14664 \n James Norman" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textViewMonday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/NameandNumber"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="30sp"
-        android:layout_marginTop="56dp"
-        android:text="Monday"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NameandNumber" />
-
-    <CheckBox
-        android:id="@+id/InOutMon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:text="In or Out"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewMonday"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewMonday"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/ConsentMon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Consented"
-        app:layout_constraintBottom_toBottomOf="@+id/InOutMon"
-        app:layout_constraintEnd_toStartOf="@+id/InOutMon"
-        app:layout_constraintTop_toTopOf="@+id/InOutMon" />
-
-    <TextView
-        android:id="@+id/textViewTuesday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewMonday"
-        android:layout_alignStart="@+id/textViewMonday"
-        android:layout_marginTop="@dimen/Teacher_check"
-        android:text="Tuesday"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textViewMonday"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMonday" />
-
-    <CheckBox
-        android:id="@+id/InOutTue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="In or Out"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewTuesday"
-        app:layout_constraintEnd_toEndOf="@+id/InOutMon"
-        app:layout_constraintTop_toTopOf="@+id/textViewTuesday"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/ConsentTue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Consented"
-        app:layout_constraintBottom_toBottomOf="@+id/InOutTue"
-        app:layout_constraintEnd_toStartOf="@+id/InOutTue"
-        app:layout_constraintTop_toTopOf="@+id/InOutTue" />
-
-    <TextView
-        android:id="@+id/textViewWednesday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewTuesday"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="@dimen/Teacher_check"
-        android:text="Wednesday "
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textViewTuesday"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTuesday" />
-
-    <CheckBox
-        android:id="@+id/InOutWed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="In or Out"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewWednesday"
-        app:layout_constraintEnd_toEndOf="@+id/InOutTue"
-        app:layout_constraintTop_toTopOf="@+id/textViewWednesday"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/ConsentWed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Consented"
-        app:layout_constraintBottom_toBottomOf="@+id/InOutWed"
-        app:layout_constraintEnd_toStartOf="@+id/InOutWed"
-        app:layout_constraintTop_toTopOf="@+id/InOutWed" />
-
-    <TextView
-        android:id="@+id/textViewThursday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewWednesday"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="@dimen/Teacher_check"
-        android:text="Thursday"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textViewWednesday"
-        app:layout_constraintTop_toBottomOf="@+id/textViewWednesday" />
-
-    <CheckBox
-        android:id="@+id/InOutThu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="In or Out"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewThursday"
-        app:layout_constraintEnd_toEndOf="@+id/InOutWed"
-        app:layout_constraintTop_toTopOf="@+id/textViewThursday"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/ConsentThu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Consented"
-        app:layout_constraintBottom_toBottomOf="@+id/InOutThu"
-        app:layout_constraintEnd_toStartOf="@+id/InOutThu"
-        app:layout_constraintTop_toTopOf="@+id/InOutThu" />
-
-    <TextView
-        android:id="@+id/textViewFriday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewThursday"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="@dimen/Teacher_check"
-        android:text="Friday"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textViewThursday"
-        app:layout_constraintTop_toBottomOf="@+id/textViewThursday" />
-
-    <CheckBox
-        android:id="@+id/InOutFri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="In or Out"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewFriday"
-        app:layout_constraintEnd_toEndOf="@+id/InOutThu"
-        app:layout_constraintTop_toTopOf="@+id/textViewFriday"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/ConsentFri"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Consented"
-        app:layout_constraintBottom_toBottomOf="@+id/InOutFri"
-        app:layout_constraintEnd_toStartOf="@+id/InOutFri"
-        app:layout_constraintTop_toTopOf="@+id/InOutFri" />
-
-    <TextView
-        android:id="@+id/textViewSaturday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textViewFriday"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="@dimen/Teacher_check"
-        android:text="Saturday"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textViewFriday"
-        app:layout_constraintTop_toBottomOf="@+id/textViewFriday" />
-
-    <CheckBox
-        android:id="@+id/InOutSat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="In or Out"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewSaturday"
-        app:layout_constraintEnd_toEndOf="@+id/InOutFri"
-        app:layout_constraintTop_toTopOf="@+id/textViewSaturday"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/ConsentSat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Consented"
-        app:layout_constraintBottom_toBottomOf="@+id/InOutSat"
-        app:layout_constraintEnd_toStartOf="@+id/InOutSat"
-        app:layout_constraintTop_toTopOf="@+id/InOutSat" />
-
-    <TextView
-        android:id="@+id/textViewSunday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewSaturday"
-        android:layout_alignStart="@+id/textViewSaturday"
-        android:layout_marginTop="@dimen/Teacher_check"
-        android:text="Sunday"
-        android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="@+id/textViewSaturday"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSaturday" />
-
-    <CheckBox
-        android:id="@+id/InOutSun"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="In or Out"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewSunday"
-        app:layout_constraintEnd_toEndOf="@+id/InOutSat"
-        app:layout_constraintTop_toTopOf="@+id/textViewSunday"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <CheckBox
-        android:id="@+id/ConsentSun"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="Consented"
-        app:layout_constraintBottom_toBottomOf="@+id/InOutSun"
-        app:layout_constraintEnd_toStartOf="@+id/InOutSun"
-        app:layout_constraintTop_toTopOf="@+id/InOutSun" />
-
-    <Button
-        android:id="@+id/btnInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="See Personal info"
-        app:layout_constraintStart_toStartOf="@+id/textViewSunday"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSunday"
-        android:stateListAnimator="@null"
-        />
-
-    <Button
-        android:id="@+id/btnHist"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="See History"
-        app:layout_constraintStart_toStartOf="@+id/btnInfo"
-        app:layout_constraintTop_toBottomOf="@+id/btnInfo"
-        android:stateListAnimator="@null"
-
-        />
-
-    <TextView
-        android:id="@+id/Day"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/NameandNumber"
-        app:layout_constraintTop_toTopOf="@+id/NameandNumber"
-        tools:visibility="invisible" />
-
-    <FrameLayout
-        android:id="@+id/query"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/NameandNumber">
-
-    </FrameLayout>
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:foregroundGravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/scrollView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Background"
+            tools:context=".Fragment_Teacher.Fragment_View_In_Out">
 
 
+            <TextView
+                android:id="@+id/NameandNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/design_default_color_primary"
+                android:textAlignment="center"
+                android:textColor="@color/White"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="14664 \n James Norman" />
+
+            <TextView
+                android:id="@+id/textViewMonday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/NameandNumber"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="56dp"
+                android:text="Monday"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NameandNumber" />
+
+            <CheckBox
+                android:id="@+id/InOutMon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="28dp"
+                android:text="In or Out"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewMonday"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewMonday"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/ConsentMon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Consented"
+                app:layout_constraintBottom_toBottomOf="@+id/InOutMon"
+                app:layout_constraintEnd_toStartOf="@+id/InOutMon"
+                app:layout_constraintTop_toTopOf="@+id/InOutMon" />
+
+            <TextView
+                android:id="@+id/textViewTuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewMonday"
+                android:layout_alignStart="@+id/textViewMonday"
+                android:layout_marginTop="@dimen/Teacher_check"
+                android:text="Tuesday"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/textViewMonday"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMonday" />
+
+            <CheckBox
+                android:id="@+id/InOutTue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In or Out"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewTuesday"
+                app:layout_constraintEnd_toEndOf="@+id/InOutMon"
+                app:layout_constraintTop_toTopOf="@+id/textViewTuesday"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/ConsentTue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Consented"
+                app:layout_constraintBottom_toBottomOf="@+id/InOutTue"
+                app:layout_constraintEnd_toStartOf="@+id/InOutTue"
+                app:layout_constraintTop_toTopOf="@+id/InOutTue" />
+
+            <TextView
+                android:id="@+id/textViewWednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textViewTuesday"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/Teacher_check"
+                android:text="Wednesday "
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/textViewTuesday"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTuesday" />
+
+            <CheckBox
+                android:id="@+id/InOutWed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In or Out"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewWednesday"
+                app:layout_constraintEnd_toEndOf="@+id/InOutTue"
+                app:layout_constraintTop_toTopOf="@+id/textViewWednesday"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/ConsentWed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Consented"
+                app:layout_constraintBottom_toBottomOf="@+id/InOutWed"
+                app:layout_constraintEnd_toStartOf="@+id/InOutWed"
+                app:layout_constraintTop_toTopOf="@+id/InOutWed" />
+
+            <TextView
+                android:id="@+id/textViewThursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textViewWednesday"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/Teacher_check"
+                android:text="Thursday"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/textViewWednesday"
+                app:layout_constraintTop_toBottomOf="@+id/textViewWednesday" />
+
+            <CheckBox
+                android:id="@+id/InOutThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In or Out"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewThursday"
+                app:layout_constraintEnd_toEndOf="@+id/InOutWed"
+                app:layout_constraintTop_toTopOf="@+id/textViewThursday"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/ConsentThu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Consented"
+                app:layout_constraintBottom_toBottomOf="@+id/InOutThu"
+                app:layout_constraintEnd_toStartOf="@+id/InOutThu"
+                app:layout_constraintTop_toTopOf="@+id/InOutThu" />
+
+            <TextView
+                android:id="@+id/textViewFriday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textViewThursday"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/Teacher_check"
+                android:text="Friday"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/textViewThursday"
+                app:layout_constraintTop_toBottomOf="@+id/textViewThursday" />
+
+            <CheckBox
+                android:id="@+id/InOutFri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In or Out"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewFriday"
+                app:layout_constraintEnd_toEndOf="@+id/InOutThu"
+                app:layout_constraintTop_toTopOf="@+id/textViewFriday"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/ConsentFri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Consented"
+                app:layout_constraintBottom_toBottomOf="@+id/InOutFri"
+                app:layout_constraintEnd_toStartOf="@+id/InOutFri"
+                app:layout_constraintTop_toTopOf="@+id/InOutFri" />
+
+            <TextView
+                android:id="@+id/textViewSaturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textViewFriday"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/Teacher_check"
+                android:text="Saturday"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/textViewFriday"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFriday" />
+
+            <CheckBox
+                android:id="@+id/InOutSat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In or Out"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewSaturday"
+                app:layout_constraintEnd_toEndOf="@+id/InOutFri"
+                app:layout_constraintTop_toTopOf="@+id/textViewSaturday"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/ConsentSat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Consented"
+                app:layout_constraintBottom_toBottomOf="@+id/InOutSat"
+                app:layout_constraintEnd_toStartOf="@+id/InOutSat"
+                app:layout_constraintTop_toTopOf="@+id/InOutSat" />
+
+            <TextView
+                android:id="@+id/textViewSunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewSaturday"
+                android:layout_alignStart="@+id/textViewSaturday"
+                android:layout_marginTop="@dimen/Teacher_check"
+                android:text="Sunday"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="@+id/textViewSaturday"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSaturday" />
+
+            <CheckBox
+                android:id="@+id/InOutSun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In or Out"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewSunday"
+                app:layout_constraintEnd_toEndOf="@+id/InOutSat"
+                app:layout_constraintTop_toTopOf="@+id/textViewSunday"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/ConsentSun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Consented"
+                app:layout_constraintBottom_toBottomOf="@+id/InOutSun"
+                app:layout_constraintEnd_toStartOf="@+id/InOutSun"
+                app:layout_constraintTop_toTopOf="@+id/InOutSun" />
+
+            <Button
+                android:id="@+id/btnInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="See Personal info"
+                app:layout_constraintStart_toStartOf="@+id/textViewSunday"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSunday"
+                android:stateListAnimator="@null" />
+
+            <Button
+                android:id="@+id/btnHist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="See History"
+                app:layout_constraintStart_toStartOf="@+id/btnInfo"
+                app:layout_constraintTop_toBottomOf="@+id/btnInfo"
+                android:stateListAnimator="@null"
+
+                />
+
+            <TextView
+                android:id="@+id/Day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/NameandNumber"
+                app:layout_constraintTop_toTopOf="@+id/NameandNumber"
+                tools:visibility="invisible" />
+
+            <FrameLayout
+                android:id="@+id/query"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NameandNumber"
+                android:visibility="gone">
+
+            </FrameLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/scrollView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

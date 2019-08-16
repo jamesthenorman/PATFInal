@@ -60,12 +60,12 @@ public class Teacher extends AppCompatActivity {
             }
         });
 
-    }
+    }               //Method to run on the creation of the screen
 
     private void openHelpScreen() {
         Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
 
-    }
+    }                                   //Method to open the help screen
 
 }

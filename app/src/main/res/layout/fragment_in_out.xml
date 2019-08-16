@@ -4,8 +4,7 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Background"
->
+    android:background="@color/Background">
 
 
     <ScrollView
@@ -18,7 +17,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="20sp">
 
@@ -92,9 +91,10 @@
                 android:id="@+id/TVtue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/spinner"
                 android:layout_alignTop="@+id/TVmon"
+                android:layout_marginStart="30dp"
                 android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/TVwed"
                 android:linksClickable="false"
                 android:text="Tuesday"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
@@ -308,13 +308,16 @@
 
             <Spinner
                 android:id="@+id/spinner"
-                android:layout_width="149dp"
+                android:layout_width="wrap_content"
                 android:layout_height="40dp"
-
                 android:layout_alignTop="@+id/textTab1"
-                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30sp"
                 android:layout_marginTop="0dp"
-                android:background="#ffff" />
+                android:layout_toEndOf="@+id/textTab1"
+
+                android:background="#ffff"
+                android:tooltipText="12 Jan- 18 Jan"
+                tools:listitem="@android:layout/test_list_item" />
 
         </RelativeLayout>
     </ScrollView>

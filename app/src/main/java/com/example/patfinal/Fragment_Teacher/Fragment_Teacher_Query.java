@@ -35,7 +35,7 @@ public class Fragment_Teacher_Query extends Fragment {
     private ProgressBar progressBar;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,          //Runs on the creation of the screen
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_teacher_query, container, false);
 
@@ -67,8 +67,6 @@ public class Fragment_Teacher_Query extends Fragment {
         System.out.println(Fragment_Teacher_Check.test.getText());
         System.out.println(getWeek());
         System.out.println(getDay());
-        //Fragment_Teacher_Check.test.getText().toString()
-        //databaseReference.child("Users").child("14664").child("Queries").child(getWeek()).child(getDay())
         System.out.println(Fragment_Teacher_Check.test.getText().toString());
         databaseReference.child("Users").child(Fragment_Teacher_Check.test.getText().toString()).child("Queries").child(getWeek()).child(getDay()).addListenerForSingleValueEvent(new ValueEventListener() {
 
@@ -106,13 +104,13 @@ public class Fragment_Teacher_Query extends Fragment {
 
             }
         });
-    }
+    }                                                       //Method to set the query screen
 
     private String getDay() {
         String x = Fragment_View_In_Out.day.getText().toString();
         return x;
 
-    }
+    }                                       //Method to get the day of the query
 
     private String getWeek() {
         Calendar calendar = Calendar.getInstance();
@@ -152,7 +150,7 @@ public class Fragment_Teacher_Query extends Fragment {
 
 
         return temp;
-    }
+    }                                      //Method to get the week of the query
 
     private void disable() {
         timeIn.setEnabled(false);
@@ -164,7 +162,7 @@ public class Fragment_Teacher_Query extends Fragment {
         timeOut.setTextColor(getResources().getColor(R.color.Black));
         notes.setTextColor(getResources().getColor(R.color.Black));
         method.setTextColor(getResources().getColor(R.color.Black));
-    }
+    }                                       //Method to make the screen not editable
 
 
 }

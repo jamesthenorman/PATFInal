@@ -29,7 +29,6 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Fragmet_parent_consent extends Fragment {
 
-    //Firebase
 
     private Button btn;
     private ToggleButton tbmon, tbtue, tbwed, tbthu, tbfri, tbsat, tbsun;
@@ -39,12 +38,14 @@ public class Fragmet_parent_consent extends Fragment {
     private ProgressBar progressBar;
     private DatabaseReference databaseReference;
 
+
+    //Downloads the data from the server and sets it into the text views and classes the method also initialises and sets the drop down menu
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_parent_consent, container, false);
 
-        spinner = (Spinner) view.findViewById(R.id.spinner);
+        spinner = view.findViewById(R.id.spinner);
         Populate_Spinner.populate();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, Populate_Spinner.week);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
@@ -74,12 +75,9 @@ public class Fragmet_parent_consent extends Fragment {
 
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Intent intent = new Intent(getActivity(), Main_Activity_Student.class);
-                //startActivity(intent);
+
                 progressBar.setVisibility(View.VISIBLE);
                 saveTB(spinner.getSelectedItem().toString());
-                //
-                // saveToggle(spinner.getSelectedItem().toString());
 
 
             }
@@ -122,6 +120,7 @@ public class Fragmet_parent_consent extends Fragment {
         return view;
     }
 
+    //Method to download the in/out history from the database
     private void downloadTv(String text) {
         databaseReference.child("Users").child(Personal_Info.getSchool_number()).child("User History").child(text).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -131,7 +130,7 @@ public class Fragmet_parent_consent extends Fragment {
                 try {
                     mon = Boolean.parseBoolean(dataSnapshot.child("monday").getValue().toString());
                     tue = Boolean.parseBoolean(dataSnapshot.child("tuesday").getValue().toString());
-                    wed = Boolean.parseBoolean(dataSnapshot.child("wednsday").getValue().toString());
+                    wed = Boolean.parseBoolean(dataSnapshot.child("wednesday").getValue().toString());
                     thu = Boolean.parseBoolean(dataSnapshot.child("thursday").getValue().toString());
                     fri = Boolean.parseBoolean(dataSnapshot.child("friday").getValue().toString());
                     sat = Boolean.parseBoolean(dataSnapshot.child("saturday").getValue().toString());
@@ -157,6 +156,7 @@ public class Fragmet_parent_consent extends Fragment {
         });
     }
 
+    //Method to download the consent history from the databse and if it is not there, it will mark it as it has not been consented
     private void downloadTb(String text) {
         databaseReference.child("Users").child(Personal_Info.getSchool_number()).child("Consent History").child(text).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -192,6 +192,7 @@ public class Fragmet_parent_consent extends Fragment {
         });
     }
 
+    //Method to set all of the textviews based on whether the data is true or false
     private void set(boolean mon, boolean tue, boolean wed, boolean thu, boolean fri, boolean sat, boolean sun) {
 
         if (mon) {
@@ -233,39 +234,40 @@ public class Fragmet_parent_consent extends Fragment {
 
     }
 
+    //Method to set all of the toggle buttons based on whether the data is true or false
     private void setTB(boolean mon, boolean tue, boolean wed, boolean thu, boolean fri, boolean sat, boolean sun) {
 
-        if (mon == true) {
+        if (mon) {
             tbmon.setChecked(true);
         } else {
             tbmon.setChecked(false);
         }
-        if (tue == true) {
+        if (tue) {
             tbtue.setChecked(true);
         } else {
             tbtue.setChecked(false);
         }
-        if (wed == true) {
+        if (wed) {
             tbwed.setChecked(true);
         } else {
             tbwed.setChecked(false);
         }
-        if (thu == true) {
+        if (thu) {
             tbwed.setChecked(true);
         } else {
             tbthu.setChecked(false);
         }
-        if (fri == true) {
+        if (fri) {
             tbwed.setChecked(true);
         } else {
             tbfri.setChecked(false);
         }
-        if (sat == true) {
+        if (sat) {
             tbwed.setChecked(true);
         } else {
             tbsat.setChecked(false);
         }
-        if (sun == true) {
+        if (sun) {
             tbwed.setChecked(true);
         } else {
             tbsun.setChecked(false);
@@ -274,6 +276,7 @@ public class Fragmet_parent_consent extends Fragment {
 
     }
 
+    //Method to save the consent history on the database
     private void saveTB(String text) {
 
 
@@ -284,9 +287,6 @@ public class Fragmet_parent_consent extends Fragment {
         boolean fri = tbfri.isChecked();
         boolean sat = tbsun.isChecked();
         boolean sun = tbsat.isChecked();
-
-
-        //String id = databaseReference.push().getKey();
 
         Week week = new Week(Mon, tue, wed, thu, fri, sat, sun);
 
@@ -303,6 +303,12 @@ public class Fragmet_parent_consent extends Fragment {
 
 
     }
+
+
+
+
+
+
 
 /*
     public void saveToggle(String week1) {

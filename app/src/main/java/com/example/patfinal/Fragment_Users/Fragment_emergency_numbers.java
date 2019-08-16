@@ -13,6 +13,7 @@ import com.example.patfinal.R;
 public class Fragment_emergency_numbers extends Fragment {
 
 
+    //Method to display the emergency numbers that the students might need
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

@@ -22,7 +22,6 @@ import static android.support.constraint.Constraints.TAG;
 
 public class Fragment_Teacher_Contact extends Fragment {
 
-    //Firebase
     private TextView TeacherName1, TeacherName2, TeacherName3, TeacherName4, TeacherName5;
     private TextView TeacherNumber1, TeacherNumber2, TeacherNumber3, TeacherNumber4, TeacherNumber5;
     private TextView TeacherRoom1, TeacherRoom2, TeacherRoom3, TeacherRoom4, TeacherRoom5;
@@ -30,6 +29,7 @@ public class Fragment_Teacher_Contact extends Fragment {
     private ProgressBar progressBar;
     private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
+    //Runs on the creation of the screen adn initialises the buttons and text views
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -81,6 +81,7 @@ public class Fragment_Teacher_Contact extends Fragment {
         return view;
     }
 
+    //Downloads the data from the server and sets it into the text views and classes
     private void GetAndSet() {
         databaseReference.child("Teacher Contact").addValueEventListener(new ValueEventListener() {
 
@@ -169,6 +170,13 @@ public class Fragment_Teacher_Contact extends Fragment {
         });
 
     }
+
+
+
+
+
+
+
 
 /*
     public void Download() {

@@ -48,6 +48,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="299dp"
         android:text="Wrong Password"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:visibility="invisible"
         tools:visibility="visible" />

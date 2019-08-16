@@ -55,7 +55,7 @@ public class Fragment_Add_User extends Fragment {
 
                 progressBar.setVisibility(View.VISIBLE);
                 Fill.setVisibility(View.INVISIBLE);
-                saveOld();
+                save();
                 //saveFireStore();
 
             }
@@ -63,9 +63,9 @@ public class Fragment_Add_User extends Fragment {
 
 
         return view;
-    }
+    }       //Runs on the creation of the screen
 
-    private void saveOld() {
+    private void save() {
         try {
             String first = First1.getText().toString();
             String last = Last1.getText().toString();
@@ -94,7 +94,18 @@ public class Fragment_Add_User extends Fragment {
         progressBar.setVisibility(View.INVISIBLE);
 
 
-    }
+    }           //Method to save the user
+
+
+
+
+
+
+
+
+
+
+
 
 /*
     public void saveFireStore() {

@@ -24,8 +24,7 @@ import com.example.patfinal.R;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 
-public class Main_Activity_Student extends AppCompatActivity {
-    private FirebaseAnalytics mFirebaseAnalytics;
+public class Main_Activity_Student extends AppCompatActivity {          //Opens the activity, adds the first fragment and adds the bottom nav view
     private static BottomNavigationView bottomnav;
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -55,14 +54,14 @@ public class Main_Activity_Student extends AppCompatActivity {
                 }
             };
 
-    static private void deselect() {
+    static private void deselect() {                            //deselects the bottom nav
         for (int i = 0; i < 4; i++) {
             bottomnav.getMenu().getItem(i).setChecked(false);
         }
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {                //Runs on the creation of activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_student);
         bottomnav = findViewById(R.id.bottom_navigation);
@@ -73,7 +72,6 @@ public class Main_Activity_Student extends AppCompatActivity {
         TextView tvname = findViewById(R.id.name);
         tvname.setText(Personal_Info.getName());
         setSupportActionBar(toolbar);
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
     }
 
     @Override
@@ -128,9 +126,9 @@ public class Main_Activity_Student extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-    }
+    }                       //Listener for the menu to be selected
 
-    private void openHelpScreen() {
+    private void openHelpScreen() {                                                //Opens the help screen
         Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
 

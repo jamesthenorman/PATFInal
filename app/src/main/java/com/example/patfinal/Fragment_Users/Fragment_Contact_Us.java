@@ -11,7 +11,7 @@ import com.example.patfinal.R;
 
 public class Fragment_Contact_Us extends Fragment {
 
-
+    //Creates the screen and displays the contact us details
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

@@ -74,18 +74,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-    }
+    }       //Runs on the creation of the screen
 
     private void openUsertype() {
         Intent intent = new Intent(this, UserType.class);
         startActivity(intent);
-    }
+    }                               //Method to open the user type screen
 
     private void openTeacherPass() {
         Intent intent = new Intent(this, Teacher_Login.class);
         startActivity(intent);
 
-    }
+    }                           //Method to open the teacher password screen
 
     private void Verify(final EditText x) {
         try {
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception e) {
             System.out.println("Error in try catch");
         }
-    }
+    }                   //Method to verify if the username is correct
 
     private void setName() {
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -137,13 +137,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-    }
+    }                                   //Sets the name of the student
 
     private void openHelpScreen() {
         Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
 
-    }
+    }                           //Opens the help screen
 
 /*
     public void openTeacher() {

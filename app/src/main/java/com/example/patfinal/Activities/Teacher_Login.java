@@ -52,19 +52,19 @@ public class Teacher_Login extends AppCompatActivity {
                 }
             }
         });
-    }
+    }                   //Runs on the creation of the screen
 
     private void openTeacher() {
         Intent intent = new Intent(this, Teacher.class);
         startActivity(intent);
 
-    }
+    }                                           //Method to open the teacher screen
 
     private void openHelpScreen() {
         Intent intent = new Intent(this, Activity_Help.class);
         startActivity(intent);
 
-    }
+    }                                        //Method to open teh help screen
 
 
 }

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
 import com.example.patfinal.R;
@@ -26,13 +27,17 @@ public class Fragment_Teacher_History extends Fragment {
     private ProgressBar progressBar;
     private static String[] arr = {"", "", ""};
     private DatabaseReference databaseReference;
+    private TableLayout tableLayout;
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,            //Runs on the creation of the screen
+                             @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_teacher_history, container, false);
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
+        tableLayout = view.findViewById(R.id.Table);
+        tableLayout.setVisibility(View.GONE);
         tv1 = view.findViewById(R.id.tvh1);
         tv2 = view.findViewById(R.id.tvh2);
         tv3 = view.findViewById(R.id.tvh3);
@@ -102,7 +107,7 @@ public class Fragment_Teacher_History extends Fragment {
 
 
         return mdformat.format(calendar.getTime());
-    }
+    }                                   //Method to get the day number from a week
 
     private boolean download() {
         progressBar.setVisibility(View.VISIBLE);
@@ -489,9 +494,9 @@ public class Fragment_Teacher_History extends Fragment {
                 x++;
                 tv27.setText(getDate(x) + "\n" + b27);
 
+                tableLayout.setVisibility(View.VISIBLE);
                 progressBar.setVisibility(View.INVISIBLE);
 
-                databaseReference.removeEventListener(this);
             }
 
             @Override
@@ -501,7 +506,7 @@ public class Fragment_Teacher_History extends Fragment {
         });
 
         return true;
-    }
+    }                                       //Method to download the student history
 
     private static String[] getWeeks() {
         String[] array = {"", "", "", ""};
@@ -557,7 +562,7 @@ public class Fragment_Teacher_History extends Fragment {
         array[3] = two + " - " + one;
         System.out.println(arr[0]);
         return array;
-    }
+    }                               //Method to get the previous 3 weeks
 
 /*
     public void Download() {

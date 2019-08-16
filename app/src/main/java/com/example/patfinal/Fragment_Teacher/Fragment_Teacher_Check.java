@@ -34,7 +34,7 @@ public class Fragment_Teacher_Check extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,          //Runs on the creation of the screen
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_teacher__check, container, false);
         btnSub = view.findViewById(R.id.check);
@@ -81,16 +81,15 @@ public class Fragment_Teacher_Check extends Fragment {
                 }
             });
         } catch (Exception e) {
-            System.out.println("Error in try catch");
         }
-    }
+    }                       //Method to search for a school number
 
 
     private void openTeacherCheck() {
         FragmentTransaction fr1 = getFragmentManager().beginTransaction().addToBackStack("Tag");
         fr1.replace(R.id.fragment_container, new Fragment_View_In_Out());
         fr1.commit();
-    }
+    }                                           //Method to open the in/out screen
 
 /*
     public void SearchRoom() {

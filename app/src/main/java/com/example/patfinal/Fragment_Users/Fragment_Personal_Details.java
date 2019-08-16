@@ -36,7 +36,6 @@ import static java.lang.String.valueOf;
 
 
 public class Fragment_Personal_Details extends Fragment {
-    //Firebase
     private EditText first;
     private EditText last;
     private EditText phone;
@@ -49,7 +48,7 @@ public class Fragment_Personal_Details extends Fragment {
     private DatabaseReference mDatabase;
     private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
-// ...
+
 
     @Nullable
     @Override
@@ -86,7 +85,7 @@ public class Fragment_Personal_Details extends Fragment {
         return view;
     }
 
-    //Download and set the texts
+    //Download and set the texts from the database
     private void download() {
 
         databaseReference.child("Users").child(Personal_Info.getSchool_number()).child("Personal Details").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -151,6 +150,12 @@ public class Fragment_Personal_Details extends Fragment {
         });
 
     }
+
+
+
+
+
+
 
 /*
     public void save2() {

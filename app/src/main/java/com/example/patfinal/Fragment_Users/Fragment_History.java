@@ -8,26 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
-import com.example.patfinal.Objects.Week;
 import com.example.patfinal.Personal_Info;
 import com.example.patfinal.R;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
-import static java.lang.String.valueOf;
 
 public class Fragment_History extends Fragment {
 
@@ -36,12 +29,13 @@ public class Fragment_History extends Fragment {
     private ProgressBar progressBar;
     private DatabaseReference databaseReference;
     private static String[] arr = {"", "", ""};
+    TableLayout tableLayout;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_user_history, container, false);
         databaseReference = FirebaseDatabase.getInstance().getReference();
-
+        tableLayout = view.findViewById(R.id.Table);
         tv1 = view.findViewById(R.id.tvh1);
         tv2 = view.findViewById(R.id.tvh2);
         tv3 = view.findViewById(R.id.tvh3);
@@ -77,6 +71,7 @@ public class Fragment_History extends Fragment {
         return view;
     }
 
+    //Method to return the date for the table
     private String getDate(int x) {
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat mdformat = new SimpleDateFormat("LLL-dd ");
@@ -114,11 +109,12 @@ public class Fragment_History extends Fragment {
         return mdformat.format(calendar.getTime());
     }
 
+    //Downloads all the data and puts them into a readable format on the table
     private boolean download() {
         String[] arr = getWeeks();
+        System.out.println(arr[0]);
 
         final String text1 = arr[0];
-        System.out.println(arr[1]);
         final String text2 = arr[1];
         final String text3 = arr[2];
         final String text4 = arr[3];
@@ -128,7 +124,6 @@ public class Fragment_History extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 try {
-
 
                     b1 = dataSnapshot.child(text1).child("monday").getValue().toString();
                     b2 = dataSnapshot.child(text1).child("tuesday").getValue().toString();
@@ -499,6 +494,7 @@ public class Fragment_History extends Fragment {
 
                 databaseReference.removeEventListener(this);
                 progressBar.setVisibility(View.INVISIBLE);
+                tableLayout.setVisibility(View.VISIBLE);
             }
 
             @Override
@@ -509,9 +505,9 @@ public class Fragment_History extends Fragment {
         return true;
     }
 
+    //Method to input the next 3 weeks into a array
     private static String[] getWeeks() {
         String[] array = {"", "", "", ""};
-
         Calendar calendar = Calendar.getInstance();
         int day = calendar.get(Calendar.DAY_OF_WEEK);
         int x = 0;
@@ -564,6 +560,15 @@ public class Fragment_History extends Fragment {
         System.out.println(arr[0]);
         return array;
     }
+
+
+
+
+
+
+
+
+
 
 /*
     public void Download() {

@@ -14,16 +14,6 @@ public class Teacher {
         this.email = email;
     }
 
-    @Override
-    public String toString() {
-        return "Teacher{" +
-                "name='" + name + '\'' +
-                ", number='" + number + '\'' +
-                ", roomNumber='" + roomNumber + '\'' +
-                ", email='" + email + '\'' +
-                '}';
-    }
-
     public Teacher() {
     }
 
@@ -49,14 +39,6 @@ public class Teacher {
 
     public String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setRoomNumber(String roomNumber) {
-        this.roomNumber = roomNumber;
     }
 
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Background">
-x
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@ x
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TableLayout
@@ -46,7 +46,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -58,7 +57,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -70,7 +68,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
                 </TableRow>
@@ -87,7 +84,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -99,7 +95,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -111,7 +106,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
                 </TableRow>
@@ -128,7 +122,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -140,7 +133,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -152,7 +144,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
                 </TableRow>
@@ -169,7 +160,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -181,7 +171,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -193,7 +182,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
                 </TableRow>
@@ -210,7 +198,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -222,7 +209,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -234,7 +220,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
                 </TableRow>
@@ -251,7 +236,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -263,7 +247,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -275,7 +258,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
                 </TableRow>
@@ -292,7 +274,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -304,7 +285,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -316,7 +296,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
                 </TableRow>
@@ -333,7 +312,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -345,7 +323,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -357,7 +334,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
                 </TableRow>
@@ -374,7 +350,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -386,7 +361,6 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
 
@@ -398,29 +372,27 @@ x
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
                         android:gravity="center"
-                        android:text="25-Jan\nIn"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
                 </TableRow>
-
-
 
 
             </TableLayout>
 
 
         </RelativeLayout>
-    </ScrollView><ProgressBar
-    android:id="@+id/progressBar"
-    style="?android:attr/progressBarStyle"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:foregroundGravity="center"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toEndOf="@+id/scrollView2"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
