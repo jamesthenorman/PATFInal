@@ -296,6 +296,7 @@
                         android:layout_margin="@dimen/History_Margin"
                         android:layout_weight="1"
                         android:background="@color/HistoryBackgroundColour"
+                        android:gravity="center"
                         android:textColor="@color/HistoryTextColour"
                         android:textSize="@dimen/History_Dimen" />
                 </TableRow>
