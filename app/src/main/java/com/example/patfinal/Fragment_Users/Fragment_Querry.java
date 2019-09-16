@@ -93,7 +93,6 @@ public class Fragment_Querry extends Fragment {
             @Override
             public void onClick(View v) {
                 save();
-                System.out.println("Save 96");
                 openNext();
                 saves++;
 
@@ -121,6 +120,7 @@ public class Fragment_Querry extends Fragment {
         myRef.child("outForTheNight").setValue(outnight);
         myRef.child("outMethod").setValue(Method);
         myRef.child("outTime").setValue(timeout);
+        progressBar.setVisibility(View.INVISIBLE);
 
 
 

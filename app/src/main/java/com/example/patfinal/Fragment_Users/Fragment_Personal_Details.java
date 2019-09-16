@@ -144,6 +144,8 @@ public class Fragment_Personal_Details extends Fragment {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 progressBar.setVisibility(View.INVISIBLE);
+                Toast.makeText(getContext(), "Saved ", Toast.LENGTH_SHORT).show();
+
             }
         });
 
