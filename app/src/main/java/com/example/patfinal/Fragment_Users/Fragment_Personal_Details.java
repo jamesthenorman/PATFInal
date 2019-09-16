@@ -136,7 +136,6 @@ public class Fragment_Personal_Details extends Fragment {
         String Allergies = allergies.getText().toString();
 
         Personal_Details personal_details = new Personal_Details(First, Last, Phone, Parent, Emergency, Room, Allergies);
-
         String id = Personal_Info.getSchool_number();
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -145,7 +144,6 @@ public class Fragment_Personal_Details extends Fragment {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 progressBar.setVisibility(View.INVISIBLE);
-
             }
         });
 

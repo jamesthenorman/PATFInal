@@ -93,6 +93,7 @@ public class Fragment_Querry extends Fragment {
             @Override
             public void onClick(View v) {
                 save();
+                System.out.println("Save 96");
                 openNext();
                 saves++;
 
@@ -113,21 +114,14 @@ public class Fragment_Querry extends Fragment {
         String week = Week.getText().toString();
         String Day = day.getText().toString();
 
-        Query query = new Query(timeout, timein, outnight, Method, Notes);
-
-        System.out.println(query);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("Users").child(Personal_Info.getSchool_number()).child("Queries").child(week).child(Day);
-        myRef.setValue(query).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                System.out.println("Saved");
+        myRef.child("inTime").setValue(timein);
+        myRef.child("notes").setValue(Notes);
+        myRef.child("outForTheNight").setValue(outnight);
+        myRef.child("outMethod").setValue(Method);
+        myRef.child("outTime").setValue(timeout);
 
-                progressBar.setVisibility(View.INVISIBLE);
-            }
-        });
-        myRef.setValue(query);
 
 
     }                           //Method to save the query
