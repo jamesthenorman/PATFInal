@@ -91,16 +91,12 @@ public class Fragmet_parent_consent extends Fragment {
                 downloadTb(spinner.getSelectedItem().toString());
                 progressBar.setVisibility(View.VISIBLE);
                 downloadTv(spinner.getSelectedItem().toString());
-                //DownloadInOut(spinner.getSelectedItem().toString());
-                // DownloadToggle(spinner.getSelectedItem().toString());
 
 
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                // If an option is removed then what to do
-                // or anything else
             }
 
         });

@@ -95,8 +95,6 @@ public class Fragment_Querry extends Fragment {
                 save();
                 openNext();
                 saves++;
-                //TODO: load week and day into query
-                //setStart();
 
             }
         });
@@ -135,8 +133,6 @@ public class Fragment_Querry extends Fragment {
     }                           //Method to save the query
 
     private void openNext() {
-        System.out.println(x + "X");
-        System.out.println(saves + "Saves");
         if (x > saves) {
             try {
 

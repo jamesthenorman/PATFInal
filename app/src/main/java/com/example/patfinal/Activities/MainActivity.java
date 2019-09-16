@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -73,6 +75,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        number.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
+                    bt.performClick();
+                }
+                return false;
+            }
+        });
 
     }       //Runs on the creation of the screen
 
